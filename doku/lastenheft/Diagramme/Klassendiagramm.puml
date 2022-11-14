@@ -1,27 +1,141 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+ class Main
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+ class Controll{
+ - user : User
+ - gui : Gui
+ - menu : Startmenu
+ + getUser() : User
+ + getMenu() : Startmenu
+ + getGui() : Gui
+ }
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+ class User{
+ - points : int
 
-class ArrayList {
-Object[] elementData
-size()
-}
+ + setPoints(pPoints : String) : void
+ + getPoints() : String
+ }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
-}
+ abstract class Person{
+ - name : String
+ - age : int
+
+ + setName(pName : String) : void
+ + setAge(pAge : int) : void
+ + getName() : String
+ + getAge() : String
+ }
+
+ class Gui{
+
+ }
+
+ class StartMenu{
+ + options : Options
+ + leaderboard : Leaderboard
+ + game : GameMenu
+ }
+
+ class GameMenu{
+ + joker : Joker
+ + modeSurvival : ModeSurvival
+ + modeNormal : ModeNormal
+ + modeJeopardy : ModeJeopardy
+ }
+
+ class Joker{
+
+ }
+
+ class Options{
+
+ }
+
+ class Leaderboard{
+ - users : User[10]
+ }
+
+ class CSVReader{
+ - fragenList : List<Questions>
+ - fragenStack : Stack<Questions>
+ - fragenQueue : Queue<Questions>
+ }
+
+ class Node{
+ - context : T
+ - next : Node<T>
+
+ + getContext() : T
+ + setContext(pContext : T) : void
+ + getNext() : Node<T>
+ + setNext(pNode : Node<T>) : void
+ }
+
+ class List{
+ - first : Node<T>
+ - aktuelleNode : Node<T>
+
+ + isEmpty() : boolean
+ + hasAccess() : boolean
+ + next() : void
+ + toFirst() : void
+ + toLast() : void
+ + getObject() : T
+ + setObject() : void
+ + append(pContext : T) : void
+ + insert(pContext : T) : void
+ + concat(pList : List<T>) : void
+ + remove() : void
+ }
+
+ class Stack{
+ - first : Node<T>
+
+ + isEmpty() : boolean
+ + enqueue(pObject : T) : void
+ + dequeue() : void
+ + front() : T
+ }
+
+ class Queue{
+ - first : Node<T>
+
+ + isEmpty() : boolean
+ + push(pObject : T) : void
+ + pop() : void
+ + top() : T
+ }
+
+ class Questions{
+ - question : String
+ - answers : String[4]
+ }
+
+ class ModeNormal{
+
+ }
+
+ class ModeSurvival{
+
+ }
+
+ class ModeJeopardy{
+
+ }
+
+
+
+ Main *-- Controll
+
+ Person <|-- User
+
+ Node --o Stack
+ Node --o Queue
+ Node --o List
+
+
 
 @enduml
