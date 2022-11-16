@@ -1,8 +1,8 @@
 # Lastenheft Team 4
 
-**Entwicklung einer Hello-world Anwendung in Java**
+**Entwicklung eines Wer wird Millionär Programmes**
 
-| Stand        | 06.11.2022                                                  |
+| Stand        | 13.11.2022                                                  |
 |--------------|-------------------------------------------------------------|
 | Auftraggeber | Hermann-Emanuel-Berufskolleg Informatik LK Abschlussprojekt |
 
@@ -16,17 +16,14 @@
 ## 1 Einleitung
 *Eine kurze Einstimmung zum Projekthintergrund*
 
-Im Informatik Leistungskurs entwickeln die Lernenden ein Softwareprojekt. Im Rahmen des
-Softwareentwicklungsprozesses sind typische Dokumente wie das Pflichtenheft zu erstellen. Mit der Entwicklung einer Hello-world-Anwendung soll der
-Softwareentwicklungsprozess praktisch mit den entsprechenden Dokumenten aufgezeigt werden.
+
 
 ## 2 Soll-Konzept
 
 ### 2.1 Anwendungsbreiche
 *Beschreibung der vorgesehenen Anwendungsfälle des zu schaffenden Systems.*
 
-Das System hat nur beispielhaften Charakter. Somit ist eine klassische Hello-world-Anwendung ausreichend.
-Eventuell soll noch optional ein Hilfetext ausgegeben werd
+Die Anwendung soll 
 
 ### 2.2 Systemidee
 *Welche Idee wird mit dem System umgesetzt?*
@@ -55,21 +52,20 @@ us dem Ziel, den Softwareentwicklungsprozess zu veranschaulichen und andererseit
 ## 3 Anforderungen
 
 ### 3.1 Funktionale Anforderungen
-*Hier sind die Anforderungen in einer einheitlichen
-und übersichtlichen Form darzustellen.*
 
-*Als Template eignet sich z. B. eine Tabelle.
-Eine Gruppierung nach Prozessen, Nutzerrollen
-oder fachlichen Bereichen und das Vergeben
-eines Identifikators, sowie Verweise auf verwandte
-Anforderungen ist ratsam*
+Unser Programm hat sechs Anforderungen. Der User startet die Anwendung und das Menü öffnet sich in einem Fenster.
+Danach kann der User im Menü die drei Spielmodi starten. Des Weiteren kann er im Menü in die Optionen gelangen und 
+sich das Leaderboard anzeigen lassen.
 
-Es gibt nur zwei Anforderungen: die Hauptfunktion und eine Hilfefunktion. Der am Betriebssystem angemeldete Nutzer führt das Programm in der Konsole aus. Der Aufruf erfolgt mittels Java-Interpreter.
+| Kürzel | Funktionsname            | Funktionsbeschreibung                                           |
+|--------|--------------------------|-----------------------------------------------------------------|
+| F1     | Anzeige des Menu         | Das Menu wird in einem Fenster angezeigt                        |
+| F2     | Menü Spielmodus Standard | Der Spielmodus Standard wird gestartet                          |
+| F3     | Menü Spielmodus Survive  | Der Spielmodus Survive wird gestartet                           |
+| F4     | Menü Spielmodus Jeopardy | Der Multiplayer Spielmodus wird gestartet                       |
+| F5     | Menü Optionen            | Die Optionen werden angezeigt                                   |
+| F6     | Menü Leaderboard         | Das Leaderboard mit den verschiedenen Highscores wird angezeigt |
 
-| Kürzel | Funktionsname                  | Funktionsbeschreibung                   |
-|--------|--------------------------------|-----------------------------------------|
-| F1     | Anzeige des Hello-world-Textes | Der Text "hello world" wird ausgegeben. |
-| F2     | Anzeigen des Hilfe-Textes      | Ein Hilfetext wird ausgegeben.          |
 
 ### 3.2 Nicht-funktionale Anforderungen
 
