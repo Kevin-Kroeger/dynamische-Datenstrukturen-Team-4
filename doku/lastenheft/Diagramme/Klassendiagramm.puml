@@ -59,9 +59,10 @@
  }
 
  class CSVReader{
- - fragenList : List<Questions>
- - fragenStack : Stack<Questions>
- - fragenQueue : Queue<Questions>
+ + readCSVList(path : String) : List<T>
+ + readCSVQueue(path : String) : Queue<T>
+ + readCSVStack(path : String) : Stack<T>
+
  }
 
  class Node{
