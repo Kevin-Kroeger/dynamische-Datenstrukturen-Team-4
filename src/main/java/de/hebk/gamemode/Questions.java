@@ -1,4 +1,4 @@
-package de.hebk.CSV;
+package de.hebk.gamemode;
 
 public class Questions {
 }

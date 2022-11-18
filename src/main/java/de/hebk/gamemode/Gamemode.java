@@ -1,4 +1,4 @@
-package de.hebk.Gamemodes;
+package de.hebk.gamemode;
 
 public class Gamemode {
 }

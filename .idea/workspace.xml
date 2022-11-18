@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409f656e-b6de-44ad-bf8f-bfd1307540be" name="Changes" comment="[CHA] Klassendiagramm.puml + Lastenheft.md 3.1">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/CSV/CSVReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/CSV/Questions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Controll/Controll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Controll/Gui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Controll/Leaderboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Gamemodes/Gamemode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Gamemodes/Joker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Gamemodes/ModeJeopardy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Gamemodes/ModeNormal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Gamemodes/ModeSurvive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/User/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/User/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="409f656e-b6de-44ad-bf8f-bfd1307540be" name="Changes" comment="[ADD] Projektstruktur" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +83,7 @@
       <workItem from="1668589128516" duration="3225000" />
       <workItem from="1668695870379" duration="25000" />
       <workItem from="1668754749856" duration="680000" />
-      <workItem from="1668755498712" duration="2188000" />
+      <workItem from="1668755498712" duration="2502000" />
     </task>
     <task id="LOCAL-00001" summary="Init Project">
       <created>1667762862125</created>
@@ -143,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668756750827</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[ADD] Projektstruktur">
+      <created>1668757896187</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668757896187</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +167,8 @@
     <MESSAGE value="Init Project" />
     <MESSAGE value="[CHA] Klassendiagramm.puml" />
     <MESSAGE value="[CHA] Klassendiagramm.puml + Lastenheft.md 3.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="[CHA] Klassendiagramm.puml + Lastenheft.md 3.1" />
+    <MESSAGE value="[ADD] Projektstruktur" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Projektstruktur" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

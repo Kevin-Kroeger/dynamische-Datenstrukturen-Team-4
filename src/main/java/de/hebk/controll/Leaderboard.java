@@ -1,4 +1,4 @@
-package de.hebk.Controll;
+package de.hebk.controll;
 
 public class Leaderboard {
 }

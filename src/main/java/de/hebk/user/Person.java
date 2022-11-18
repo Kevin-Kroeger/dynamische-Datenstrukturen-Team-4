@@ -1,4 +1,4 @@
-package de.hebk.User;
+package de.hebk.user;
 
 public abstract class Person {
 }
