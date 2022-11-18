@@ -9,7 +9,7 @@ class Game{
 - csv : CSVReader
 
 + Game(pCsv : CSVReader, pCtrl : Controll)
-+ startGame(pGaemmode : Gamemode)
++ startGame(pGaemmode : Gamemode) : void
 + setUser() : User
 + setCSV() : void
 + setCtrl() : void
@@ -56,6 +56,7 @@ class Gui{
 
 class Leaderboard{
 - users : User[10]
++ showleaderboard() : void
  }
 
 class CSVReader{
@@ -69,6 +70,8 @@ class CSVReader{
 class Questions{
 - question : String
 - answers : String[4]
+- correct : boolean
+- checkcorrect() : boolean
 }
 
 
