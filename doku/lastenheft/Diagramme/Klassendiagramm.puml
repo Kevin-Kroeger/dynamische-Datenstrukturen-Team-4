@@ -1,5 +1,5 @@
 @startuml
- 'https://plantuml.com/class-diagram
+'https://plantuml.com/class-diagram
 
 class Main
 
@@ -7,15 +7,19 @@ class Game{
 - user : User
 - ctrl : Controll
 - csv : CSVReader
+- gamemode : Gamemode
+
 
 + Game(pCsv : CSVReader, pCtrl : Controll)
 + startGame(pGaemmode : Gamemode) : void
 + setUser() : User
 + setCSV() : void
 + setCtrl() : void
++ setGamemode(pGamemode : Gamemode)
 + getUser() : User
 + getCtrl() : Controll
 + getCsv() : CSVReader
++ getGamemode() : Gamemode
 }
 
 
@@ -24,12 +28,8 @@ class Controll{
 - gui : Gui
 - leaderboard : Leaderboard
 - options : Options
-- gamemode : Gamemode
-
-+ setGamemode(pGamemode : Gamemode)
 + getGui() : Gui
 + getLeaderboard() : Leaderboard
-+ getGamemode() : Gamemode
 + getOptions() : Options
 }
 
@@ -70,25 +70,46 @@ class CSVReader{
 class Questions{
 - question : String
 - answers : String[4]
-- correct : boolean
+- correct : String
 - checkcorrect() : boolean
++ setCorrect() : void
++ setAnswers() : void
++ setQuestion() : void
++ getCorrect() : String
++ setAnswers() : String[]
++ setQuestion() : String
 }
 
 
 class Gamemode{
-
+- joker : Joker[3]
++ getJoker() : Joker[]
++ setJoker() : void
++ useJoker() : void
 }
 
 class ModeNormal extends Gamemode{
 - questions : List<Questions>
+- money : int
++ getQuestions() : List<Questions>
++ setMoney() : void
++ getMoney() : int
 }
 
 class ModeSurvival extends Gamemode{
 - questions : Stack<Questions>
+- counter : int
++ getQuestions() : Stack<Questions>
++ count() : void
++ getCounter() : int
 }
 
 class ModeJeopardy extends Gamemode{
 - questions : Queue<Questions>
+- points : int
++ getQuestions() : Queue<Questions>
++ getPoints() : int
++ setPoints() : void
 }
 
 class Node{
@@ -134,6 +155,10 @@ class Queue{
 + push(pObject : T) : void
 + pop() : void
 + top() : T
+}
+
+class Joker{
+
 }
 
 Main *-- Game
