@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="409f656e-b6de-44ad-bf8f-bfd1307540be" name="Changes" comment="Init Project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doku/lastenheft/Lastenheft.md" beforeDir="false" afterPath="$PROJECT_DIR$/doku/lastenheft/Lastenheft.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -76,6 +81,9 @@
       <workItem from="1667762750058" duration="500000" />
       <workItem from="1667764071977" duration="611000" />
       <workItem from="1667766457265" duration="8000" />
+      <workItem from="1668589286638" duration="790000" />
+      <workItem from="1668590148012" duration="3556000" />
+      <workItem from="1668754743966" duration="2633000" />
     </task>
     <task id="LOCAL-00001" summary="Init Project">
       <created>1667762862125</created>
