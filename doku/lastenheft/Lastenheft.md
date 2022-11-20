@@ -62,14 +62,12 @@ Unser Programm hat sechs Anforderungen. Der User startet die Anwendung und das M
 Danach kann der User im Menü die drei Spielmodi starten. Des Weiteren kann er im Menü in die Optionen gelangen und 
 sich das Leaderboard anzeigen lassen.
 
-| Kürzel | Funktionsname            | Funktionsbeschreibung                                           |
-|--------|--------------------------|-----------------------------------------------------------------|
-| F1     | Anzeige des Menu         | Das Menu wird in einem Fenster angezeigt                        |
-| F2     | Menü Spielmodus Standard | Der Spielmodus Standard wird gestartet                          |
-| F3     | Menü Spielmodus Survive  | Der Spielmodus Survive wird gestartet                           |
-| F4     | Menü Spielmodus Jeopardy | Der Multiplayer Spielmodus wird gestartet                       |
-| F5     | Menü Optionen            | Die Optionen werden angezeigt                                   |
-| F6     | Menü Leaderboard         | Das Leaderboard mit den verschiedenen Highscores wird angezeigt |
+| Kürzel | Funktionsname                            | Funktionsbeschreibung                                           |
+|--------|------------------------------------------|-----------------------------------------------------------------|
+| F1     | Anzeige des Menu                         | Das Menu wird in einem Fenster angezeigt                        |
+| F2     | Menü Anzeigen der verschiedenen Spielmodi | Die Spielmoid Standard, Survive und Geopardy werden angezeigt   |
+| F3     | Menü Optionen                            | Die Optionen werden angezeigt                                   |
+| F4     | Menü Leaderboard                         | Das Leaderboard mit den verschiedenen Highscores wird angezeigt |
 
 
 ### 3.2 Nicht-funktionale Anforderungen
