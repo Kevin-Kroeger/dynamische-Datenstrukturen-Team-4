@@ -14,40 +14,45 @@
 
 
 ## 1 Einleitung
-*Eine kurze Einstimmung zum Projekthintergrund*
+* Aufg *
 
 
 
 ## 2 Soll-Konzept
 
 ### 2.1 Anwendungsbreiche
-*Beschreibung der vorgesehenen Anwendungsfälle des zu schaffenden Systems.*
 
-Die Anwendung soll 
-
+Die Anwendung soll eine Funktionierende Kopie des Deutschland weit bekannten Game-Show "Wer wird Millionär" sein.
+Diese Kopie soll Spielbar sein und mithilfe dynamischen Datenstrukturen Erweitert werden. 3 Verschiedene Spiel-modys 
+sollen in unserer Version von "Wer wird Millionär" vorhanden sein. Diese Unterscheiden sich je nach Datenstruktur in 
+ihrer Anwendung. So werden die Modys "Klassisch", "Überleben" und "Jeopardy" spielbar sein. Alle Fortschritte werden
+in einen Leaderboard gespeichtert. Somit soll an Ende des Projektes ein Witziges und Spannendes Spiel rauskommen. 
 ### 2.2 Systemidee
-*Welche Idee wird mit dem System umgesetzt?*
 
-Eine einfache und übersichtliche Java-Anwendung, welche in der Konsole zu starten ist, gibt einen kurzen
-Text aus. Wird die Anwendung mit einem entsprechenden Parameter gestartet, wird ein Hilfetext
-ausgegeben
-
+Die Grundidee unsers Projekts ist die Kultische und schon fast Legendäre Game-show "Wer wird Millinär". Diese wird mit 
+Dynamischen Datenstrukturen aufgewertet. Diese sollen die Spielspaß auf ein neues Level heben. 
 ### 2.3 Ziele
-*Welche konkreten Ziele sollen erreicht werden? (Aufteilung der Idee in Teilziele)*
 
-Nicht mit dem System, sondern anhand des Systems soll der Softwareentwicklungsprozess veranschaulicht
-werden
+#### 2.3.1 Ziele des  Projektes
+Dieses Projekt soll das ganze können des Team unter Beweis stellen. Hierzu wollen wir das Wissen der letzt 1,5 Jahre auf 
+Zusammenfassen. Neu dazu kommen Dynamische Datenstrukturen und Genreics. Durch dieses Projekt wolle wir uns bests möglich 
+auf die anstehende Klausur vorbereiten. 
+
+#### 2.3.2 Ziele der Anwendung 
+Unsere Anwendung soll am Ende der Projektzeit ein funktionierendes und spaßiges Spiel sein. Das Allgemeinwissen abfragt 
+und vermittelt. Dieses Spiel soll eine große Zeilgruppe ansprechen und soll mit nazu jeder Altersgruppe spielbar sein. 
+
 
 ### 2.4 Zielgruppe
-*Benennung der Anforderungsbeitragenden mit Bezug zu deren Anforderungen*
+ Um den Umgang mit Dynamischen Datenstrukturen und Generics den Nutzer näher zu brigen, soll dieses Projekt programmiert 
+werden. Hierzu agieren verschiedne Gruppen in Projekt "Lernende", "Nutzer" und "Lehrkräfte". Alle Gruppen haben andere
+Aufgaben.
 
-us dem Ziel, den Softwareentwicklungsprozess zu veranschaulichen und andererseits ein einfaches Hello-world-Programm zu entwickeln, lassen sich folgende Beteiligte den grob erfassten Anforderungen zuordnen:
-
-| **Anforderungsbeitragende** | **Anforderung**                                                                                                                                                                                          |
-|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Lernende                    | Anhand des Systems soll der Softwareentwicklungsprozess praktisch veranschaulicht werde                                                                                                                  |
-| Nutzer                      | Das System soll die Zeichenkette „hello world“ ausgeben. Das System soll an das Betriebssystem einen Exit-Code zurückgeben. Das System kann  einen Hilfetext ausgeben                                    |
-| Lehrkräfte                  | Die Analyse des Systems soll objektorientiert erfolgen. Für Modellierung und Dokumentation soll UML2 genutzt werden. Die Implementierung soll in Java erfolgen, der Code soll gewisse Vorgaben erfüllen. |
+| **Anforderungsbeitragende** | **Anforderung**                                                                                                                                                                                                  |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Lernende                    | Durch dieses Projekt sollen die Lernenden Dynamische Datenstrukturen und Generics lernen und das Wissen der letzten 1,5 Jahren abrufen.                                                                          |
+| Nutzer                      | Der Nutzer des Projektes soll das Spiel spielen, sein Allgemienwissen abfragen und spaß und freude am Spiel haben.                                                                                               |
+| Lehrkräfte                  | Die Lehrkräfte sollen die Korrektheit des Code Kontrollieren und das Projekt in die richtige Richtungfürhren. Sie sind die ansprech Partner für die Lernende und werden die Korrektheit des Porjektes bewerten.  |
 
 ## 3 Anforderungen
 
@@ -57,14 +62,12 @@ Unser Programm hat sechs Anforderungen. Der User startet die Anwendung und das M
 Danach kann der User im Menü die drei Spielmodi starten. Des Weiteren kann er im Menü in die Optionen gelangen und 
 sich das Leaderboard anzeigen lassen.
 
-| Kürzel | Funktionsname            | Funktionsbeschreibung                                           |
-|--------|--------------------------|-----------------------------------------------------------------|
-| F1     | Anzeige des Menu         | Das Menu wird in einem Fenster angezeigt                        |
-| F2     | Menü Spielmodus Standard | Der Spielmodus Standard wird gestartet                          |
-| F3     | Menü Spielmodus Survive  | Der Spielmodus Survive wird gestartet                           |
-| F4     | Menü Spielmodus Jeopardy | Der Multiplayer Spielmodus wird gestartet                       |
-| F5     | Menü Optionen            | Die Optionen werden angezeigt                                   |
-| F6     | Menü Leaderboard         | Das Leaderboard mit den verschiedenen Highscores wird angezeigt |
+| Kürzel | Funktionsname                            | Funktionsbeschreibung                                           |
+|--------|------------------------------------------|-----------------------------------------------------------------|
+| F1     | Anzeige des Menu                         | Das Menu wird in einem Fenster angezeigt                        |
+| F2     | Menü Anzeigen der verschiedenen Spielmodi | Die Spielmoid Standard, Survive und Geopardy werden angezeigt   |
+| F3     | Menü Optionen                            | Die Optionen werden angezeigt                                   |
+| F4     | Menü Leaderboard                         | Das Leaderboard mit den verschiedenen Highscores wird angezeigt |
 
 
 ### 3.2 Nicht-funktionale Anforderungen
