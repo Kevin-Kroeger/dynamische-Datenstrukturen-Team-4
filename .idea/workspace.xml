@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409f656e-b6de-44ad-bf8f-bfd1307540be" name="Changes" comment="Init Project">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doku/lastenheft/Lastenheft.md" beforeDir="false" afterPath="$PROJECT_DIR$/doku/lastenheft/Lastenheft.md" afterDir="false" />
-    </list>
+    <list default="true" id="409f656e-b6de-44ad-bf8f-bfd1307540be" name="Changes" comment="[ADD] Projektstruktur" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,13 +16,14 @@
         <option value="UML Sequence" />
         <option value="UML Class" />
         <option value="UML Object" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Lastenheft" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,22 +38,23 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Object&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultPlantUmlFileTemplate": "UML Object",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="de.hebk.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.hebk.Main" />
       <module name="dynamische-Datenstrukturen-Team1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.hebk.*" />
+          <option name="PATTERN" value="de.hebk.CSV.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -65,7 +64,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.de.hebk.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -81,9 +80,10 @@
       <workItem from="1667762750058" duration="500000" />
       <workItem from="1667764071977" duration="611000" />
       <workItem from="1667766457265" duration="8000" />
-      <workItem from="1668589286638" duration="790000" />
-      <workItem from="1668590148012" duration="3556000" />
-      <workItem from="1668754743966" duration="2633000" />
+      <workItem from="1668589128516" duration="3225000" />
+      <workItem from="1668695870379" duration="25000" />
+      <workItem from="1668754749856" duration="680000" />
+      <workItem from="1668755498712" duration="2502000" />
     </task>
     <task id="LOCAL-00001" summary="Init Project">
       <created>1667762862125</created>
@@ -99,7 +99,42 @@
       <option name="project" value="LOCAL" />
       <updated>1667764093538</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[CHA] Klassendiagramm.puml">
+      <created>1668589355312</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668589355312</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[CHA] Klassendiagramm.puml">
+      <created>1668593254141</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668593254141</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[CHA] Klassendiagramm.puml">
+      <created>1668755033407</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668755033407</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[CHA] Klassendiagramm.puml + Lastenheft.md 3.1">
+      <created>1668756750827</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668756750827</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[ADD] Projektstruktur">
+      <created>1668757896187</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668757896187</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,7 +145,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Lastenheft" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -118,7 +165,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init Project" />
+    <MESSAGE value="[CHA] Klassendiagramm.puml" />
+    <MESSAGE value="[CHA] Klassendiagramm.puml + Lastenheft.md 3.1" />
+    <MESSAGE value="[ADD] Projektstruktur" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Projektstruktur" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
