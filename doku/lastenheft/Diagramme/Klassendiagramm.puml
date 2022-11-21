@@ -168,4 +168,28 @@ Person <|-- User
 Node --o Stack
 Node --o Queue
 Node --o List
+
+package controll{
+class Controll
+class Gui
+class Leaderboard
+}
+
+package user{
+class User
+class Person
+}
+
+package Gamemode{
+class Gamemode
+class Joker
+class ModeJeopardy
+class ModeNormal
+class ModeSurvival
+class Questions
+}
+
+package csv{
+class CSVReader
+}
 @enduml
