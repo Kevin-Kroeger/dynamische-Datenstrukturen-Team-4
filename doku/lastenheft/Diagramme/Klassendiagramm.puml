@@ -3,6 +3,45 @@
 
 class Main
 
+package controll{
+class Controll
+class Gui
+class Leaderboard
+}
+
+package user{
+class User
+class Person
+}
+
+package Gamemode{
+class Gamemode
+class Joker
+class ModeJeopardy
+class ModeNormal
+class ModeSurvival
+class Questions
+}
+
+package csv{
+class CSVReader
+}
+
+package model{
+    package list{
+    class List
+    }
+    package node{
+    class Node
+    }
+    package queue{
+    class Queue
+    }
+    package Stack{
+    class Stack
+    }
+}
+
 class Game{
 - user : User
 - ctrl : Controll
@@ -169,27 +208,5 @@ Node --o Stack
 Node --o Queue
 Node --o List
 
-package controll{
-class Controll
-class Gui
-class Leaderboard
-}
 
-package user{
-class User
-class Person
-}
-
-package Gamemode{
-class Gamemode
-class Joker
-class ModeJeopardy
-class ModeNormal
-class ModeSurvival
-class Questions
-}
-
-package csv{
-class CSVReader
-}
 @enduml
