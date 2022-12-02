@@ -8,6 +8,14 @@ import de.hebk.model.list.*;
 
 public class CSVReader {
 
+    /**
+     * Diese Methode liest die Datei mit den Fragen.
+     * Danach wird von jeder Zeile ein neues Objekt der Klasse Question instanziiert.
+     * Dieses Objekt wird dann der Liste hinzugefügt.
+     * Die Liste mit allen Fragen wird dann zurückgegeben
+     * @param path
+     * @return
+     */
     public List<Questions> readCSVList(String path){
         List<Questions> l1 = new List<Questions>();
         String line;
