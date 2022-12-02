@@ -53,6 +53,7 @@ public class ModeNormal extends Gamemode {
     public void nextQuestion(){
         String s = "ja";
         if(checkCorrect(s)){
+            //Todo Money System einbauen & Überprüfung der Antwort
             count++;
             changeLVL();
             randomQuestion();
