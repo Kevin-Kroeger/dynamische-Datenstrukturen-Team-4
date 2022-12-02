@@ -1,16 +1,8 @@
 package de.hebk.csv;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.lang.reflect.Array;
-import java.nio.file.Paths;
-import java.nio.file.Path;
-import java.util.ArrayList;
-
 import de.hebk.gamemode.*;
 import de.hebk.model.list.*;
 
