@@ -15,6 +15,7 @@ public class Node<T> {
      * @return
      */
     public T getContext(){
+
         return this.context;
     }
 
@@ -23,6 +24,7 @@ public class Node<T> {
      * @param pContext
      */
     public void setContext(T pContext){
+
         this.context = pContext;
     }
 
@@ -31,6 +33,7 @@ public class Node<T> {
      * @return
      */
     public Node<T> getNext(){
+
         return this.next;
     }
 
@@ -39,6 +42,7 @@ public class Node<T> {
      * @param pNode
      */
     public void setNext(Node<T> pNode){
+
         this.next = pNode;
     }
 }
