@@ -15,9 +15,7 @@ public class Questions {
         setCorrect(pCorrect);
         setDifficulty(pDifficulty);
     }
-    public boolean checkCorrect(String pAnswer){
-        return pAnswer.equals(correct);
-    }
+
 
     public void randomAnswers(){
         Random rand = new Random();
