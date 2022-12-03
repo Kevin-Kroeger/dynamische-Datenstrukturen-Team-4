@@ -15,6 +15,7 @@ public class Game {
     public Game(CSVReader pCsv, Controll pCtrl){
         setCsv(pCsv);
         setCtrl(pCtrl);
+
     }
 
     public void createUser(String pName, int pAge, int pPoints){
@@ -22,8 +23,8 @@ public class Game {
         user.setAge(pAge);
         user.setPoints(pPoints);
     }
-    public void startGame(){
-            this.gamemode.
+    public void startGame(Gamemode pGamemode){
+
     }
 
 
