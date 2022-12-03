@@ -4,21 +4,16 @@ import de.hebk.model.list.List;
 import java.util.Random;
 
 public class ModeNormal extends Gamemode {
-
     private List<Questions> questions;
     private int money;
     private int lvl;
     private Questions currentQuestion;
     private int count = 0;
-
-
     public ModeNormal(List<Questions> pList){
         setQuestions(pList);
         setLvl(1);
         setMoney(0);
     }
-
-
     public boolean checkCorrect(String pAnswer){
         return pAnswer.equals(currentQuestion.getCorrect());
     }
@@ -50,9 +45,8 @@ public class ModeNormal extends Gamemode {
     /**
      *
      */
-    public void nextQuestion(){
-        String s = "ja";
-        if(checkCorrect(s)){
+    public void nextQuestion(String pAnswer){
+        if(checkCorrect(pAnswer)){
             //Todo Money System einbauen & Überprüfung der Antwort
             count++;
             changeLVL();
@@ -68,9 +62,6 @@ public class ModeNormal extends Gamemode {
         }
     }
 
-
-
-
     public List<Questions> getQuestions() {
         return questions;
     }
@@ -78,27 +69,21 @@ public class ModeNormal extends Gamemode {
     public void setQuestions(List<Questions> questions) {
         this.questions = questions;
     }
-
     public int getMoney() {
         return money;
     }
-
     public void setMoney(int money) {
         this.money = money;
     }
-
     public int getLvl() {
         return lvl;
     }
-
     public void setLvl(int lvl) {
         this.lvl = lvl;
     }
-
     public Questions getCurrentQuestion() {
         return currentQuestion;
     }
-
     public void setCurrentQuestion(Questions currentQuestion) {
         this.currentQuestion = currentQuestion;
     }
