@@ -4,19 +4,19 @@ package de.hebk.model.stack;
 import de.hebk.model.node.Node;
 
 /**
- *
+ *Objekte der Klasse Stack (Stapel) verwalten beliebige Objekte nach dem
+ *Last-In-First-Out-Prinzip, d.h., das zuletzt abgelegte Objekt wird als erstes wieder
+ *entnommen.
  * @param <T>
  */
 public class Stack<T> {
     private Node<T> first;
-
     /**
      * Die Anfrage liefert den Wert true, wenn der Stapel keine
      * Objekte enthält, sonst liefert sie den Wert false.
      */
     public boolean isEmpty(){
-        //TODO fill
-        return true;
+        return first == null;
     }
 
     /**
@@ -24,7 +24,16 @@ public class Stack<T> {
      * pObject gleich null ist, bleibt der Stapel unverändert
      */
     public void push(T pObjekt){
-        //TODO fill
+        if(pObjekt==null) {
+            return;
+        }
+        if(first == null) {
+            first = new Node<T>(pObjekt);
+        } else {
+            Node<T> a = first;
+            first = new Node<T>(pObjekt);
+            first.setNext(a);
+        }
     }
 
     /**
@@ -32,7 +41,9 @@ public class Stack<T> {
      * Falls der Stapel leer ist, bleibt er unverändert.
      */
     public void pop(){
-        //TODO fill
+        if(!isEmpty()) {
+            first = first.getNext();
+        }
     }
 
     /**
@@ -40,7 +51,31 @@ public class Stack<T> {
      * unverändert. Falls der Stapel leer ist, wird null zurückgegeben.
      */
     public T top(){
-        //TODO fill
+        if(first == null) {
+            return null;
+        }
         return this.first.getContext();
+    }
+
+    /**
+     * toString zum überprüfen, kann später weg
+     * @return
+     */
+    public String toString(){
+        String ret = "[";
+        Node<T> tmp = first;
+
+        while (tmp != null){
+            if(tmp.getNext() == null){
+                ret = ret + tmp.getContext().toString();
+            }else {
+                ret = ret + tmp.getContext().toString()+";";
+            }
+            tmp = tmp.getNext();
+        }
+
+
+        ret = ret + "]";
+        return ret;
     }
 }

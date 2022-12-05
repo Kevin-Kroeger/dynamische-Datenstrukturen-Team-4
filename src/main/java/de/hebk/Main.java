@@ -2,6 +2,7 @@ package de.hebk;
 
 import de.hebk.model.list.List;
 import de.hebk.model.queue.Queue;
+import de.hebk.model.stack.Stack;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,6 +13,7 @@ public class Main {
         System.out.println("Hello world!");
 
         testQueue();
+        testStack();
     }
 
 
@@ -30,5 +32,17 @@ public class Main {
         System.out.println(q2);
         System.out.println(q2.front());
         System.out.println(q2.isEmpty());
+    }
+    private static void testStack() {
+        Stack<String> s1 = new Stack<String>();
+        System.out.println("----\nStacktester");
+
+        s1.push("aa");
+        s1.push("bb");
+        System.out.println(s1);
+        System.out.println(s1.top());
+        s1.pop();
+        System.out.println(s1);
+
     }
 }
