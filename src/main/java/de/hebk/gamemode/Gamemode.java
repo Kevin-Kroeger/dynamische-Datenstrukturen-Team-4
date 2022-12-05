@@ -1,12 +1,10 @@
 package de.hebk.gamemode;
 
 
-public class  Gamemode {
+public abstract class  Gamemode {
     private Joker[] joker = new Joker[3];
 
-    public Gamemode(){
 
-    }
     public void useJoker(int pInput){
         if(joker[pInput] != null) {
             if(joker[pInput].getName().equals("fiftyfifty")){
@@ -19,6 +17,8 @@ public class  Gamemode {
 
         }
     }
+
+    public abstract void start();
 
     public void jokerHinzufuegen(Joker pJoker){
         for(int i = 0; i < joker.length; i++){

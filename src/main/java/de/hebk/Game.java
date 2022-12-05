@@ -22,10 +22,16 @@ public class Game {
         user.setAge(pAge);
         user.setPoints(pPoints);
     }
-    public void startModeNormal(){
-        gamemode = new ModeNormal(csv.readCSVList("src/main/java/de/hebk/csv/questions.csv"));
-    }
 
+    public void startGame(){
+        if(gamemode instanceof ModeNormal){
+
+        }else if(gamemode instanceof ModeSurvive){
+            //startet den Gamemode Survive
+        }else if(gamemode instanceof ModeJeopardy){
+            //startet den Gamemode Survive
+        }
+    }
 
     /*
     Getter und Setter
@@ -33,9 +39,6 @@ public class Game {
     public User getUser() {
         return user;
     }
-
-
-
     public Controll getCtrl() {
         return ctrl;
     }
@@ -55,8 +58,8 @@ public class Game {
     public Gamemode getGamemode() {
         return gamemode;
     }
-
-    public void setGamemode(Gamemode gamemode) {
-        this.gamemode = gamemode;
+    public void setGamemode(Gamemode pGamemode){
+        gamemode = new Gamemode();
     }
+
 }

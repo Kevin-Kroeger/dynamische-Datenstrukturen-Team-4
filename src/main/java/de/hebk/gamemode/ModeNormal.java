@@ -32,7 +32,7 @@ public class ModeNormal extends Gamemode {
         }
         //List enthällt jetzt nur Fragen der jeweilligen Schwierigkeitsstufe
         list.toFirst();
-        int j = rand.nextInt(list.getLenght());
+        int j = rand.nextInt(0);//getLenght());
         for(int i = 0; i<j;i++){
             //TODO Testen was passiert wenn die Randomzahl = Letztes Objekt in der Liste
             if(list.hasAccess()) {
@@ -60,6 +60,11 @@ public class ModeNormal extends Gamemode {
         }else if(count == 10){
             setLvl(3);
         }
+    }
+
+    @Override
+    public void start() {
+
     }
 
     public List<Questions> getQuestions() {
