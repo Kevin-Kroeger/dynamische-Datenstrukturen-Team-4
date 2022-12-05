@@ -16,8 +16,7 @@ public class Queue<T> {
      * Objekte enthält, sonst liefert sie den Wert false.
      */
     public boolean isEmpty(){
-        //TODO Fill
-        return true;
+        return first == null;
     }
 
     /**
@@ -25,7 +24,19 @@ public class Queue<T> {
      * pObject gleich null ist, bleibt die Schlange unverändert
      */
     public void enqueue(T pObject){
-        //TODO Fill
+        if( pObject==null) {
+            return;
+        }
+        if (first == null) {
+            first = new Node<T>(pObject);
+        } else {
+            Node<T> n = first;
+
+            while (n.getNext()!=null) {
+                n = n.getNext();
+            }
+            n.setNext(new Node<T>(pObject));
+        }
     }
 
     /**
@@ -33,7 +44,9 @@ public class Queue<T> {
      * Schlange leer ist, wird sie nicht verändert.
      */
     public void dequeue(){
-        //TODO Fill
+        if(!isEmpty()) {
+            first = first.getNext();
+        }
     }
 
     /**
@@ -42,8 +55,9 @@ public class Queue<T> {
      * null zurückgegeben.
      */
     public T front(){
-        //TODO Fill
+        if(first == null) {
+            return null;
+        }
         return first.getContext();
     }
-
 }
