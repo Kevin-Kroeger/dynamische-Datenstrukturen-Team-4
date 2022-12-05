@@ -62,6 +62,9 @@ public class ModeNormal extends Gamemode {
         }
     }
 
+    /**
+     *
+     */
     @Override
     public void start() {
 

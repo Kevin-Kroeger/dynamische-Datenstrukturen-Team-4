@@ -23,14 +23,11 @@ public class Game {
         user.setPoints(pPoints);
     }
 
+    /**
+     *
+     */
     public void startGame(){
-        if(gamemode instanceof ModeNormal){
-
-        }else if(gamemode instanceof ModeSurvive){
-            //startet den Gamemode Survive
-        }else if(gamemode instanceof ModeJeopardy){
-            //startet den Gamemode Survive
-        }
+        gamemode.start();
     }
 
     /*
@@ -59,7 +56,6 @@ public class Game {
         return gamemode;
     }
     public void setGamemode(Gamemode pGamemode){
-        gamemode = new Gamemode();
+        this.gamemode = pGamemode;
     }
-
 }
