@@ -10,12 +10,22 @@ public class Node<T> {
     private Node<T> next;
 
 
+    public Node(){
+
+    }
+
+    public Node(T pContext){
+        this.context = pContext;
+    }
+
+
+
+
     /**
      * returns context of a node
      * @return
      */
     public T getContext(){
-
         return this.context;
     }
 

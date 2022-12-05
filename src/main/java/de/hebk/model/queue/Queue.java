@@ -28,20 +28,14 @@ public class Queue<T> {
             return;
         }
         if (first == null) {
-            first = new Node<T>();
-            first.setContext(pObject);
-        } else if(first.getNext()==null) {
-            first.setNext(new Node<T>());
-            first.getNext().setContext(pObject);
-        }
-        else {
+            first = new Node<T>(pObject);
+        } else {
             Node<T> n = first;
 
             while (n.getNext()!=null) {
                 n = n.getNext();
             }
-            n.setNext(new Node<T>());
-            n.getNext().setContext(pObject);
+            n.setNext(new Node<T>(pObject));
         }
     }
 
@@ -51,8 +45,7 @@ public class Queue<T> {
      */
     public void dequeue(){
         if(!isEmpty()) {
-            Node<T> n = first;
-            first = n.getNext();
+            first = first.getNext();
         }
     }
 
@@ -67,5 +60,4 @@ public class Queue<T> {
         }
         return first.getContext();
     }
-
 }

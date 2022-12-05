@@ -10,6 +10,12 @@ public class Main {
         List<String> l1 = new List<String>();
 
         System.out.println("Hello world!");
+
+        testQueue();
+    }
+
+
+    private static void testQueue(){
         Queue<String> q1 = new Queue<String>();
         q1.enqueue("a");
         q1.enqueue("b");
@@ -24,6 +30,5 @@ public class Main {
         System.out.println(q2);
         System.out.println(q2.front());
         System.out.println(q2.isEmpty());
-
     }
 }
