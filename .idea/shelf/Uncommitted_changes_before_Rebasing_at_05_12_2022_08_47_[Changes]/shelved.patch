@@ -1,0 +1,116 @@
+Index: src/main/java/de/hebk/model/stack/Stack.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package de.hebk.model.stack;\r\n\r\n\r\nimport de.hebk.model.node.Node;\r\n\r\n/**\r\n *\r\n * @param <T>\r\n */\r\npublic class Stack<T> {\r\n    private Node<T> first;\r\n\r\n    /**\r\n     * Die Anfrage liefert den Wert true, wenn der Stapel keine\r\n     * Objekte enthält, sonst liefert sie den Wert false.\r\n     */\r\n    public boolean isEmpty(){\r\n        //TODO fill\r\n        return true;\r\n    }\r\n\r\n    /**\r\n     * Das Objekt pObject wird oben auf den Stapel gelegt. Falls\r\n     * pObject gleich null ist, bleibt der Stapel unverändert\r\n     */\r\n    public void push(T pObjekt){\r\n        //TODO fill\r\n    }\r\n\r\n    /**\r\n     * Das zuletzt eingefügte Objekt wird von dem Stapel entfernt.\r\n     * Falls der Stapel leer ist, bleibt er unverändert.\r\n     */\r\n    public void pop(){\r\n        //TODO fill\r\n    }\r\n\r\n    /**\r\n     * Die Anfrage liefert das oberste Stapelobjekt. Der Stapel bleibt\r\n     * unverändert. Falls der Stapel leer ist, wird null zurückgegeben.\r\n     */\r\n    public T top(){\r\n        //TODO fill\r\n        return this.first.getContext();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/de/hebk/model/stack/Stack.java b/src/main/java/de/hebk/model/stack/Stack.java
+--- a/src/main/java/de/hebk/model/stack/Stack.java	(revision 3daddc2fc082dd5f70c247f3f7177c691ef00ebc)
++++ b/src/main/java/de/hebk/model/stack/Stack.java	(date 1670226469945)
+@@ -15,8 +15,7 @@
+      * Objekte enthält, sonst liefert sie den Wert false.
+      */
+     public boolean isEmpty(){
+-        //TODO fill
+-        return true;
++        return first == null;
+     }
+ 
+     /**
+@@ -24,7 +23,11 @@
+      * pObject gleich null ist, bleibt der Stapel unverändert
+      */
+     public void push(T pObjekt){
+-        //TODO fill
++        Node<T> n = first;
++        if(first == null) {
++            first = new Node<>();
++
++        }
+     }
+ 
+     /**
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"2866380c-7f39-4bed-9416-88fabc0190d1\" name=\"Changes\" comment=\"dc\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Queue1\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"recentNewPullRequestHead\">\r\n      <RepoCoordinatesHolder>\r\n        <option name=\"owner\" value=\"Apftendo\" />\r\n        <option name=\"repository\" value=\"dynamische-Datenstrukturen-Team-4myFork\" />\r\n      </RepoCoordinatesHolder>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task id=\"LOCAL-00001\" summary=\"dc\">\r\n      <created>1670081710247</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670081710247</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"dc\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"dc\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3daddc2fc082dd5f70c247f3f7177c691ef00ebc)
++++ b/.idea/workspace.xml	(date 1670225595151)
+@@ -4,7 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="dc" />
++    <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="dc">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/model/stack/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/model/stack/Stack.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -13,7 +16,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="Queue1" />
++        <entry key="$PROJECT_DIR$" value="Queue2" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+@@ -26,7 +29,23 @@
+       </RepoCoordinatesHolder>
+     </option>
+   </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
++  <component name="ProjectId" id="2IU6H6De2VRag5f1uX9dbo7dzzk" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false"
++  }
++}]]></component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task id="LOCAL-00001" summary="dc">
+       <created>1670081710247</created>
+@@ -35,8 +54,26 @@
+       <option name="project" value="LOCAL" />
+       <updated>1670081710247</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="dc" />
++      <created>1670223746325</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1670223746325</updated>
++      <workItem from="1670223750969" duration="1826000" />
++    </task>
++    <task id="LOCAL-00002" summary="dc">
++      <created>1670224012464</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1670224012464</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
