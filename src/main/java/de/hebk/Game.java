@@ -15,7 +15,6 @@ public class Game {
     public Game(CSVReader pCsv, Controll pCtrl){
         setCsv(pCsv);
         setCtrl(pCtrl);
-
     }
 
     public void createUser(String pName, int pAge, int pPoints){
@@ -23,10 +22,13 @@ public class Game {
         user.setAge(pAge);
         user.setPoints(pPoints);
     }
-    public void startGame(Gamemode pGamemode){
 
+    /**
+     *
+     */
+    public void startGame(){
+        gamemode.start();
     }
-
 
     /*
     Getter und Setter
@@ -34,9 +36,6 @@ public class Game {
     public User getUser() {
         return user;
     }
-
-
-
     public Controll getCtrl() {
         return ctrl;
     }
@@ -56,8 +55,7 @@ public class Game {
     public Gamemode getGamemode() {
         return gamemode;
     }
-
-    public void setGamemode(Gamemode gamemode) {
-        this.gamemode = gamemode;
+    public void setGamemode(Gamemode pGamemode){
+        this.gamemode = pGamemode;
     }
 }
