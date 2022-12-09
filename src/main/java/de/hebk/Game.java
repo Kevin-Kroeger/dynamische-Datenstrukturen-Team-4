@@ -23,10 +23,20 @@ public class Game {
         user.setPoints(pPoints);
     }
 
+
+
+
     /**
-     *
+     *Erstmal zum Testen
      */
-    public void startGame(){
+    public void startGame(int input){
+        if(input == 1){
+            gamemode = new ModeNormal(csv.readCSVList("src/main/java/de/hebk/csv/questions.csv"));
+        }else if(input == 2){
+            gamemode = new ModeSurvive();
+        }else if(input == 3){
+            gamemode = new ModeJeopardy();
+        }
         gamemode.start();
     }
 

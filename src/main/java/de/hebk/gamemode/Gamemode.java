@@ -1,8 +1,15 @@
 package de.hebk.gamemode;
 
 
-public abstract class  Gamemode {
+import de.hebk.model.list.List;
+import de.hebk.model.queue.Queue;
+import de.hebk.model.stack.Stack;
+
+public abstract class Gamemode {
     private Joker[] joker = new Joker[3];
+    public List<Questions> modeNormal;
+    public Stack<Questions> modeSurvive;
+    private Queue<Questions> modeJeopardy;
 
 
     public void useJoker(int pInput){
@@ -35,6 +42,30 @@ public abstract class  Gamemode {
 
     public void setJoker(Joker[] joker) {
         this.joker = joker;
+    }
+
+    public List<Questions> getModeNormal() {
+        return modeNormal;
+    }
+
+    public void setModeNormal(List<Questions> modeNormal) {
+        this.modeNormal = modeNormal;
+    }
+
+    public Stack<Questions> getModeSurvive() {
+        return modeSurvive;
+    }
+
+    public void setModeSurvive(Stack<Questions> modeSurvive) {
+        this.modeSurvive = modeSurvive;
+    }
+
+    public Queue<Questions> getModeJeopardy() {
+        return modeJeopardy;
+    }
+
+    public void setModeJeopardy(Queue<Questions> modeJeopardy) {
+        this.modeJeopardy = modeJeopardy;
     }
 }
 

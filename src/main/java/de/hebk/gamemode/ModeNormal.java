@@ -4,13 +4,12 @@ import de.hebk.model.list.List;
 import java.util.Random;
 
 public class ModeNormal extends Gamemode {
-    private List<Questions> questions;
     private int money;
     private int lvl;
     private Questions currentQuestion;
     private int count = 0;
     public ModeNormal(List<Questions> pList){
-        setQuestions(pList);
+        setModeNormal(pList);
         setLvl(1);
         setMoney(0);
     }
@@ -25,14 +24,14 @@ public class ModeNormal extends Gamemode {
     public void randomQuestion(){
         Random rand = new Random();
         List<Questions> list = new List<>();
-        questions.toFirst();
-        while(questions.getObject().getDifficulty() == lvl){
-            list.append(questions.getObject());
-            questions.remove();
+        modeNormal.toFirst();
+        while(modeNormal.getObject().getDifficulty() == lvl){
+            list.append(modeNormal.getObject());
+            modeNormal.remove();
         }
         //List enthällt jetzt nur Fragen der jeweilligen Schwierigkeitsstufe
         list.toFirst();
-        int j = rand.nextInt(0);//getLenght());
+        int j = rand.nextInt(getModeNormal().getLenght());
         for(int i = 0; i<j;i++){
             //TODO Testen was passiert wenn die Randomzahl = Letztes Objekt in der Liste
             if(list.hasAccess()) {
@@ -67,15 +66,7 @@ public class ModeNormal extends Gamemode {
      */
     @Override
     public void start() {
-
-    }
-
-    public List<Questions> getQuestions() {
-        return questions;
-    }
-
-    public void setQuestions(List<Questions> questions) {
-        this.questions = questions;
+        randomQuestion();
     }
     public int getMoney() {
         return money;
