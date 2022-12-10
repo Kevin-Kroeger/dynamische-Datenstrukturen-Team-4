@@ -3,13 +3,15 @@ import java.util.Random;
 
 
 public class Questions {
+    private String topic;
     private String question;
     private String[] answers = new String[4];
     private String correct;
     private int difficulty;
 
 
-    public Questions(String pQuestion, String[] pAnswers, String pCorrect, int pDifficulty){
+    public Questions(String pTopic,String pQuestion, String[] pAnswers, String pCorrect, int pDifficulty){
+        setTopic(pTopic);
         setQuestion(pQuestion);
         setAnswers(pAnswers);
         setCorrect(pCorrect);
@@ -25,6 +27,14 @@ public class Questions {
             getAnswers()[randomIndexToSwap] = getAnswers()[i];
             getAnswers()[i] = temp;
         }
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
     }
 
     public String getQuestion() {
