@@ -1,5 +1,6 @@
 package de.hebk;
 
+import de.hebk.csv.CSVReader;
 import de.hebk.model.list.List;
 import de.hebk.model.queue.Queue;
 import de.hebk.model.stack.Stack;
@@ -12,8 +13,7 @@ public class Main {
 
         System.out.println("Hello world!");
 
-        testQueue();
-        testStack();
+        testStackQ();
     }
 
 
@@ -44,5 +44,12 @@ public class Main {
         s1.pop();
         System.out.println(s1);
 
+    }
+    private static void testStackQ() {
+        String adress;
+        adress = "C:\\Users\\aswin.peterf\\IdeaProjects\\dynamische-Datenstrukturen-Team-4myFork\\src\\main\\java\\de\\hebk\\csv\\Testcsv";
+        CSVReader c = new CSVReader();
+        c.readCSVListST(adress);
+        System.out.println(c);
     }
 }
