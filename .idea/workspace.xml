@@ -4,137 +4,88 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409f656e-b6de-44ad-bf8f-bfd1307540be" name="Changes" comment="[ADD] Projektstruktur" />
+    <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="dc">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/model/stack/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/model/stack/Stack.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="UML Sequence" />
-        <option value="UML Class" />
-        <option value="UML Object" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Lastenheft" />
+        <entry key="$PROJECT_DIR$" value="Queue2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="Apftendo" />
+        <option name="repository" value="dynamische-Datenstrukturen-Team-4myFork" />
+      </RepoCoordinatesHolder>
+    </option>
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c015d7ba-27e4-4456-ba39-58efabdc3a6e" />
+        <option name="url" value="https://github.com/HEBK-BGM/dynamische-Datenstrukturen-Team-4.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2HBYoget7g6hULhRWUFk73OXd0C" />
+  <component name="ProjectId" id="2IU6H6De2VRag5f1uX9dbo7dzzk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Object",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration name="de.hebk.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Maintester" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="de.hebk.Main" />
       <module name="dynamische-Datenstrukturen-Team1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.hebk.CSV.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.de.hebk.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="409f656e-b6de-44ad-bf8f-bfd1307540be" name="Changes" comment="" />
-      <created>1667760121216</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1667760121216</updated>
-      <workItem from="1667760742384" duration="1990000" />
-      <workItem from="1667762750058" duration="500000" />
-      <workItem from="1667764071977" duration="611000" />
-      <workItem from="1667766457265" duration="8000" />
-      <workItem from="1668589128516" duration="3225000" />
-      <workItem from="1668695870379" duration="25000" />
-      <workItem from="1668754749856" duration="680000" />
-      <workItem from="1668755498712" duration="2502000" />
-    </task>
-    <task id="LOCAL-00001" summary="Init Project">
-      <created>1667762862125</created>
+    <task id="LOCAL-00001" summary="dc">
+      <created>1670081710247</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1667762862125</updated>
+      <updated>1670081710247</updated>
     </task>
-    <task id="LOCAL-00002" summary="Init Project">
-      <created>1667764093538</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="dc" />
+      <created>1670223746325</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670223746325</updated>
+      <workItem from="1670223750969" duration="3661000" />
+    </task>
+    <task id="LOCAL-00002" summary="dc">
+      <created>1670224012464</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1667764093538</updated>
+      <updated>1670224012464</updated>
     </task>
-    <task id="LOCAL-00003" summary="[CHA] Klassendiagramm.puml">
-      <created>1668589355312</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1668589355312</updated>
-    </task>
-    <task id="LOCAL-00004" summary="[CHA] Klassendiagramm.puml">
-      <created>1668593254141</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1668593254141</updated>
-    </task>
-    <task id="LOCAL-00005" summary="[CHA] Klassendiagramm.puml">
-      <created>1668755033407</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1668755033407</updated>
-    </task>
-    <task id="LOCAL-00006" summary="[CHA] Klassendiagramm.puml + Lastenheft.md 3.1">
-      <created>1668756750827</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1668756750827</updated>
-    </task>
-    <task id="LOCAL-00007" summary="[ADD] Projektstruktur">
-      <created>1668757896187</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1668757896187</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,33 +96,14 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="Lastenheft" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Init Project" />
-    <MESSAGE value="[CHA] Klassendiagramm.puml" />
-    <MESSAGE value="[CHA] Klassendiagramm.puml + Lastenheft.md 3.1" />
-    <MESSAGE value="[ADD] Projektstruktur" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Projektstruktur" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="dc" />
+    <option name="LAST_COMMIT_MESSAGE" value="dc" />
   </component>
 </project>
