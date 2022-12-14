@@ -30,18 +30,17 @@ public class ModeNormal extends Gamemode {
         Random rand = new Random();
         List<Questions> list = new List<>();
         modeNormal.toFirst();
-        while(modeNormal.getObject().getDifficulty() == lvl){
-            list.append(modeNormal.getObject());
+        while(modeNormal.hasAccess()){
+            if(modeNormal.getObject().getDifficulty() == lvl){
+                list.append(modeNormal.getObject());
+            }
             modeNormal.remove();
         }
         //List enthällt jetzt nur Fragen der jeweilligen Schwierigkeitsstufe
         list.toFirst();
-        int j = rand.nextInt(getModeNormal().getLenght());
-        for(int i = 0; i<j;i++){
-        //TODO Testen was passiert wenn die Randomzahl = Letztes Objekt in der Liste
-          if(list.hasAccess()) {
+        int j = rand.nextInt(list.getLenght()+1);
+        for(int i = 0; i < j;i++){
             list.next();
-            }
         }
         currentQuestion = list.getObject();
     }
