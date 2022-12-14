@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ModenormalGui extends JFrame {
+public class ModenormalGui extends JFrame implements ActionListener{
 
     private Gamemode gamemode;
     private JPanel panel1;
@@ -21,26 +21,41 @@ public class ModenormalGui extends JFrame {
     private JPanel antworten;
     private JPanel fragePanel;
 
-    public ModenormalGui(Gamemode pGamemode, String pTitel){
+    public ModenormalGui(Gamemode pGamemode, String pTitel) {
         super(pTitel);
+
         gamemode = pGamemode;
         generateLabelButtontext();
-        this.setSize(600,400);
-        this.setVisible(true);
-        this.add(panel1);
 
+        this.setSize(600, 400);
+        this.setVisible(true);
+
+        this.add(panel1);
+        antwort1.addActionListener(this);
+        antwort2.addActionListener(this);
+        antwort3.addActionListener(this);
+        antwort4.addActionListener(this);
+
+
+        /*
         //Bild Wer wird Millionär
         ImageIcon wwm = new ImageIcon("wer-wird-millionaer-20201023-DE-news.jpg");
         JLabel pic = new JLabel(wwm);
         panel1.add(pic);
-
-        antwort1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
+        */
     }
+        public void actionPerformed(ActionEvent event){
+            if(event.getSource() == antwort1 || event.getSource() == antwort2 || event.getSource() == antwort3 || event.getSource() == antwort4){
+                if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
+                    System.out.println("Korrekt");
+                }else{
+                    System.out.println("Falsch");
+                }
+            }
+        }
+
+
+
 
 
 
