@@ -3,12 +3,15 @@ package de.hebk.controll;
 import de.hebk.Game;
 import de.hebk.gamemode.Gamemode;
 import de.hebk.gamemode.ModeNormal;
+import de.hebk.gamemode.Questions;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ModenormalGui extends JFrame implements ActionListener{
+
+
 
     private Gamemode gamemode;
     private JPanel panel1;
@@ -27,10 +30,10 @@ public class ModenormalGui extends JFrame implements ActionListener{
         gamemode = pGamemode;
         generateLabelButtontext();
 
+        this.add(panel1);
         this.setSize(600, 400);
         this.setVisible(true);
 
-        this.add(panel1);
         antwort1.addActionListener(this);
         antwort2.addActionListener(this);
         antwort3.addActionListener(this);
@@ -47,7 +50,9 @@ public class ModenormalGui extends JFrame implements ActionListener{
         public void actionPerformed(ActionEvent event){
             if(event.getSource() == antwort1 || event.getSource() == antwort2 || event.getSource() == antwort3 || event.getSource() == antwort4){
                 if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
+                    generateLabelButtontext();
                     System.out.println("Korrekt");
+
                 }else{
                     System.out.println("Falsch");
                 }

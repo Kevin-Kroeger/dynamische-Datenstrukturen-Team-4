@@ -34,6 +34,7 @@ public class ModeNormal extends Gamemode {
             if(modeNormal.getObject().getDifficulty() == lvl){
                 list.append(modeNormal.getObject());
             }
+            modeNormal.next();
             modeNormal.remove();
         }
         //List enthällt jetzt nur Fragen der jeweilligen Schwierigkeitsstufe
@@ -46,18 +47,11 @@ public class ModeNormal extends Gamemode {
     }
 
 
-    /**
-     *
-     * @param pAnswer
-     */
     @Override
-    public void nextQuestion(String pAnswer) {
-        if(checkcorrect(pAnswer)){
-            //Todo Money System einbauen & Überprüfung der Antwort
-            count++;
-            changeLVL();
-            randomQuestion();
-        }
+    public void nextQuestion() {
+        count++;
+        changeLVL();
+        randomQuestion();
     }
 
     public void changeLVL(){
@@ -103,7 +97,7 @@ public class ModeNormal extends Gamemode {
     public Questions getCurrentQuestion() {
         return currentQuestion;
     }
-    public void setCurrentQuestion(Questions currentQuestion) {
+    public void setCurrentQuestion(Questions currentQuestion){
         this.currentQuestion = currentQuestion;
     }
 
