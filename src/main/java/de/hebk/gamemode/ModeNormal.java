@@ -28,22 +28,17 @@ public class ModeNormal extends Gamemode {
     @Override
     public void randomQuestion() {
         Random rand = new Random();
-        List<Questions> list = new List<>();
         modeNormal.toFirst();
-        while(modeNormal.hasAccess()){
-            if(modeNormal.getObject().getDifficulty() == lvl){
-                list.append(modeNormal.getObject());
-            }
-            modeNormal.next();
-            modeNormal.remove();
-        }
-        //List enthällt jetzt nur Fragen der jeweilligen Schwierigkeitsstufe
-        list.toFirst();
-        int j = rand.nextInt(list.getLenght()+1);
+        int j = rand.nextInt(modeNormal.getLenght()+1);
         for(int i = 0; i < j;i++){
-            list.next();
+            modeNormal.next();
         }
-        currentQuestion = list.getObject();
+        if(modeNormal.getObject().getDifficulty() == lvl){
+            currentQuestion = modeNormal.getObject();
+            modeNormal.remove();
+        }else{
+            randomQuestion();
+        }
     }
 
 

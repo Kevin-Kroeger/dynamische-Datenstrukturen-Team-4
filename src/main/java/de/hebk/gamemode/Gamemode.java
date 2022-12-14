@@ -12,6 +12,8 @@ public abstract class Gamemode {
     private Queue<Questions> modeJeopardy;
 
 
+
+
     public abstract void useJoker(int pInput);
 
     public abstract void start();
@@ -20,7 +22,8 @@ public abstract class Gamemode {
 
     public abstract boolean checkcorrect(String pAnswer);
     public abstract void randomQuestion();
-    public abstract void nextQuestion(String pAnswer);
+
+    public abstract void nextQuestion();
 
 
     public Joker[] getJoker() {
@@ -56,5 +59,6 @@ public abstract class Gamemode {
     }
 
     public abstract Questions getCurrentQuestion();
+    public abstract void setCurrentQuestion(Questions currentQuestion);
 }
 
