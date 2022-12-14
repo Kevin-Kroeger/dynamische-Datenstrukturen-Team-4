@@ -46,18 +46,16 @@ public class List<T> {
      * aktuelles Objekt.
      */
     public void next(){
-        //ToDo einmal testen und überprüfen das sieht nicht richtig aus. Bitte funktion gemäß oberen Text überprüfen
-        if(isEmpty()) {
-            return;
-        }
-        if (hasAccess()){
-            // ToDO wenn es ein aktuelles Element gibt, dann wird es auf das first Node gesetzt? Das ist nicht richtig
-            current = first;
-            return;
-        }
-        if (current.getNext()!=null) {// soll null sein nicht überprüfen
-            current = current.getNext();
-        }
+       if(isEmpty()){
+           return;
+       }
+       if(!hasAccess()){
+           first = current;
+           return;
+       }
+       if(current.getNext() != null){
+           current = current.getNext();
+       }
     }
 
     /**
@@ -195,26 +193,32 @@ public class List<T> {
      * unverändert.
      */
     public void remove(){
-        Node<T> tmp=first;
-        Node<T> next = current.getNext(); // null pointer exception sofern current == null
-        // ToDo hasAcces sollte vor current.getNext() überprüft werden
-        if(hasAccess()){
-            while(tmp.getNext()!= current){
-                tmp = tmp.getNext();
-            }
-            //ToDo es fehlt: das Objekt hinter dem gelöschten Objekt wird
-            //     * zum aktuellen Objekt
-            current = tmp;
-            current.setNext(next);
+        if(isEmpty() || !hasAccess()){
+            return;
         }
+        if(first == current){
+            first = first.getNext();
+            current = current.getNext();
+            return;
+        }
+        Node<T> tmp = first;
+        while(tmp.getNext() != current){
+            tmp = tmp.getNext();
+        }
+        tmp.setNext(current.getNext());
+        current = current.getNext();
+
     }
 
     public int getLenght(){
+        int count = 1;
+        if(first == null){
+            return 0;
+        }
         Node<T> tmp = first;
-        int count = 0;
         while(tmp.getNext() != null){
-            tmp = tmp.getNext();
             count++;
+            tmp = tmp.getNext();
         }
         return count;
     }
