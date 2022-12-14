@@ -32,6 +32,7 @@ public class Game {
     public void startGame(int input){
         if(input == 1){
             gamemode = new ModeNormal(csv.readCSVList("src/main/java/de/hebk/csv/questions.csv"));
+            ModenormalGui gui = new ModenormalGui(gamemode,"Hallo");
         }else if(input == 2){
             gamemode = new ModeSurvive();
         }else if(input == 3){
