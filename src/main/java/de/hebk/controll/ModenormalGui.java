@@ -16,16 +16,24 @@ public class ModenormalGui extends JFrame {
     private JButton antwort2;
     private JButton antwort3;
     private JButton antwort4;
-    private JLabel Geld;
     private JLabel frage;
+    private JPanel geldAnzeige;
+    private JPanel antworten;
+    private JPanel fragePanel;
 
     public ModenormalGui(Gamemode pGamemode, String pTitel){
         super(pTitel);
         gamemode = pGamemode;
         generateLabelButtontext();
-        this.setSize(600,800);
+        this.setSize(600,400);
         this.setVisible(true);
         this.add(panel1);
+
+        //Bild Wer wird Millionär
+        ImageIcon wwm = new ImageIcon("wer-wird-millionaer-20201023-DE-news.jpg");
+        JLabel pic = new JLabel(wwm);
+        panel1.add(pic);
+
         antwort1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
