@@ -1,5 +1,6 @@
 package de.hebk.controll;
 
+import de.hebk.Game;
 import de.hebk.gamemode.Gamemode;
 import de.hebk.gamemode.ModeNormal;
 
@@ -9,7 +10,7 @@ import java.awt.event.ActionListener;
 
 public class ModenormalGui extends JFrame {
 
-    private ModeNormal gamemode;
+    private Gamemode gamemode;
     private JPanel panel1;
     private JButton antwort1;
     private JButton antwort2;
@@ -18,7 +19,7 @@ public class ModenormalGui extends JFrame {
     private JLabel Geld;
     private JLabel frage;
 
-    public ModenormalGui(ModeNormal pGamemode, String pTitel){
+    public ModenormalGui(Gamemode pGamemode, String pTitel){
         super(pTitel);
         gamemode = pGamemode;
         generateLabelButtontext();
@@ -33,13 +34,15 @@ public class ModenormalGui extends JFrame {
         });
     }
 
+
+
     private void generateLabelButtontext() {
         gamemode.randomQuestion();
         gamemode.getCurrentQuestion().randomAnswers();
-        antwort1.setText(gamemode.getCurrentQuestion().getAnswers()[1]);
-        antwort2.setText(gamemode.getCurrentQuestion().getAnswers()[2]);
-        antwort3.setText(gamemode.getCurrentQuestion().getAnswers()[3]);
-        antwort4.setText(gamemode.getCurrentQuestion().getAnswers()[4]);
+        antwort1.setText(gamemode.getCurrentQuestion().getAnswers()[0]);
+        antwort2.setText(gamemode.getCurrentQuestion().getAnswers()[1]);
+        antwort3.setText(gamemode.getCurrentQuestion().getAnswers()[2]);
+        antwort4.setText(gamemode.getCurrentQuestion().getAnswers()[3]);
         frage.setText(gamemode.getCurrentQuestion().getQuestion());
     }
 }
