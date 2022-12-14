@@ -12,29 +12,16 @@ public abstract class Gamemode {
     private Queue<Questions> modeJeopardy;
 
 
-    public void useJoker(int pInput){
-        if(joker[pInput] != null) {
-            if(joker[pInput].getName().equals("fiftyfifty")){
-                joker[pInput] = null;
-            }else if(joker[pInput].getName().equals("telephone")){
-                joker[pInput] = null;
-            }else if(joker[pInput].getName().equals("audience")){
-                joker[pInput] = null;
-            }
-
-        }
-    }
+    public abstract void useJoker(int pInput);
 
     public abstract void start();
 
-    public void jokerHinzufuegen(Joker pJoker){
-        for(int i = 0; i < joker.length; i++){
-            if(joker[i] == null);{
-                joker[i] = pJoker;
-                return;
-            }
-        }
-    }
+    public abstract void jokerHinzufuegen(Joker pJoker);
+
+    public abstract boolean checkcorrect(String pAnswer);
+    public abstract void randomQuestion();
+    public abstract void nextQuestion(String pAnswer);
+
 
     public Joker[] getJoker() {
         return joker;
@@ -67,5 +54,7 @@ public abstract class Gamemode {
     public void setModeJeopardy(Queue<Questions> modeJeopardy) {
         this.modeJeopardy = modeJeopardy;
     }
+
+    public abstract Questions getCurrentQuestion();
 }
 

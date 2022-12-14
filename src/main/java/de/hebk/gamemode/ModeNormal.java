@@ -8,20 +8,25 @@ public class ModeNormal extends Gamemode {
     private int lvl;
     private Questions currentQuestion;
     private int count = 0;
-    public ModeNormal(List<Questions> pList){
-        setModeNormal(pList);
+    public ModeNormal(){
+        setModeNormal(getModeNormal());
         setLvl(1);
         setMoney(0);
     }
-    public boolean checkCorrect(String pAnswer){
+
+    @Override
+    public boolean checkcorrect(String pAnswer) {
         return pAnswer.equals(currentQuestion.getCorrect());
     }
+
+
 
     /**
      *
      * @return
      */
-    public void randomQuestion(){
+    @Override
+    public void randomQuestion() {
         Random rand = new Random();
         List<Questions> list = new List<>();
         modeNormal.toFirst();
@@ -33,19 +38,22 @@ public class ModeNormal extends Gamemode {
         list.toFirst();
         int j = rand.nextInt(getModeNormal().getLenght());
         for(int i = 0; i<j;i++){
-            //TODO Testen was passiert wenn die Randomzahl = Letztes Objekt in der Liste
-            if(list.hasAccess()) {
-                list.next();
+        //TODO Testen was passiert wenn die Randomzahl = Letztes Objekt in der Liste
+          if(list.hasAccess()) {
+            list.next();
             }
         }
         currentQuestion = list.getObject();
     }
 
+
     /**
      *
+     * @param pAnswer
      */
-    public void nextQuestion(String pAnswer){
-        if(checkCorrect(pAnswer)){
+    @Override
+    public void nextQuestion(String pAnswer) {
+        if(checkcorrect(pAnswer)){
             //Todo Money System einbauen & Überprüfung der Antwort
             count++;
             changeLVL();
@@ -60,6 +68,19 @@ public class ModeNormal extends Gamemode {
             setLvl(3);
         }
     }
+
+    @Override
+    public void useJoker(int pInput) {
+
+    }
+
+    @Override
+    public void jokerHinzufuegen(Joker pJoker) {
+
+    }
+
+
+
 
     /**
      *
@@ -86,4 +107,16 @@ public class ModeNormal extends Gamemode {
     public void setCurrentQuestion(Questions currentQuestion) {
         this.currentQuestion = currentQuestion;
     }
+
+    @Override
+    public Joker[] getJoker() {
+        return super.getJoker();
+    }
+
+    @Override
+    public void setJoker(Joker[] joker) {
+        super.setJoker(joker);
+    }
+
+
 }
