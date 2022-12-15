@@ -12,6 +12,7 @@ public class ModenormalGui extends JFrame implements ActionListener{
 
 
     private Gamemode gamemode;
+    private int count = 0;
     private JPanel panel1;
     private JButton antwort1;
     private JButton antwort2;
@@ -40,6 +41,7 @@ public class ModenormalGui extends JFrame implements ActionListener{
     private JLabel money13;
     private JLabel money14;
     private JLabel money15;
+    private JButton end;
 
     public ModenormalGui(Gamemode pGamemode, String pTitel) {
         super(pTitel);
@@ -49,8 +51,8 @@ public class ModenormalGui extends JFrame implements ActionListener{
         generateLabelButtontext();
 
         this.add(panel1);
-        this.setSize(600, 400);
         this.setVisible(true);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         //Icons für Joker
         Icon joker50 = new ImageIcon("src/main/java/de/hebk/images/icons/50-50.png");
@@ -68,20 +70,30 @@ public class ModenormalGui extends JFrame implements ActionListener{
 
 
         //Bild Wer wird Millionär
+        /*
         ImageIcon wwm = new ImageIcon("wer-wird-millionaer-20201023-DE-news.jpg");
         JLabel pic = new JLabel(wwm);
-        //frage.add(pic);
+        fragePanel.add(pic);
+         */
 
+        end.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(1);
+            }
+        });
     }
         public void actionPerformed(ActionEvent event){
             if(event.getSource() == antwort1 || event.getSource() == antwort2 || event.getSource() == antwort3 || event.getSource() == antwort4){
                 if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
                     gamemode.nextQuestion();
+                    count++;
                     generateLabelButtontext();
                     System.out.println("Korrekt");
 
                 }else{
-                    System.out.println("Falsch");
+                    frage.setText("Diese Antwort ist Falsch");
+                    frage.setForeground(Color.RED);
                 }
             }
         }
