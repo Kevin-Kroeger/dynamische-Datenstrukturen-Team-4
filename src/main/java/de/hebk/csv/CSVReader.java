@@ -25,11 +25,13 @@ public class CSVReader {
             while((line = br.readLine()) != null){
                 String[] arr = line.split(",");
                 String[] questions = new String[4];
-                for(int i = 0, j = 2; i < questions.length; i++,j++){
+                for(int i = 0, j = 3; i < questions.length; i++,j++){
                     questions[i] = arr[j];
+                    System.out.println(questions[i] + " " + arr[j]);
+                    System.out.println(i + " " + j);
                 }
-                int diff = Integer.parseInt(arr[1]);
-                l1.append(new Questions(arr[0], questions,arr[2],diff));
+                int diff = Integer.parseInt(arr[2]);
+                l1.append(new Questions(arr[0],arr[1], questions,arr[3],diff));
             }
             br.close();
         } catch (IOException e) {
