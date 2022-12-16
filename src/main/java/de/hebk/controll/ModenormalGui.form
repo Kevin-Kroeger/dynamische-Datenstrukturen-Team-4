@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="de.hebk.controll.ModenormalGui">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="1277" height="473"/>
+    </constraints>
+    <properties>
+      <background color="-16776639"/>
+      <enabled value="true"/>
+      <foreground color="-16776639"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="78fbd" binding="antworten" layout-manager="GridBagLayout">
+        <constraints border-constraint="South"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="8a62b" class="javax.swing.JButton" binding="antwort3">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-15771717"/>
+              <foreground color="-16777216"/>
+              <text value="Button"/>
+            </properties>
+          </component>
+          <component id="b6e71" class="javax.swing.JButton" binding="antwort2">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="50.0" weighty="50.0"/>
+            </constraints>
+            <properties>
+              <background color="-15771717"/>
+              <foreground color="-16777216"/>
+              <text value="Button"/>
+            </properties>
+          </component>
+          <component id="ab9f2" class="javax.swing.JButton" binding="antwort4">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-15771717"/>
+              <foreground color="-16777216"/>
+              <text value="Button"/>
+            </properties>
+          </component>
+          <component id="1c2d1" class="javax.swing.JButton" binding="antwort1">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="50.0" weighty="50.0"/>
+            </constraints>
+            <properties>
+              <background color="-15771717"/>
+              <foreground color="-16777216"/>
+              <text value="Button"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="19ded" binding="geldAnzeige" layout-manager="GridBagLayout">
+        <constraints border-constraint="East"/>
+        <properties>
+          <background color="-16776639"/>
+        </properties>
+        <border type="none" title=""/>
+        <children>
+          <component id="f1541" class="javax.swing.JLabel" binding="money1">
+            <constraints>
+              <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-12828863"/>
+              <font size="16"/>
+              <foreground color="-7248349"/>
+              <text value="1 - € 50"/>
+            </properties>
+          </component>
+          <component id="65093" class="javax.swing.JLabel" binding="money2">
+            <constraints>
+              <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-7248349"/>
+              <text value="2 - € 100"/>
+            </properties>
+          </component>
+          <component id="7ce4f" class="javax.swing.JLabel" binding="money3">
+            <constraints>
+              <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-7248349"/>
+              <text value="3 - € 200"/>
+            </properties>
+          </component>
+          <component id="4a003" class="javax.swing.JLabel" binding="money4">
+            <constraints>
+              <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-7248349"/>
+              <text value="4 - € 300"/>
+            </properties>
+          </component>
+          <component id="a4470" class="javax.swing.JLabel" binding="money5">
+            <constraints>
+              <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-657921"/>
+              <text value="5 - € 500"/>
+            </properties>
+          </component>
+          <component id="3f220" class="javax.swing.JLabel" binding="money6">
+            <constraints>
+              <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-7248349"/>
+              <text value="6 - € 1000"/>
+            </properties>
+          </component>
+          <component id="1f932" class="javax.swing.JLabel" binding="money7">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-7248349"/>
+              <text value="7 - € 2000"/>
+            </properties>
+          </component>
+          <component id="157dd" class="javax.swing.JLabel" binding="money8">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-7248349"/>
+              <text value="8 - € 4000"/>
+            </properties>
+          </component>
+          <component id="5080b" class="javax.swing.JLabel" binding="money9">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-7248349"/>
+              <text value="9 - € 8000"/>
+            </properties>
+          </component>
+          <component id="ad761" class="javax.swing.JLabel" binding="money10">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-657921"/>
+              <text value="10 - € 16.000"/>
+            </properties>
+          </component>
+          <component id="847a4" class="javax.swing.JLabel" binding="money11">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-7248349"/>
+              <text value="11 - € 32.000"/>
+            </properties>
+          </component>
+          <component id="be478" class="javax.swing.JLabel" binding="money12">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-7248349"/>
+              <text value="12 - € 64.000"/>
+            </properties>
+          </component>
+          <component id="459be" class="javax.swing.JLabel" binding="money13">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-7248349"/>
+              <text value="13 - € 125.000"/>
+            </properties>
+          </component>
+          <component id="ec29d" class="javax.swing.JLabel" binding="money14">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-7248349"/>
+              <text value="14 - € 500.000"/>
+            </properties>
+          </component>
+          <component id="c2583" class="javax.swing.JLabel" binding="money15">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16"/>
+              <foreground color="-657921"/>
+              <text value="15 - € 1 MILLIONEN"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="be822" binding="fragePanel" layout-manager="GridBagLayout">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <background color="-16776639"/>
+          <font size="50"/>
+          <foreground color="-16777216"/>
+          <maximumSize width="200" height="200"/>
+          <preferredSize width="200" height="200"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="1e59e" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+              <gridbag top="50" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-16776639"/>
+              <font size="50"/>
+              <foreground color="-7248349"/>
+              <lineWrap value="true"/>
+              <margin top="0" left="50" bottom="0" right="50"/>
+              <maximumSize width="50" height="300"/>
+              <wrapStyleWord value="true"/>
+            </properties>
+          </component>
+          <vspacer id="359b1">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="6" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="200" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+            </constraints>
+          </vspacer>
+          <component id="4307" class="javax.swing.JButton" binding="end">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-15771717"/>
+              <foreground color="-657921"/>
+              <margin top="0" left="0" bottom="0" right="0"/>
+              <preferredSize width="100" height="30"/>
+              <text value="End Game"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="31fc8" binding="joker" layout-manager="GridBagLayout">
+        <constraints border-constraint="West"/>
+        <properties>
+          <background color="-16776639"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="f066d" class="javax.swing.JButton" binding="joker3">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-16776639"/>
+              <horizontalTextPosition value="0"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="6aff8" class="javax.swing.JButton" binding="joker2">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="50" right="0" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-16776639"/>
+              <horizontalTextPosition value="0"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="5d1bc" class="javax.swing.JButton" binding="joker1">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-16776639"/>
+              <horizontalTextPosition value="0"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

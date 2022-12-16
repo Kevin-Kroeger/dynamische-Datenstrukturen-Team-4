@@ -27,8 +27,6 @@ public class CSVReader {
                 String[] questions = new String[4];
                 for(int i = 0, j = 3; i < questions.length; i++,j++){
                     questions[i] = arr[j];
-                    System.out.println(questions[i] + " " + arr[j]);
-                    System.out.println(i + " " + j);
                 }
                 int diff = Integer.parseInt(arr[2]);
                 l1.append(new Questions(arr[0],arr[1], questions,arr[3],diff));

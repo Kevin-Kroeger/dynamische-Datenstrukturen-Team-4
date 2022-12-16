@@ -23,11 +23,18 @@ public class Game {
         user.setPoints(pPoints);
     }
 
+
+
+
     /**
-     *
+     *Erstmal zum Testen
      */
-    public void startGame(){
-        gamemode.start();
+    public void startGame(int input){
+        if(input == 1) {
+            gamemode = new ModeNormal();
+            gamemode.setModeNormal(csv.readCSVList("src/main/java/de/hebk/csv/questions.csv"));
+            ctrl.gamemodeGui(gamemode);
+        }
     }
 
     /*

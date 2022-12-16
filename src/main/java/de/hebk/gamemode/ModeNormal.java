@@ -4,54 +4,49 @@ import de.hebk.model.list.List;
 import java.util.Random;
 
 public class ModeNormal extends Gamemode {
-    private List<Questions> questions;
     private int money;
     private int lvl;
     private Questions currentQuestion;
     private int count = 0;
-    public ModeNormal(List<Questions> pList){
-        setQuestions(pList);
+    public ModeNormal(){
+        setModeNormal(getModeNormal());
         setLvl(1);
         setMoney(0);
     }
-    public boolean checkCorrect(String pAnswer){
+
+    @Override
+    public boolean checkcorrect(String pAnswer) {
         return pAnswer.equals(currentQuestion.getCorrect());
     }
+
+
 
     /**
      *
      * @return
      */
-    public void randomQuestion(){
+    @Override
+    public void randomQuestion() {
         Random rand = new Random();
-        List<Questions> list = new List<>();
-        questions.toFirst();
-        while(questions.getObject().getDifficulty() == lvl){
-            list.append(questions.getObject());
-            questions.remove();
+        modeNormal.toFirst();
+        int j = rand.nextInt(modeNormal.getLenght()+1);
+        for(int i = 0; i < j;i++){
+            modeNormal.next();
         }
-        //List enthällt jetzt nur Fragen der jeweilligen Schwierigkeitsstufe
-        list.toFirst();
-        int j = rand.nextInt(0);//getLenght());
-        for(int i = 0; i<j;i++){
-            //TODO Testen was passiert wenn die Randomzahl = Letztes Objekt in der Liste
-            if(list.hasAccess()) {
-                list.next();
-            }
-        }
-        currentQuestion = list.getObject();
-    }
-
-    /**
-     *
-     */
-    public void nextQuestion(String pAnswer){
-        if(checkCorrect(pAnswer)){
-            //Todo Money System einbauen & Überprüfung der Antwort
-            count++;
-            changeLVL();
+        if(modeNormal.getObject().getDifficulty() == lvl){
+            currentQuestion = modeNormal.getObject();
+            modeNormal.remove();
+        }else{
             randomQuestion();
         }
+    }
+
+
+    @Override
+    public void nextQuestion() {
+        count++;
+        changeLVL();
+        randomQuestion();
     }
 
     public void changeLVL(){
@@ -62,20 +57,25 @@ public class ModeNormal extends Gamemode {
         }
     }
 
+    @Override
+    public void useJoker(int pInput) {
+
+    }
+
+    @Override
+    public void jokerHinzufuegen(Joker pJoker) {
+
+    }
+
+
+
+
     /**
      *
      */
     @Override
     public void start() {
-
-    }
-
-    public List<Questions> getQuestions() {
-        return questions;
-    }
-
-    public void setQuestions(List<Questions> questions) {
-        this.questions = questions;
+        randomQuestion();
     }
     public int getMoney() {
         return money;
@@ -92,7 +92,19 @@ public class ModeNormal extends Gamemode {
     public Questions getCurrentQuestion() {
         return currentQuestion;
     }
-    public void setCurrentQuestion(Questions currentQuestion) {
+    public void setCurrentQuestion(Questions currentQuestion){
         this.currentQuestion = currentQuestion;
     }
+
+    @Override
+    public Joker[] getJoker() {
+        return super.getJoker();
+    }
+
+    @Override
+    public void setJoker(Joker[] joker) {
+        super.setJoker(joker);
+    }
+
+
 }
