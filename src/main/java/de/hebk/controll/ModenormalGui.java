@@ -18,7 +18,6 @@ public class ModenormalGui extends JFrame implements ActionListener{
     private JButton antwort2;
     private JButton antwort3;
     private JButton antwort4;
-    private JLabel frage;
     private JPanel geldAnzeige;
     private JPanel antworten;
     private JPanel fragePanel;
@@ -42,6 +41,8 @@ public class ModenormalGui extends JFrame implements ActionListener{
     private JLabel money14;
     private JLabel money15;
     private JButton end;
+    private JTextArea textArea1;
+
 
     public ModenormalGui(Gamemode pGamemode, String pTitel) {
         super(pTitel);
@@ -89,15 +90,15 @@ public class ModenormalGui extends JFrame implements ActionListener{
                 count++;
                 if(count == 15){
                     deleteAnswerbuttons();
-                    frage.setText("DU HAST 1.000.0000€ GEWONNEN ");
-                    frage.setForeground(Color.orange);
+                    textArea1.setText("DU HAST 1.000.0000€ GEWONNEN ");
+                    textArea1.setForeground(Color.orange);
                 }else{
                     gamemode.nextQuestion();
                     generateLabelButtontext();
                 }
             }else{
-                frage.setText("Diese Antwort ist Falsch");
-                frage.setForeground(Color.RED);
+                textArea1.setText("Diese Antwort ist Falsch");
+                textArea1.setForeground(Color.RED);
                 deleteAnswerbuttons();
             }
         }
@@ -115,6 +116,6 @@ public class ModenormalGui extends JFrame implements ActionListener{
         antwort2.setText(gamemode.getCurrentQuestion().getAnswers()[1]);
         antwort3.setText(gamemode.getCurrentQuestion().getAnswers()[2]);
         antwort4.setText(gamemode.getCurrentQuestion().getAnswers()[3]);
-        frage.setText(gamemode.getCurrentQuestion().getQuestion());
+        textArea1.setText(gamemode.getCurrentQuestion().getQuestion());
     }
 }
