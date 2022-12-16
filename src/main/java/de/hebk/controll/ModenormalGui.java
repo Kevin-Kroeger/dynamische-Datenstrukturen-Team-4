@@ -83,25 +83,31 @@ public class ModenormalGui extends JFrame implements ActionListener{
             }
         });
     }
-        public void actionPerformed(ActionEvent event){
-            if(event.getSource() == antwort1 || event.getSource() == antwort2 || event.getSource() == antwort3 || event.getSource() == antwort4){
-                if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
-                    gamemode.nextQuestion();
-                    count++;
-                    generateLabelButtontext();
-                    System.out.println("Korrekt");
-
+    public void actionPerformed(ActionEvent event){
+        if(event.getSource() == antwort1 || event.getSource() == antwort2 || event.getSource() == antwort3 || event.getSource() == antwort4){
+            if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
+                count++;
+                if(count == 15){
+                    deleteAnswerbuttons();
+                    frage.setText("DU HAST 1.000.0000€ GEWONNEN ");
+                    frage.setForeground(Color.orange);
                 }else{
-                    frage.setText("Diese Antwort ist Falsch");
-                    frage.setForeground(Color.RED);
+                    gamemode.nextQuestion();
+                    generateLabelButtontext();
                 }
+            }else{
+                frage.setText("Diese Antwort ist Falsch");
+                frage.setForeground(Color.RED);
+                deleteAnswerbuttons();
             }
         }
-
-
-
-
-
+    }
+    public void deleteAnswerbuttons(){
+        antwort1.setVisible(false);
+        antwort2.setVisible(false);
+        antwort3.setVisible(false);
+        antwort4.setVisible(false);
+    }
 
     private void generateLabelButtontext() {
         gamemode.getCurrentQuestion().randomAnswers();

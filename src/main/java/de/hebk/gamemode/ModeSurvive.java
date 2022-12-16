@@ -30,12 +30,17 @@ public class ModeSurvive extends Gamemode {
     }
 
     @Override
-    public void nextQuestion(String pAnswer) {
+    public void nextQuestion() {
 
     }
 
     @Override
     public Questions getCurrentQuestion() {
         return null;
+    }
+
+    @Override
+    public void setCurrentQuestion(Questions currentQuestion) {
+
     }
 }
