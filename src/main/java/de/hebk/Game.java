@@ -12,9 +12,10 @@ public class Game {
     private Gamemode gamemode;
 
 
-    public Game(CSVReader pCsv, Controll pCtrl){
-        setCsv(pCsv);
-        setCtrl(pCtrl);
+    public Game(){
+        ctrl = new Controll(this);
+        csv = new CSVReader();
+        ctrl.showMenu();
     }
 
     public void createUser(String pName, int pAge, int pPoints){
@@ -33,7 +34,6 @@ public class Game {
         if(input == 1) {
             gamemode = new ModeNormal();
             gamemode.setModeNormal(csv.readCSVList("src/main/java/de/hebk/csv/questions.csv"));
-            ctrl.gamemodeGui(gamemode);
         }
     }
 

@@ -2,6 +2,7 @@ package de.hebk.controll;
 
 import de.hebk.gamemode.Gamemode;
 
+import javax.naming.ldap.Control;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +13,7 @@ public class ModenormalGui extends JFrame implements ActionListener{
 
 
     private Gamemode gamemode;
+    private Controll ctrl;
     private int count = 0;
     private JPanel panel1;
     private JButton antwort1;
@@ -44,9 +46,9 @@ public class ModenormalGui extends JFrame implements ActionListener{
     private JTextArea textArea1;
 
 
-    public ModenormalGui(Gamemode pGamemode, String pTitel) {
+    public ModenormalGui(Controll pCtrl, Gamemode pGamemode, String pTitel) {
         super(pTitel);
-
+        ctrl = (Controll) pCtrl;
         gamemode = pGamemode;
         gamemode.randomQuestion();
         generateLabelButtontext();
@@ -67,7 +69,7 @@ public class ModenormalGui extends JFrame implements ActionListener{
         antwort2.addActionListener(this);
         antwort3.addActionListener(this);
         antwort4.addActionListener(this);
-
+        end.addActionListener(this);
 
 
         //Bild Wer wird Millionär
@@ -77,12 +79,6 @@ public class ModenormalGui extends JFrame implements ActionListener{
         fragePanel.add(pic);
          */
 
-        end.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(1);
-            }
-        });
     }
     public void actionPerformed(ActionEvent event){
         if(event.getSource() == antwort1 || event.getSource() == antwort2 || event.getSource() == antwort3 || event.getSource() == antwort4){
@@ -101,6 +97,9 @@ public class ModenormalGui extends JFrame implements ActionListener{
                 textArea1.setForeground(Color.RED);
                 deleteAnswerbuttons();
             }
+        }else if(event.getSource() == end){
+            ctrl.showMenu();
+            this.setVisible(false);
         }
     }
     public void deleteAnswerbuttons(){
