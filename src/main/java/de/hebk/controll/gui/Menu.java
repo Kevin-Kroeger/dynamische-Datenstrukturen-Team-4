@@ -1,5 +1,6 @@
-package de.hebk.controll;
+package de.hebk.controll.gui;
 
+import de.hebk.controll.Controll;
 import de.hebk.gamemode.ModeNormal;
 
 import javax.swing.*;
