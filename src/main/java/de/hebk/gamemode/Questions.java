@@ -48,6 +48,7 @@ public class Questions {
     public String[] getAnswers() {
         return answers;
     }
+    public String getSpecificAnswer(int i) {return answers[i];}
 
     public String getCorrect() {
         return correct;

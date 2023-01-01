@@ -1,6 +1,7 @@
 package de.hebk;
 
 import de.hebk.csv.CSVReader;
+import de.hebk.gamemode.ModeSurvive;
 import de.hebk.model.list.List;
 import de.hebk.model.queue.Queue;
 import de.hebk.model.stack.Stack;
@@ -13,7 +14,7 @@ public class Main {
 
         System.out.println("Hello world!");
 
-        testStackQ();
+        testSurvive();
     }
 
 
@@ -51,5 +52,9 @@ public class Main {
         CSVReader c = new CSVReader();
         c.readCSVListST(adress);
         System.out.println(c);
+    }
+    private static void testSurvive() {
+        ModeSurvive s = new ModeSurvive();
+        s.start();
     }
 }

@@ -51,7 +51,7 @@ public class CSVReader {
                     questions2[i] = arr[j];
                 }
                 int diff = Integer.parseInt(arr[2]);
-                s1.push(new Questions(arr[0], questions2,arr[3],diff));
+                s1.push(new Questions(arr[0],arr[1],questions2,arr[3],diff));
             }
             r.close();
         } catch (Exception e) {
