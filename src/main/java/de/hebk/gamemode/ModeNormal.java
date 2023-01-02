@@ -39,6 +39,7 @@ public class ModeNormal extends Gamemode {
         }else{
             randomQuestion();
         }
+        System.out.println(currentQuestion.getDifficulty());
     }
 
 

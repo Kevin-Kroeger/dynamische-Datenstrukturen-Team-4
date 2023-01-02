@@ -257,6 +257,8 @@
             </constraints>
             <properties>
               <background color="-16776639"/>
+              <editable value="false"/>
+              <enabled value="true"/>
               <font size="50"/>
               <foreground color="-7248349"/>
               <lineWrap value="true"/>
