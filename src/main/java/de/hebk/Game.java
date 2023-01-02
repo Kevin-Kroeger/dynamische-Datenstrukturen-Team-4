@@ -31,9 +31,15 @@ public class Game {
      *Erstmal zum Testen
      */
     public void startGame(int input){
-        if(input == 1) {
+        if(input == 1){
             gamemode = new ModeNormal();
             gamemode.setModeNormal(csv.readCSVList("src/main/java/de/hebk/csv/questions.csv"));
+        }else if(input == 2){
+            gamemode = new ModeSurvive();
+            gamemode.setModeSurvive(csv.readCSVStack("src/main/java/de/hebk/csv/questions.csv"));
+        }else if(input == 3){
+            gamemode = new ModeJeopardy();
+            gamemode.setModeJeopardy(null);
         }
     }
 

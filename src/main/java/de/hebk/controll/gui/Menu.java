@@ -36,8 +36,7 @@ public class Menu extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent event){
         if(event.getSource() == play){
             this.setVisible(false);
-            ctrl.getGame().startGame(1);
-            ctrl.gamemodeGui(ctrl.getGame().getGamemode());
+            ctrl.showSelection();
         }else if(event.getSource() == leaderboard){
 
         }else if(event.getSource() == options){

@@ -71,6 +71,9 @@ public class ModenormalGui extends JFrame implements ActionListener{
         antwort3.addActionListener(this);
         antwort4.addActionListener(this);
         end.addActionListener(this);
+        joker1.addActionListener(this);
+        joker2.addActionListener(this);
+        joker3.addActionListener(this);
 
 
         //Bild Wer wird Millionär
@@ -101,6 +104,12 @@ public class ModenormalGui extends JFrame implements ActionListener{
         }else if(event.getSource() == end){
             ctrl.showMenu();
             this.setVisible(false);
+        }else if(event.getSource() == joker1){
+
+        }else if(event.getSource() == joker2){
+
+        }else if(event.getSource() == joker3){
+
         }
     }
     public void deleteAnswerbuttons(){

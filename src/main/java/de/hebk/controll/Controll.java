@@ -2,6 +2,7 @@ package de.hebk.controll;
 
 
 import de.hebk.Game;
+import de.hebk.controll.gui.GamemodeSelection;
 import de.hebk.controll.gui.Menu;
 import de.hebk.controll.gui.ModenormalGui;
 import de.hebk.gamemode.Gamemode;
@@ -32,6 +33,10 @@ public class Controll {
 
     public void showMenu(){
         menu = new Menu(this,"Menü");
+    }
+
+    public void showSelection(){
+        GamemodeSelection selection = new GamemodeSelection(this,"Spielen");
     }
 
     public Leaderboard getLeaderboard() {
