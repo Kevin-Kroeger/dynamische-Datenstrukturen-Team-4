@@ -29,6 +29,8 @@ public class ModenormalGui extends JFrame implements ActionListener{
     private JButton joker3;
     private JButton joker2;
     private JPanel joker;
+
+    private JLabel[] moneyarr;
     private JLabel money1;
     private JLabel money2;
     private JLabel money3;
@@ -54,6 +56,8 @@ public class ModenormalGui extends JFrame implements ActionListener{
         gamemode = pGamemode;
         gamemode.randomQuestion();
         generateLabelButtontext();
+        addMoneyarr();
+
 
         this.add(panel1);
         this.setVisible(true);
@@ -75,21 +79,14 @@ public class ModenormalGui extends JFrame implements ActionListener{
         joker1.addActionListener(this);
         joker2.addActionListener(this);
         joker3.addActionListener(this);
-
-
-        //Bild Wer wird Millionär
-        /*
-        ImageIcon wwm = new ImageIcon("wer-wird-millionaer-20201023-DE-news.jpg");
-        JLabel pic = new JLabel(wwm);
-        fragePanel.add(pic);
-         */
-
     }
     public void actionPerformed(ActionEvent event){
         if(event.getSource() == antwort1 || event.getSource() == antwort2 || event.getSource() == antwort3 || event.getSource() == antwort4){
             if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
                 count++;
-                if(count == 15){
+                moneycount();
+                System.out.println(gamemode.getCurrentQuestion().getDifficulty());
+                if(count == 14){
                     deleteAnswerbuttons();
                     textArea1.setText("DU HAST 1.000.0000€ GEWONNEN ");
                     textArea1.setForeground(Color.orange);
@@ -116,7 +113,31 @@ public class ModenormalGui extends JFrame implements ActionListener{
             joker3.setVisible(false);
         }
     }
-    public void deleteAnswerbuttons(){
+
+    /**
+     * Verändern wenns geht
+     */
+    private void addMoneyarr(){
+        moneyarr = new JLabel[15];
+        moneyarr[0] = money1;
+        moneyarr[1] = money2;
+        moneyarr[2] = money3;
+        moneyarr[3] = money4;
+        moneyarr[4] = money5;
+        moneyarr[5] = money6;
+        moneyarr[6] = money7;
+        moneyarr[7] = money8;
+        moneyarr[8] = money9;
+        moneyarr[9] = money10;
+        moneyarr[10] = money11;
+        moneyarr[11] = money12;
+        moneyarr[12] = money13;
+        moneyarr[13] = money14;
+        moneyarr[14] = money15;
+        moneyarr[count].setForeground(Color.RED);
+    }
+
+    private void deleteAnswerbuttons(){
         antwort1.setVisible(false);
         antwort2.setVisible(false);
         antwort3.setVisible(false);
@@ -143,5 +164,13 @@ public class ModenormalGui extends JFrame implements ActionListener{
         antwort2.setText(gamemode.getCurrentQuestion().getAnswers()[1]);
         antwort3.setVisible(false);
         antwort4.setVisible(false);
+    }
+
+    private void moneycount(){
+        if(count == 4 || count == 9 || count == 14){
+            moneyarr[count].setForeground(new Color(75,82,142));
+        }else{
+            moneyarr[count].setForeground(Color.RED);
+        }
     }
 }
