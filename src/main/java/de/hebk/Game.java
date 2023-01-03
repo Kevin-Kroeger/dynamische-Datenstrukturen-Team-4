@@ -33,6 +33,9 @@ public class Game {
     public void startGame(int input){
         if(input == 1){
             gamemode = new ModeNormal();
+            gamemode.jokerHinzufuegen(new Joker("50/50 Joker"));
+            gamemode.jokerHinzufuegen(new Joker("Telefon Joker"));
+            gamemode.jokerHinzufuegen( new Joker("Zuschauer Joker"));
             gamemode.setModeNormal(csv.readCSVList("src/main/java/de/hebk/csv/questions.csv"));
         }else if(input == 2){
             gamemode = new ModeSurvive();

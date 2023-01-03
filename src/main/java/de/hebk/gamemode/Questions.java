@@ -22,10 +22,12 @@ public class Questions {
     public void randomAnswers(){
         Random rand = new Random();
         for (int i = 0; i < getAnswers().length; i++) {
-            int randomIndexToSwap = rand.nextInt(getAnswers().length);
-            String temp = getAnswers()[randomIndexToSwap];
-            getAnswers()[randomIndexToSwap] = getAnswers()[i];
-            getAnswers()[i] = temp;
+            if(getAnswers()[i] != null ){
+                int randomIndexToSwap = rand.nextInt(getAnswers().length);
+                String temp = getAnswers()[randomIndexToSwap];
+                getAnswers()[randomIndexToSwap] = getAnswers()[i];
+                getAnswers()[i] = temp;
+            }
         }
     }
 

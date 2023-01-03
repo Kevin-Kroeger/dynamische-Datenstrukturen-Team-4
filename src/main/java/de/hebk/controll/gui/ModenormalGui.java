@@ -2,6 +2,7 @@ package de.hebk.controll.gui;
 
 import de.hebk.controll.Controll;
 import de.hebk.gamemode.Gamemode;
+import de.hebk.gamemode.ModeNormal;
 
 import javax.naming.ldap.Control;
 import javax.swing.*;
@@ -105,11 +106,14 @@ public class ModenormalGui extends JFrame implements ActionListener{
             ctrl.showMenu();
             this.setVisible(false);
         }else if(event.getSource() == joker1){
-
+            usefiftyfifty();
+            joker1.setVisible(false);
         }else if(event.getSource() == joker2){
-
+            ctrl.getGame().getGamemode().useJoker(1);
+            joker2.setVisible(false);
         }else if(event.getSource() == joker3){
-
+            ctrl.getGame().getGamemode().useJoker(2);
+            joker3.setVisible(false);
         }
     }
     public void deleteAnswerbuttons(){
@@ -121,10 +125,23 @@ public class ModenormalGui extends JFrame implements ActionListener{
 
     private void generateLabelButtontext() {
         gamemode.getCurrentQuestion().randomAnswers();
+        antwort1.setVisible(true);
+        antwort2.setVisible(true);
+        antwort3.setVisible(true);
+        antwort4.setVisible(true);
         antwort1.setText(gamemode.getCurrentQuestion().getAnswers()[0]);
         antwort2.setText(gamemode.getCurrentQuestion().getAnswers()[1]);
         antwort3.setText(gamemode.getCurrentQuestion().getAnswers()[2]);
         antwort4.setText(gamemode.getCurrentQuestion().getAnswers()[3]);
         textArea1.setText(gamemode.getCurrentQuestion().getQuestion());
+    }
+
+    private void usefiftyfifty(){
+        ctrl.getGame().getGamemode().useJoker(0);
+        gamemode.getCurrentQuestion().randomAnswers();
+        antwort1.setText(gamemode.getCurrentQuestion().getAnswers()[0]);
+        antwort2.setText(gamemode.getCurrentQuestion().getAnswers()[1]);
+        antwort3.setVisible(false);
+        antwort4.setVisible(false);
     }
 }

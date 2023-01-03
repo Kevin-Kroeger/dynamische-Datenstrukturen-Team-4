@@ -8,6 +8,7 @@ public class ModeNormal extends Gamemode {
     private int lvl;
     private Questions currentQuestion;
     private int count = 0;
+
     public ModeNormal(){
         setModeNormal(getModeNormal());
         setLvl(1);
@@ -39,7 +40,6 @@ public class ModeNormal extends Gamemode {
         }else{
             randomQuestion();
         }
-        System.out.println(currentQuestion.getDifficulty());
     }
 
 
@@ -60,12 +60,28 @@ public class ModeNormal extends Gamemode {
 
     @Override
     public void useJoker(int pInput) {
-
+        getJoker()[pInput] = null;
+        if(pInput == 0){
+            String[] arr = new String[2];
+            arr[0] = currentQuestion.getCorrect();
+            currentQuestion.randomAnswers();
+            if(currentQuestion.getAnswers()[1] != currentQuestion.getCorrect()){
+                arr[1] = currentQuestion.getAnswers()[1];
+            }else{
+                useJoker(0);
+            }
+            currentQuestion.setAnswers(arr);
+        }
     }
 
     @Override
     public void jokerHinzufuegen(Joker pJoker) {
-
+        for(int i = 0; i < getJoker().length; i++){
+            if(getJoker()[i] == null) {
+                getJoker()[i] = pJoker;
+                return;
+            }
+        }
     }
 
 
