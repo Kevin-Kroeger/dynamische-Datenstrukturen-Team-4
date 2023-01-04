@@ -12,9 +12,10 @@ public class Game {
     private Gamemode gamemode;
 
 
-    public Game(CSVReader pCsv, Controll pCtrl){
-        setCsv(pCsv);
-        setCtrl(pCtrl);
+    public Game(){
+        ctrl = new Controll(this);
+        csv = new CSVReader();
+        ctrl.showMenu();
     }
 
     public void createUser(String pName, int pAge, int pPoints){
@@ -23,11 +24,26 @@ public class Game {
         user.setPoints(pPoints);
     }
 
+
+
+
     /**
-     *
+     *Erstmal zum Testen
      */
-    public void startGame(){
-        gamemode.start();
+    public void startGame(int input){
+        if(input == 1){
+            gamemode = new ModeNormal();
+            gamemode.jokerHinzufuegen(new Joker("50/50 Joker"));
+            gamemode.jokerHinzufuegen(new Joker("Telefon Joker"));
+            gamemode.jokerHinzufuegen( new Joker("Zuschauer Joker"));
+            gamemode.setModeNormal(csv.readCSVList("src/main/java/de/hebk/csv/questions.csv"));
+        }else if(input == 2){
+            gamemode = new ModeSurvive();
+            gamemode.setModeSurvive(csv.readCSVStack("src/main/java/de/hebk/csv/questions.csv"));
+        }else if(input == 3){
+            gamemode = new ModeJeopardy();
+            gamemode.setModeJeopardy(null);
+        }
     }
 
     /*

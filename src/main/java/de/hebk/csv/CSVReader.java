@@ -27,8 +27,6 @@ public class CSVReader {
                 String[] questions = new String[4];
                 for(int i = 0, j = 3; i < questions.length; i++,j++){
                     questions[i] = arr[j];
-                    System.out.println(questions[i] + " " + arr[j]);
-                    System.out.println(i + " " + j);
                 }
                 int diff = Integer.parseInt(arr[2]);
                 l1.append(new Questions(arr[0],arr[1], questions,arr[3],diff));
@@ -39,19 +37,19 @@ public class CSVReader {
         }
         return l1;
     }
-    public Stack<Questions> readCSVListST(String path) {
+    public Stack<Questions> readCSVStack(String path) {
         Stack<Questions> s1 = new Stack<Questions>();
         String s;
         try {
             BufferedReader r = new BufferedReader(new FileReader(path));
             while((s = r.readLine())!=null) {
                 String[] arr = s.split(",");
-                String[] questions2 = new String[4];
-                for(int i = 0, j = 3; i < questions2.length; i++,j++){
-                    questions2[i] = arr[j];
+                String[] questions = new String[4];
+                for(int i = 0, j = 3; i < questions.length; i++,j++){
+                    questions[i] = arr[j];
                 }
                 int diff = Integer.parseInt(arr[2]);
-                s1.push(new Questions(arr[0],arr[1],questions2,arr[3],diff));
+                s1.push(new Questions(arr[0],arr[1],questions,arr[3],diff));
             }
             r.close();
         } catch (Exception e) {
