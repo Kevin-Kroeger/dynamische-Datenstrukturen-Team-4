@@ -1,6 +1,9 @@
 package de.hebk.gamemode;
 
 import de.hebk.gamemode.Gamemode;
+import de.hebk.model.queue.Queue;
+
+import java.util.Random;
 
 public class ModeJeopardy extends Gamemode {
     @Override
@@ -42,4 +45,15 @@ public class ModeJeopardy extends Gamemode {
     public void setCurrentQuestion(Questions currentQuestion) {
 
     }
+
+    public int getLvl() {
+        return lvl;
+    }
+
+    public void setLvl(int lvl) {
+        this.lvl = lvl;
+    }
+
 }
+
+

@@ -5,22 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="ModeSurvive Testbar">
-      <change afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2015.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2016.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2020.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_05_12_2022_08_47_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_05_12_2022_08_47__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModejeopardyGui.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModejeopardyGui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeJeopardy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeJeopardy.java" afterDir="false" />
+    </list>
+    <list id="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" name="Changes by kevin" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/Controll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/Controll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModenormalGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModenormalGui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/csv/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/csv/CSVReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/csv/Testcsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/csv/Testcsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Gamemode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Gamemode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeJeopardy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeJeopardy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeNormal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Questions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -44,6 +54,19 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeJeopardy.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="6" changelist="2866380c-7f39-4bed-9416-88fabc0190d1" />
+        <range start1="5" end1="5" start2="8" end2="14" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
+        <range start1="26" end1="28" start2="35" end2="53" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
+        <range start1="37" end1="38" start2="62" end2="63" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
+        <range start1="41" end1="43" start2="66" end2="68" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
+        <range start1="44" end1="45" start2="69" end2="77" changelist="2866380c-7f39-4bed-9416-88fabc0190d1" />
+        <range start1="46" end1="46" start2="78" end2="82" changelist="2866380c-7f39-4bed-9416-88fabc0190d1" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -57,6 +80,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
     "WebServerToolWindowFactoryState": "false",
     "nodejs_package_manager_path": "npm"
   }
@@ -94,6 +119,8 @@
       <workItem from="1671434782280" duration="55000" />
       <workItem from="1671613002494" duration="973000" />
       <workItem from="1672485329005" duration="11978000" />
+      <workItem from="1672933229230" duration="183000" />
+      <workItem from="1672946904509" duration="6967000" />
     </task>
     <task id="LOCAL-00002" summary="dc">
       <created>1670224012464</created>
