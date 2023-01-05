@@ -85,10 +85,9 @@ public class ModenormalGui extends JFrame implements ActionListener{
             if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
                 count++;
                 moneycount();
-                System.out.println(gamemode.getCurrentQuestion().getDifficulty());
                 if(count == 14){
                     deleteAnswerbuttons();
-                    textArea1.setText("DU HAST 1.000.0000€ GEWONNEN ");
+                    textArea1.setText("DU HAST 1.000.000€ GEWONNEN ");
                     textArea1.setForeground(Color.orange);
                 }else{
                     gamemode.nextQuestion();
