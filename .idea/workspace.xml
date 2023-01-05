@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="ModeSurvive Testbar">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModejeopardyGui.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModejeopardyGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeJeopardy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeJeopardy.java" afterDir="false" />
-    </list>
+    <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="" />
     <list id="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" name="Changes by kevin" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/Controll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/Controll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/Menu.java" afterDir="false" />
@@ -53,19 +48,6 @@
         <option name="url" value="https://github.com/HEBK-BGM/dynamische-Datenstrukturen-Team-4.git" />
       </UrlAndAccount>
     </option>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeJeopardy.java">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="6" changelist="2866380c-7f39-4bed-9416-88fabc0190d1" />
-        <range start1="5" end1="5" start2="8" end2="14" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
-        <range start1="26" end1="28" start2="35" end2="53" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
-        <range start1="37" end1="38" start2="62" end2="63" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
-        <range start1="41" end1="43" start2="66" end2="68" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
-        <range start1="44" end1="45" start2="69" end2="77" changelist="2866380c-7f39-4bed-9416-88fabc0190d1" />
-        <range start1="46" end1="46" start2="78" end2="82" changelist="2866380c-7f39-4bed-9416-88fabc0190d1" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -120,7 +102,7 @@
       <workItem from="1671613002494" duration="973000" />
       <workItem from="1672485329005" duration="11978000" />
       <workItem from="1672933229230" duration="183000" />
-      <workItem from="1672946904509" duration="6967000" />
+      <workItem from="1672946904509" duration="7122000" />
     </task>
     <task id="LOCAL-00002" summary="dc">
       <created>1670224012464</created>
@@ -129,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670224012464</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[ADD] Mode Jeopardy + GUI">
+      <created>1672953990963</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672953990963</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +138,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dc" />
     <MESSAGE value="ModeSurvive Testbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="ModeSurvive Testbar" />
+    <MESSAGE value="[ADD] Mode Jeopardy + GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Mode Jeopardy + GUI" />
   </component>
 </project>
