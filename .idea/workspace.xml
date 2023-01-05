@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="ModeSurvive Testbar">
-      <change afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2015.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2016.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2020.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_05_12_2022_08_47_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_05_12_2022_08_47__Changes_.xml" beforeDir="false" />
+    <list default="true" id="0202f099-650d-455f-855f-e2f3d6b26e8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/csv/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/csv/CSVReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/csv/Testcsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/csv/Testcsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Questions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doku/klausurvorbereitung/2020.md" beforeDir="false" afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2020.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,29 +16,15 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Survivemode" />
+        <entry key="$PROJECT_DIR$" value="klausurvorbereitung" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="recentNewPullRequestHead">
-      <RepoCoordinatesHolder>
-        <option name="owner" value="Apftendo" />
-        <option name="repository" value="dynamische-Datenstrukturen-Team-4myFork" />
-      </RepoCoordinatesHolder>
-    </option>
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="c015d7ba-27e4-4456-ba39-58efabdc3a6e" />
-        <option name="url" value="https://github.com/HEBK-BGM/dynamische-Datenstrukturen-Team-4.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2IU6H6De2VRag5f1uX9dbo7dzzk" />
+  <component name="ProjectId" id="2JuJMshHNQqdeeGOd77DKKtdVz4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -58,51 +35,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/aswin.peterf/Schule/Informatik/Extras/Bild/Löschen.png",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Maintester" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="de.hebk.Main" />
-      <module name="dynamische-Datenstrukturen-Team1" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="dc">
-      <created>1670081710247</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1670081710247</updated>
-    </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="dc" />
-      <created>1670223746325</created>
+      <changelist id="0202f099-650d-455f-855f-e2f3d6b26e8c" name="Changes" comment="" />
+      <created>1672922016223</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670223746325</updated>
-      <workItem from="1670223750969" duration="3661000" />
-      <workItem from="1670524042299" duration="601000" />
-      <workItem from="1670569564015" duration="4625000" />
-      <workItem from="1670922666283" duration="3492000" />
-      <workItem from="1671008015527" duration="5533000" />
-      <workItem from="1671175790791" duration="2529000" />
-      <workItem from="1671434782280" duration="55000" />
-      <workItem from="1671613002494" duration="973000" />
-      <workItem from="1672485329005" duration="11978000" />
+      <updated>1672922016223</updated>
+      <workItem from="1672922026909" duration="614000" />
+      <workItem from="1672924427608" duration="10636000" />
     </task>
-    <task id="LOCAL-00002" summary="dc">
-      <created>1670224012464</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1670224012464</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,10 +65,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="dc" />
-    <MESSAGE value="ModeSurvive Testbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="ModeSurvive Testbar" />
   </component>
 </project>
