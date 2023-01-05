@@ -61,6 +61,7 @@ public class ModeNormal extends Gamemode {
     @Override
     public void useJoker(int pInput) {
         getJoker()[pInput] = null;
+        //50/50 Joker
         if(pInput == 0){
             String[] arr = new String[2];
             arr[0] = currentQuestion.getCorrect();
@@ -71,6 +72,33 @@ public class ModeNormal extends Gamemode {
                 useJoker(0);
             }
             currentQuestion.setAnswers(arr);
+        //Telefon Joker
+        }else if(pInput == 1){
+            if(currentQuestion.getDifficulty() == 1){
+                getCurrentQuestion().setQuestion("Ich tendiere zu der Antwort: " + getCurrentQuestion().getCorrect());
+            }else if(currentQuestion.getDifficulty() == 2){
+                String[] arr = new String[2];
+                arr[0] = getCurrentQuestion().getCorrect();
+                arr[1] = getCurrentQuestion().getAnswers()[1];
+                String tmp;
+                Random rand = new Random();
+                int j = rand.nextInt(2);
+                tmp = arr[j];
+                getCurrentQuestion().setQuestion("Ich bin mir nicht 100% sicher aber ich würde sagen, es ist " + tmp);
+            }else if(currentQuestion.getDifficulty() == 3){
+                String[] arr = new String[3];
+                arr[0] = getCurrentQuestion().getCorrect();
+                arr[1] = getCurrentQuestion().getAnswers()[1];
+                arr[2] = getCurrentQuestion().getAnswers()[2];
+                String tmp;
+                Random rand = new Random();
+                int j = rand.nextInt(3);
+                tmp = arr[j];
+                getCurrentQuestion().setQuestion("Ich weiß die Antwort nicht und müsste raten. Ich würde sagen es ist " + tmp);
+            }
+        //Publikums Joker
+        }else if(pInput == 2){
+
         }
     }
 
