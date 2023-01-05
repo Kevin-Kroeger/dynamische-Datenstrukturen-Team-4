@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="dc">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/csv/Testcsv" afterDir="false" />
+    <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="ModeSurvive Testbar">
+      <change afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2015.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2016.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2020.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_05_12_2022_08_47_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_05_12_2022_08_47__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/csv/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/csv/CSVReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/csv/Testcsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/csv/Testcsv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Questions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Queue2" />
+        <entry key="$PROJECT_DIR$" value="Survivemode" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,13 +53,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Maintester" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="de.hebk.Main" />
@@ -81,6 +88,12 @@
       <workItem from="1670223750969" duration="3661000" />
       <workItem from="1670524042299" duration="601000" />
       <workItem from="1670569564015" duration="4625000" />
+      <workItem from="1670922666283" duration="3492000" />
+      <workItem from="1671008015527" duration="5533000" />
+      <workItem from="1671175790791" duration="2529000" />
+      <workItem from="1671434782280" duration="55000" />
+      <workItem from="1671613002494" duration="973000" />
+      <workItem from="1672485329005" duration="11978000" />
     </task>
     <task id="LOCAL-00002" summary="dc">
       <created>1670224012464</created>
@@ -108,6 +121,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dc" />
-    <option name="LAST_COMMIT_MESSAGE" value="dc" />
+    <MESSAGE value="ModeSurvive Testbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="ModeSurvive Testbar" />
   </component>
 </project>
