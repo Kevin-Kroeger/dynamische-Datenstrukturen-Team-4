@@ -1,5 +1,6 @@
 package de.hebk.gamemode;
 
+import de.hebk.Game;
 import de.hebk.model.list.List;
 import java.util.Random;
 
@@ -98,7 +99,37 @@ public class ModeNormal extends Gamemode {
             }
         //Publikums Joker
         }else if(pInput == 2){
-
+            if(currentQuestion.getDifficulty() == 1){
+                String tmp = "";
+                for(int i = 0; i < getCurrentQuestion().getAnswers().length; i++){
+                    if(getCurrentQuestion().getAnswers()[i] == getCurrentQuestion().getCorrect()){
+                        tmp = tmp + "Antwort "+ getCurrentQuestion().getCorrect() + " 88% \n";
+                    }else{
+                        tmp = tmp + "Antwort" + getCurrentQuestion().getAnswers()[i] + "  3% \n";
+                    }
+                }
+                getCurrentQuestion().setQuestion(tmp);
+            }else if(currentQuestion.getDifficulty() == 2){
+                String tmp = "";
+                for(int i = 0; i < getCurrentQuestion().getAnswers().length; i++){
+                    if(getCurrentQuestion().getAnswers()[i] == getCurrentQuestion().getCorrect()){
+                        tmp = tmp + "Antwort "+ getCurrentQuestion().getCorrect() + " 70% \n";
+                    }else{
+                        tmp = tmp + "Antwort" + getCurrentQuestion().getAnswers()[i] + "  10% \n";
+                    }
+                }
+                getCurrentQuestion().setQuestion(tmp);
+            }else if(currentQuestion.getDifficulty() == 3){
+                String tmp = "";
+                for(int i = 0; i < getCurrentQuestion().getAnswers().length; i++){
+                    if(getCurrentQuestion().getAnswers()[i] == getCurrentQuestion().getCorrect()){
+                        tmp = tmp + "Antwort "+ getCurrentQuestion().getCorrect() + " 40% \n";
+                    }else{
+                        tmp = tmp + "Antwort" + getCurrentQuestion().getAnswers()[i] + "  20% \n";
+                    }
+                }
+                getCurrentQuestion().setQuestion(tmp);
+            }
         }
     }
 
@@ -150,6 +181,4 @@ public class ModeNormal extends Gamemode {
     public void setJoker(Joker[] joker) {
         super.setJoker(joker);
     }
-
-
 }

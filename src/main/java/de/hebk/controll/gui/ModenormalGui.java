@@ -108,7 +108,7 @@ public class ModenormalGui extends JFrame implements ActionListener{
             usetelephone();
             joker2.setVisible(false);
         }else if(event.getSource() == joker3){
-            ctrl.getGame().getGamemode().useJoker(2);
+            useaudiencejoker();
             joker3.setVisible(false);
         }
     }
@@ -170,8 +170,14 @@ public class ModenormalGui extends JFrame implements ActionListener{
         textArea1.setText(gamemode.getCurrentQuestion().getQuestion());
     }
 
+    private void useaudiencejoker(){
+        ctrl.getGame().getGamemode().useJoker(2);
+        textArea1.setText(gamemode.getCurrentQuestion().getQuestion());
+    }
+
     private void useaudience(){
         ctrl.getGame().getGamemode().useJoker(2);
+        textArea1.setText(gamemode.getCurrentQuestion().getQuestion());
     }
 
     private void moneycount(){
