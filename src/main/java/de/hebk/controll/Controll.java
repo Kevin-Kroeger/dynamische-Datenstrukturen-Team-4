@@ -5,6 +5,7 @@ import de.hebk.Game;
 import de.hebk.controll.gui.GamemodeSelection;
 import de.hebk.controll.gui.Menu;
 import de.hebk.controll.gui.ModenormalGui;
+import de.hebk.controll.gui.ModesurviveGui;
 import de.hebk.gamemode.Gamemode;
 import de.hebk.gamemode.ModeJeopardy;
 import de.hebk.gamemode.ModeNormal;
@@ -25,7 +26,7 @@ public class Controll {
         if(pGamemode instanceof ModeNormal) {
             ModenormalGui gui = new ModenormalGui(this,pGamemode, "Wer Wird Millionär");
         }else if(pGamemode instanceof ModeSurvive){
-
+            ModesurviveGui gui1 = new ModesurviveGui(this,pGamemode,"Wie länge überstehst du?");
         }else if(pGamemode instanceof ModeJeopardy){
 
         }

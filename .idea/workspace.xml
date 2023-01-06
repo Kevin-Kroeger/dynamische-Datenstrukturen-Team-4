@@ -4,25 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0202f099-650d-455f-855f-e2f3d6b26e8c" name="Changes" comment="">
+    <list default="true" id="0202f099-650d-455f-855f-e2f3d6b26e8c" name="Changes" comment="Klausurvorbereitung fertig">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModesurviveGui.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModesurviveGui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doku/klausurvorbereitung/2020.md" beforeDir="false" afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2020.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doku/klausurvorbereitung/2016.md" beforeDir="false" afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2016.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/Controll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/Controll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/model/stack/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/model/stack/Stack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="klausurvorbereitung" />
+        <entry key="$PROJECT_DIR$" value="klausurvorbereitung2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="Apftendo" />
+        <option name="repository" value="dynamische-Datenstrukturen-Team-4myFork" />
+      </RepoCoordinatesHolder>
+    </option>
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c015d7ba-27e4-4456-ba39-58efabdc3a6e" />
+        <option name="url" value="https://github.com/HEBK-BGM/dynamische-Datenstrukturen-Team-4.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2JuJMshHNQqdeeGOd77DKKtdVz4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -34,11 +63,21 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "391",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/aswin.peterf/Schule/Informatik/Extras/Bild/Löschen.png",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Starter" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="de.hebk.Main" />
+      <module name="dynamische-Datenstrukturen-Team1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,8 +87,17 @@
       <option name="presentableId" value="Default" />
       <updated>1672922016223</updated>
       <workItem from="1672922026909" duration="614000" />
-      <workItem from="1672924427608" duration="10636000" />
+      <workItem from="1672924427608" duration="11712000" />
+      <workItem from="1673007695703" duration="12528000" />
     </task>
+    <task id="LOCAL-00001" summary="Klausurvorbereitung fertig">
+      <created>1672945923291</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672945923291</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -65,5 +113,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Klausurvorbereitung fertig" />
+    <option name="LAST_COMMIT_MESSAGE" value="Klausurvorbereitung fertig" />
   </component>
 </project>
