@@ -7,10 +7,7 @@ import java.util.Random;
 public class ModeSurvive extends Gamemode {
 
     private Questions currentQuestion;
-    public ModeSurvive() {
-        setModeSurvive(getModeSurvive());
-
-    }
+    public ModeSurvive() {setModeSurvive(getModeSurvive());}
     @Override
     public void useJoker(int pInput) {
 
@@ -18,12 +15,11 @@ public class ModeSurvive extends Gamemode {
 
     @Override
     public void start() {
-        if(currentQuestion== null) {
-            setCurrentQuestion(modeSurvive.top());
-        } else {
+        if (currentQuestion != null) {
             modeSurvive.pop();
-            setCurrentQuestion(modeSurvive.top());
         }
+        setCurrentQuestion(modeSurvive.top());
+        currentQuestion.randomAnswers();
     }
 
     @Override
@@ -33,7 +29,7 @@ public class ModeSurvive extends Gamemode {
 
     @Override
     public boolean checkcorrect(String pAnswer) {
-        return false;
+        return pAnswer.equals(currentQuestion.getCorrect());
     }
 
 
@@ -42,6 +38,7 @@ public class ModeSurvive extends Gamemode {
     public void randomQuestion() {
         // Nicht für Stack Anwendbar
     }
+
 
 
 
