@@ -1,12 +1,14 @@
 package de.hebk.controll.gui;
 
 import de.hebk.controll.Controll;
+import de.hebk.gamemode.Gamemode;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ModejeopardyGui extends JFrame implements ActionListener {
     private Controll ctrl;
+    private Gamemode gamemode;
     private JPanel jeopardy;
     private JLabel topic1;
     private JLabel topic2;
@@ -55,20 +57,88 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
     private JButton homebutton;
     private JPanel home;
 
-    public ModejeopardyGui(Controll pCtrl, String pTitel, String[] pTopics){
+    public ModejeopardyGui(Controll pCtrl, Gamemode pGamemode ,String pTitel, String[] pTopics){
         super(pTitel);
         ctrl = pCtrl;
+        gamemode = pGamemode;
 
         this.add(jeopardy);
         this.setVisible(true);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 
         generateTopicLabel(pTopics);
+        disabletextAnswers();
+
+        first100.addActionListener(this);
+        first200.addActionListener(this);
+        first300.addActionListener(this);
+        first400.addActionListener(this);
+        first500.addActionListener(this);
+        first600.addActionListener(this);
+        second100.addActionListener(this);
+        second200.addActionListener(this);
+        second300.addActionListener(this);
+        second400.addActionListener(this);
+        second500.addActionListener(this);
+        second600.addActionListener(this);
+        third100.addActionListener(this);
+        third200.addActionListener(this);
+        third300.addActionListener(this);
+        third400.addActionListener(this);
+        third500.addActionListener(this);
+        third600.addActionListener(this);
+        fourth100.addActionListener(this);
+        fourth200.addActionListener(this);
+        fourth300.addActionListener(this);
+        fourth400.addActionListener(this);
+        fourth500.addActionListener(this);
+        fourth600.addActionListener(this);
+        answers1.addActionListener(this);
+        answers2.addActionListener(this);
+        answers3.addActionListener(this);
+        answers4.addActionListener(this);
     }
 
     public void actionPerformed(ActionEvent event){
-
+        if(event.getSource() == first100 || event.getSource() == first200){
+            generateQuestion(topic1.getText(),1);
+            ((JButton) event.getSource()).setVisible(false);
+        }else if(event.getSource() == first300 || event.getSource() == first400){
+            generateQuestion(topic1.getText(),2);
+        }else if(event.getSource() == first500 || event.getSource() == first600){
+            generateQuestion(topic1.getText(),3);
+        }else if(event.getSource() == second100 || event.getSource() == second200){
+            generateQuestion(topic2.getText(),1);
+        }else if(event.getSource() == second300 || event.getSource() == second400){
+            generateQuestion(topic2.getText(),2);
+        }else if(event.getSource() == second500 || event.getSource() == second600){
+            generateQuestion(topic2.getText(),3);
+        }else if(event.getSource() == third100 || event.getSource() == third200){
+            generateQuestion(topic3.getText(),1);
+        }else if( event.getSource() == third300 || event.getSource() == third400){
+            generateQuestion(topic3.getText(),2);
+        }else if(event.getSource() == third500|| event.getSource() == third600){
+            generateQuestion(topic3.getText(),3);
+        }else if(event.getSource() == fourth100 || event.getSource() == fourth200){
+            generateQuestion(topic4.getText(),1);
+        }else if(event.getSource() == fourth300 || event.getSource() == fourth400){
+            generateQuestion(topic4.getText(),2);
+        }else if(event.getSource() == fourth500 || event.getSource() == fourth600){
+            generateQuestion(topic4.getText(),3);
+        }else if(event.getSource() == homebutton) {
+            ctrl.showMenu();
+        }
+        if(event.getSource() == answers1 || event.getSource() == answers2 || event.getSource() == answers3 || event.getSource() == answers4){
+            if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
+                //Punkte System machen
+                disabletextAnswers();
+            }else{
+                //Keine Punkte
+            }
+        }
     }
+
+
 
     private void generateTopicLabel(String[] pTopic){
         topic1.setText(pTopic[0]);
@@ -77,7 +147,27 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         topic4.setText(pTopic[3]);
     }
 
-    private void generateQuestion(){
+    private void generateQuestion(String pTopic,int input){
+        gamemode.setLvl(input);
+        gamemode.randomQuestion(pTopic);
+        gamemode.getCurrentQuestion().randomAnswers();
+        question.setVisible(true);
+        answers1.setVisible(true);
+        answers2.setVisible(true);
+        answers3.setVisible(true);
+        answers4.setVisible(true);
+        question.setText(gamemode.getCurrentQuestion().getQuestion());
+        answers1.setText(gamemode.getCurrentQuestion().getAnswers()[0]);
+        answers2.setText(gamemode.getCurrentQuestion().getAnswers()[1]);
+        answers3.setText(gamemode.getCurrentQuestion().getAnswers()[2]);
+        answers4.setText(gamemode.getCurrentQuestion().getAnswers()[3]);
+    }
 
+    private void disabletextAnswers(){
+        question.setVisible(false);
+        answers1.setVisible(false);
+        answers2.setVisible(false);
+        answers3.setVisible(false);
+        answers4.setVisible(false);
     }
 }

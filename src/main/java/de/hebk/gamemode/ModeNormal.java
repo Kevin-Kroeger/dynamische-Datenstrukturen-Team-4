@@ -27,7 +27,7 @@ public class ModeNormal extends Gamemode {
      * @return
      */
     @Override
-    public void randomQuestion() {
+    public void randomQuestion(String pContext) {
         Random rand = new Random();
         modeNormal.toFirst();
         int j = rand.nextInt(modeNormal.getLenght()+1);
@@ -38,7 +38,7 @@ public class ModeNormal extends Gamemode {
             currentQuestion = modeNormal.getObject();
             modeNormal.remove();
         }else{
-            randomQuestion();
+            randomQuestion(null);
         }
     }
 
@@ -47,7 +47,7 @@ public class ModeNormal extends Gamemode {
     public void nextQuestion() {
         count++;
         changeLVL();
-        randomQuestion();
+        randomQuestion(null);
     }
 
     public void changeLVL(){
@@ -85,30 +85,26 @@ public class ModeNormal extends Gamemode {
     }
 
 
-
-
     /**
      *
      */
     @Override
     public void start() {
-        randomQuestion();
+        randomQuestion(null);
     }
+
     public int getMoney() {
         return money;
     }
+
     public void setMoney(int money) {
         this.money = money;
     }
-    public int getLvl() {
-        return lvl;
-    }
-    public void setLvl(int lvl) {
-        this.lvl = lvl;
-    }
+
     public Questions getCurrentQuestion() {
         return currentQuestion;
     }
+
     public void setCurrentQuestion(Questions currentQuestion){
         this.currentQuestion = currentQuestion;
     }

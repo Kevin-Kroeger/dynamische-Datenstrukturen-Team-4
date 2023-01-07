@@ -7,9 +7,10 @@ import de.hebk.model.stack.Stack;
 
 public abstract class Gamemode {
     private Joker[] joker = new Joker[3];
+    private int lvl;
     public List<Questions> modeNormal;
     public Stack<Questions> modeSurvive;
-    private Queue<Questions> modeJeopardy;
+    public Queue<Questions> modeJeopardy;
 
 
 
@@ -21,7 +22,7 @@ public abstract class Gamemode {
     public abstract void jokerHinzufuegen(Joker pJoker);
 
     public abstract boolean checkcorrect(String pAnswer);
-    public abstract void randomQuestion();
+    public abstract void randomQuestion(String pContext);
 
     public abstract void nextQuestion();
 
@@ -60,5 +61,13 @@ public abstract class Gamemode {
 
     public abstract Questions getCurrentQuestion();
     public abstract void setCurrentQuestion(Questions currentQuestion);
+
+    public int getLvl() {
+        return lvl;
+    }
+
+    public void setLvl(int lvl) {
+        this.lvl = lvl;
+    }
 }
 
