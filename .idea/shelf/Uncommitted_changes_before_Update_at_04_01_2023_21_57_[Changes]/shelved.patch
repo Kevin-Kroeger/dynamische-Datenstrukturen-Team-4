@@ -1,0 +1,66 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"2866380c-7f39-4bed-9416-88fabc0190d1\" name=\"Changes\" comment=\"ModeSurvive Testbar\">\r\n      <change afterPath=\"$PROJECT_DIR$/doku/klausurvorbereitung/2015.md\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/doku/klausurvorbereitung/2016.md\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/doku/klausurvorbereitung/2020.md\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_05_12_2022_08_47_[Changes]/shelved.patch\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_05_12_2022_08_47__Changes_.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/de/hebk/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/de/hebk/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/de/hebk/csv/CSVReader.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/de/hebk/csv/CSVReader.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/de/hebk/csv/Testcsv\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/de/hebk/csv/Testcsv\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Questions.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Questions.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Survivemode\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"recentNewPullRequestHead\">\r\n      <RepoCoordinatesHolder>\r\n        <option name=\"owner\" value=\"Apftendo\" />\r\n        <option name=\"repository\" value=\"dynamische-Datenstrukturen-Team-4myFork\" />\r\n      </RepoCoordinatesHolder>\r\n    </option>\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"c015d7ba-27e4-4456-ba39-58efabdc3a6e\" />\r\n        <option name=\"url\" value=\"https://github.com/HEBK-BGM/dynamische-Datenstrukturen-Team-4.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2IU6H6De2VRag5f1uX9dbo7dzzk\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"nodejs_package_manager_path\": \"npm\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Maintester\" type=\"Application\" factoryName=\"Application\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"de.hebk.Main\" />\r\n      <module name=\"dynamische-Datenstrukturen-Team1\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task id=\"LOCAL-00001\" summary=\"dc\">\r\n      <created>1670081710247</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670081710247</updated>\r\n    </task>\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"2866380c-7f39-4bed-9416-88fabc0190d1\" name=\"Changes\" comment=\"dc\" />\r\n      <created>1670223746325</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1670223746325</updated>\r\n      <workItem from=\"1670223750969\" duration=\"3661000\" />\r\n      <workItem from=\"1670524042299\" duration=\"601000\" />\r\n      <workItem from=\"1670569564015\" duration=\"4625000\" />\r\n      <workItem from=\"1670922666283\" duration=\"3492000\" />\r\n      <workItem from=\"1671008015527\" duration=\"5533000\" />\r\n      <workItem from=\"1671175790791\" duration=\"2529000\" />\r\n      <workItem from=\"1671434782280\" duration=\"55000\" />\r\n      <workItem from=\"1671613002494\" duration=\"973000\" />\r\n      <workItem from=\"1672485329005\" duration=\"11978000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"dc\">\r\n      <created>1670224012464</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670224012464</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"dc\" />\r\n    <MESSAGE value=\"ModeSurvive Testbar\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"ModeSurvive Testbar\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 4bfc9a6817ce9ea53f8242128069d631f0bd4cda)
++++ b/.idea/workspace.xml	(date 1672572833567)
+@@ -4,19 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="ModeSurvive Testbar">
+-      <change afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2015.md" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2016.md" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/doku/klausurvorbereitung/2020.md" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_05_12_2022_08_47_[Changes]/shelved.patch" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_05_12_2022_08_47__Changes_.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/csv/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/csv/CSVReader.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/csv/Testcsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/csv/Testcsv" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Questions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Questions.java" afterDir="false" />
+-    </list>
++    <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="ModeSurvive und Anfang Klausurvorbereitung" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -93,7 +81,7 @@
+       <workItem from="1671175790791" duration="2529000" />
+       <workItem from="1671434782280" duration="55000" />
+       <workItem from="1671613002494" duration="973000" />
+-      <workItem from="1672485329005" duration="11978000" />
++      <workItem from="1672485329005" duration="12599000" />
+     </task>
+     <task id="LOCAL-00002" summary="dc">
+       <created>1670224012464</created>
+@@ -102,7 +90,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1670224012464</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="ModeSurvive und Anfang Klausurvorbereitung">
++      <created>1672572519405</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1672572519405</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -122,6 +117,7 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="dc" />
+     <MESSAGE value="ModeSurvive Testbar" />
+-    <option name="LAST_COMMIT_MESSAGE" value="ModeSurvive Testbar" />
++    <MESSAGE value="ModeSurvive und Anfang Klausurvorbereitung" />
++    <option name="LAST_COMMIT_MESSAGE" value="ModeSurvive und Anfang Klausurvorbereitung" />
+   </component>
+ </project>
+\ No newline at end of file
