@@ -46,6 +46,14 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
     private JLabel team2;
     private JPanel point1;
     private JLabel point2;
+    private JPanel panel1;
+    private JPanel panel2;
+    private JPanel panel3;
+    private JPanel panel4;
+    private JPanel answers;
+    private JPanel points;
+    private JButton homebutton;
+    private JPanel home;
 
     public ModejeopardyGui(Controll pCtrl, String pTitel, String[] pTopics){
         super(pTitel);
