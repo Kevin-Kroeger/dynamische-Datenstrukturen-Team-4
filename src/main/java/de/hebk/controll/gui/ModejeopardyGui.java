@@ -170,4 +170,5 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         answers3.setVisible(false);
         answers4.setVisible(false);
     }
+
 }

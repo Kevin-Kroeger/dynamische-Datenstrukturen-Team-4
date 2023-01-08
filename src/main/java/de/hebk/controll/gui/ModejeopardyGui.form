@@ -399,7 +399,7 @@
           <gridbag weightx="0.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <background color="-3840"/>
+          <background color="-17660"/>
           <foreground color="-17660"/>
         </properties>
         <border type="none"/>
@@ -412,7 +412,7 @@
               <gridbag weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties>
-              <background color="-3840"/>
+              <background color="-17660"/>
               <editable value="false"/>
               <foreground color="-16777216"/>
               <lineWrap value="true"/>
