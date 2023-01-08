@@ -29,7 +29,6 @@ public class ModenormalGui extends JFrame implements ActionListener{
     private JButton joker3;
     private JButton joker2;
     private JPanel joker;
-
     private JLabel[] moneyarr;
     private JLabel money1;
     private JLabel money2;
@@ -52,9 +51,9 @@ public class ModenormalGui extends JFrame implements ActionListener{
 
     public ModenormalGui(Controll pCtrl, Gamemode pGamemode, String pTitel) {
         super(pTitel);
-        ctrl = (Controll) pCtrl;
+        ctrl = pCtrl;
         gamemode = pGamemode;
-        gamemode.randomQuestion();
+        gamemode.randomQuestion(null);
         generateLabelButtontext();
         addMoneyarr();
 

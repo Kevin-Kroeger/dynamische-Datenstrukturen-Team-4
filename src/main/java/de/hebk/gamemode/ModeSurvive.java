@@ -25,7 +25,7 @@ public class ModeSurvive extends Gamemode {
     }
 
     @Override
-    public void randomQuestion() {
+    public void randomQuestion(String pContext) {
 
     }
 
