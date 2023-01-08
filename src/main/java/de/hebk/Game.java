@@ -1,12 +1,11 @@
 package de.hebk;
-import de.hebk.*;
 import de.hebk.controll.*;
 import de.hebk.user.*;
 import de.hebk.gamemode.*;
 import de.hebk.csv.*;
 
 public class Game {
-    private User user;
+    private User[] users = new User[2];
     private Controll ctrl;
     private CSVReader csv;
     private Gamemode gamemode;
@@ -15,13 +14,15 @@ public class Game {
     public Game(){
         ctrl = new Controll(this);
         csv = new CSVReader();
-        ctrl.showMenu();
+        ctrl.showLogin();
     }
 
-    public void createUser(String pName, int pAge, int pPoints){
-        user.setName(pName);
-        user.setAge(pAge);
-        user.setPoints(pPoints);
+    public void createUser(String pName, int pAge){
+        if(users[0] == null){
+            users[0] = new User(pName,pAge,0);
+        }else{
+            users[1] = new User(pName,pAge,0);
+        }
     }
 
 
@@ -49,8 +50,8 @@ public class Game {
     /*
     Getter und Setter
      */
-    public User getUser() {
-        return user;
+    public User[] getUser() {
+        return users;
     }
     public Controll getCtrl() {
         return ctrl;

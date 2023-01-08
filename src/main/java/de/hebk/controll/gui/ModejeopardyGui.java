@@ -71,7 +71,7 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         gamemode = pGamemode;
 
         //User
-        users[0] = ctrl.getGame().getUser();
+        users[0] = ctrl.getGame().getUser()[0];
         users[1] = user2;
         currentPlayer = users[0];
         team1.setText(users[0].getName());
