@@ -40,7 +40,7 @@ public class Game {
             gamemode.setModeNormal(csv.readCSVList("src/main/java/de/hebk/csv/questions.csv"));
         }else if(input == 2){
             gamemode = new ModeSurvive();
-            gamemode.setModeSurvive(csv.readCSVStack("src/main/java/de/hebk/csv/questions.csv"));
+            gamemode.setModeSurvive(csv.readCSVStack("C:\\Users\\aswin.peterf\\IdeaProjects\\dynamische-Datenstrukturen-Team-4myFork\\src\\main\\java\\de\\hebk\\csv\\questions.csv"));
         }else if(input == 3){
             gamemode = new ModeJeopardy();
             gamemode.setModeJeopardy(csv.readCSVQueue("src/main/java/de/hebk/csv/questions.csv"));
