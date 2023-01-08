@@ -35,8 +35,10 @@ public class ModeSurvive extends Gamemode {
 
 
     @Override
-    public void randomQuestion() {
-        // Nicht für Stack Anwendbar
+
+    public void randomQuestion(String pContext) {
+
+
     }
 
 
