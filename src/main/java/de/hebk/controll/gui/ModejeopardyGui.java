@@ -3,6 +3,7 @@ package de.hebk.controll.gui;
 import de.hebk.controll.Controll;
 import de.hebk.gamemode.Gamemode;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -130,9 +131,13 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         }
         if(event.getSource() == answers1 || event.getSource() == answers2 || event.getSource() == answers3 || event.getSource() == answers4){
             if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
-                //Punkte System machen
                 disabletextAnswers();
+                question.setForeground(Color.BLACK);
+                question.setText("Diese Antwort ist Richtig!");
             }else{
+                disabletextAnswers();
+                question.setForeground(Color.RED);
+                question.setText("Diese Antwort ist Falsch!");
                 //Keine Punkte
             }
         }
@@ -164,7 +169,6 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
     }
 
     private void disabletextAnswers(){
-        question.setVisible(false);
         answers1.setVisible(false);
         answers2.setVisible(false);
         answers3.setVisible(false);

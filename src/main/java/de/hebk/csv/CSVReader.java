@@ -74,7 +74,6 @@ public class CSVReader {
                     questions[i] = arr[j];
                 }
                 int diff = Integer.parseInt(arr[2]);
-                System.out.println("CSV");
                 q1.enqueue(new Questions(arr[0],arr[1],questions,arr[3],diff));
             }
             r.close();
