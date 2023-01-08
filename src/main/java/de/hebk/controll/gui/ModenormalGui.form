@@ -241,6 +241,7 @@
         <constraints border-constraint="Center"/>
         <properties>
           <background color="-16776639"/>
+          <enabled value="true"/>
           <font size="50"/>
           <foreground color="-16777216"/>
           <maximumSize width="200" height="200"/>
@@ -302,7 +303,9 @@
             </constraints>
             <properties>
               <background color="-16776639"/>
+              <hideActionText value="true"/>
               <horizontalTextPosition value="0"/>
+              <icon value="de/hebk/images/icons/img.png"/>
               <text value=""/>
             </properties>
           </component>
@@ -314,6 +317,7 @@
             <properties>
               <background color="-16776639"/>
               <horizontalTextPosition value="0"/>
+              <icon value="de/hebk/images/icons/img_1.png"/>
               <text value=""/>
             </properties>
           </component>
@@ -325,6 +329,7 @@
             <properties>
               <background color="-16776639"/>
               <horizontalTextPosition value="0"/>
+              <icon value="de/hebk/images/icons/img_2.png"/>
               <text value=""/>
             </properties>
           </component>

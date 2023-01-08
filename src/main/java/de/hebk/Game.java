@@ -42,7 +42,7 @@ public class Game {
             gamemode.setModeSurvive(csv.readCSVStack("src/main/java/de/hebk/csv/questions.csv"));
         }else if(input == 3){
             gamemode = new ModeJeopardy();
-            gamemode.setModeJeopardy(null);
+            gamemode.setModeJeopardy(csv.readCSVQueue("src/main/java/de/hebk/csv/questions.csv"));
         }
     }
 
