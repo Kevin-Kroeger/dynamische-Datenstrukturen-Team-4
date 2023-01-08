@@ -2,12 +2,17 @@ package de.hebk.controll.gui;
 
 import de.hebk.controll.Controll;
 import de.hebk.gamemode.Gamemode;
+import de.hebk.user.User;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ModejeopardyGui extends JFrame implements ActionListener {
+    private User[] users = new User[2];
+    private int point;
+    private User currentPlayer;
     private Controll ctrl;
     private Gamemode gamemode;
     private JPanel jeopardy;
@@ -47,7 +52,7 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
     private JButton answers2;
     private JLabel team1;
     private JLabel team2;
-    private JPanel point1;
+    private JPanel pointteam1;
     private JLabel point2;
     private JPanel panel1;
     private JPanel panel2;
@@ -57,11 +62,20 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
     private JPanel points;
     private JButton homebutton;
     private JPanel home;
+    private JLabel point1;
+    private JPanel pointteam2;
 
-    public ModejeopardyGui(Controll pCtrl, Gamemode pGamemode ,String pTitel, String[] pTopics){
+    public ModejeopardyGui(Controll pCtrl, Gamemode pGamemode ,String pTitel, String[] pTopics,User user2){
         super(pTitel);
         ctrl = pCtrl;
         gamemode = pGamemode;
+
+        //User
+        users[0] = ctrl.getGame().getUser();
+        users[1] = user2;
+        currentPlayer = users[0];
+        team1.setText(users[0].getName());
+        team2.setText(users[1].getName());
 
         this.add(jeopardy);
         this.setVisible(true);
@@ -98,47 +112,72 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         answers2.addActionListener(this);
         answers3.addActionListener(this);
         answers4.addActionListener(this);
+        homebutton.addActionListener(this);
     }
 
     public void actionPerformed(ActionEvent event){
+        if(event.getSource() == homebutton){
+            ctrl.showMenu();
+            this.setVisible(false);
+        }
         if(event.getSource() == first100 || event.getSource() == first200){
             generateQuestion(topic1.getText(),1);
             ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
         }else if(event.getSource() == first300 || event.getSource() == first400){
             generateQuestion(topic1.getText(),2);
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
         }else if(event.getSource() == first500 || event.getSource() == first600){
             generateQuestion(topic1.getText(),3);
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
         }else if(event.getSource() == second100 || event.getSource() == second200){
             generateQuestion(topic2.getText(),1);
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
         }else if(event.getSource() == second300 || event.getSource() == second400){
             generateQuestion(topic2.getText(),2);
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
         }else if(event.getSource() == second500 || event.getSource() == second600){
             generateQuestion(topic2.getText(),3);
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
         }else if(event.getSource() == third100 || event.getSource() == third200){
             generateQuestion(topic3.getText(),1);
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
         }else if( event.getSource() == third300 || event.getSource() == third400){
             generateQuestion(topic3.getText(),2);
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
         }else if(event.getSource() == third500|| event.getSource() == third600){
             generateQuestion(topic3.getText(),3);
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
         }else if(event.getSource() == fourth100 || event.getSource() == fourth200){
             generateQuestion(topic4.getText(),1);
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
         }else if(event.getSource() == fourth300 || event.getSource() == fourth400){
             generateQuestion(topic4.getText(),2);
-        }else if(event.getSource() == fourth500 || event.getSource() == fourth600){
-            generateQuestion(topic4.getText(),3);
-        }else if(event.getSource() == homebutton) {
-            ctrl.showMenu();
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
+        }else if(event.getSource() == fourth500 || event.getSource() == fourth600) {
+            generateQuestion(topic4.getText(), 3);
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
         }
         if(event.getSource() == answers1 || event.getSource() == answers2 || event.getSource() == answers3 || event.getSource() == answers4){
             if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
                 disabletextAnswers();
-                question.setForeground(Color.BLACK);
                 question.setText("Diese Antwort ist Richtig!");
+                pointCounter(point);
             }else{
                 disabletextAnswers();
-                question.setForeground(Color.RED);
                 question.setText("Diese Antwort ist Falsch!");
-                //Keine Punkte
+                pointCounter(0);
             }
         }
     }
@@ -173,5 +212,17 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         answers2.setVisible(false);
         answers3.setVisible(false);
         answers4.setVisible(false);
+    }
+
+    private void pointCounter(int pPoints){
+        if(currentPlayer == users[0]){
+            users[0].setPoints(users[0].getPoints() + pPoints);
+            point1.setText(String.valueOf(users[0].getPoints())+ " Punkte");
+            currentPlayer = users[1];
+        }else if(currentPlayer == users[1]){
+            users[1].setPoints(users[1].getPoints() + pPoints);
+            point2.setText(String.valueOf(users[1].getPoints())+ " Punkte");
+            currentPlayer = users[0];
+        }
     }
 }
