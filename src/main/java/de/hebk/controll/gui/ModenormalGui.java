@@ -84,10 +84,9 @@ public class ModenormalGui extends JFrame implements ActionListener{
             if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
                 count++;
                 moneycount();
-                System.out.println(gamemode.getCurrentQuestion().getDifficulty());
                 if(count == 14){
                     deleteAnswerbuttons();
-                    textArea1.setText("DU HAST 1.000.0000€ GEWONNEN ");
+                    textArea1.setText("DU HAST 1.000.000€ GEWONNEN ");
                     textArea1.setForeground(Color.orange);
                 }else{
                     gamemode.nextQuestion();
@@ -105,10 +104,10 @@ public class ModenormalGui extends JFrame implements ActionListener{
             usefiftyfifty();
             joker1.setVisible(false);
         }else if(event.getSource() == joker2){
-            ctrl.getGame().getGamemode().useJoker(1);
+            usetelephone();
             joker2.setVisible(false);
         }else if(event.getSource() == joker3){
-            ctrl.getGame().getGamemode().useJoker(2);
+            useaudiencejoker();
             joker3.setVisible(false);
         }
     }
@@ -163,6 +162,21 @@ public class ModenormalGui extends JFrame implements ActionListener{
         antwort2.setText(gamemode.getCurrentQuestion().getAnswers()[1]);
         antwort3.setVisible(false);
         antwort4.setVisible(false);
+    }
+
+    private void usetelephone(){
+        ctrl.getGame().getGamemode().useJoker(1);
+        textArea1.setText(gamemode.getCurrentQuestion().getQuestion());
+    }
+
+    private void useaudiencejoker(){
+        ctrl.getGame().getGamemode().useJoker(2);
+        textArea1.setText(gamemode.getCurrentQuestion().getQuestion());
+    }
+
+    private void useaudience(){
+        ctrl.getGame().getGamemode().useJoker(2);
+        textArea1.setText(gamemode.getCurrentQuestion().getQuestion());
     }
 
     private void moneycount(){

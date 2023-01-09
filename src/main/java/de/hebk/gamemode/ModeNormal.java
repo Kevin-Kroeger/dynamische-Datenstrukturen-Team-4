@@ -1,5 +1,6 @@
 package de.hebk.gamemode;
 
+import de.hebk.Game;
 import de.hebk.model.list.List;
 import java.util.Random;
 
@@ -61,6 +62,7 @@ public class ModeNormal extends Gamemode {
     @Override
     public void useJoker(int pInput) {
         getJoker()[pInput] = null;
+        //50/50 Joker
         if(pInput == 0){
             String[] arr = new String[2];
             arr[0] = currentQuestion.getCorrect();
@@ -71,6 +73,63 @@ public class ModeNormal extends Gamemode {
                 useJoker(0);
             }
             currentQuestion.setAnswers(arr);
+        //Telefon Joker
+        }else if(pInput == 1){
+            if(currentQuestion.getDifficulty() == 1){
+                getCurrentQuestion().setQuestion("Ich tendiere zu der Antwort: " + getCurrentQuestion().getCorrect());
+            }else if(currentQuestion.getDifficulty() == 2){
+                String[] arr = new String[2];
+                arr[0] = getCurrentQuestion().getCorrect();
+                arr[1] = getCurrentQuestion().getAnswers()[1];
+                String tmp;
+                Random rand = new Random();
+                int j = rand.nextInt(2);
+                tmp = arr[j];
+                getCurrentQuestion().setQuestion("Ich bin mir nicht 100% sicher aber ich würde sagen, es ist " + tmp);
+            }else if(currentQuestion.getDifficulty() == 3){
+                String[] arr = new String[3];
+                arr[0] = getCurrentQuestion().getCorrect();
+                arr[1] = getCurrentQuestion().getAnswers()[1];
+                arr[2] = getCurrentQuestion().getAnswers()[2];
+                String tmp;
+                Random rand = new Random();
+                int j = rand.nextInt(3);
+                tmp = arr[j];
+                getCurrentQuestion().setQuestion("Ich weiß die Antwort nicht und müsste raten. Ich würde sagen es ist " + tmp);
+            }
+        //Publikums Joker
+        }else if(pInput == 2){
+            if(currentQuestion.getDifficulty() == 1){
+                String tmp = "";
+                for(int i = 0; i < getCurrentQuestion().getAnswers().length; i++){
+                    if(getCurrentQuestion().getAnswers()[i] == getCurrentQuestion().getCorrect()){
+                        tmp = tmp + "Antwort "+ getCurrentQuestion().getCorrect() + " 88% \n";
+                    }else{
+                        tmp = tmp + "Antwort" + getCurrentQuestion().getAnswers()[i] + "  3% \n";
+                    }
+                }
+                getCurrentQuestion().setQuestion(tmp);
+            }else if(currentQuestion.getDifficulty() == 2){
+                String tmp = "";
+                for(int i = 0; i < getCurrentQuestion().getAnswers().length; i++){
+                    if(getCurrentQuestion().getAnswers()[i] == getCurrentQuestion().getCorrect()){
+                        tmp = tmp + "Antwort "+ getCurrentQuestion().getCorrect() + " 70% \n";
+                    }else{
+                        tmp = tmp + "Antwort" + getCurrentQuestion().getAnswers()[i] + "  10% \n";
+                    }
+                }
+                getCurrentQuestion().setQuestion(tmp);
+            }else if(currentQuestion.getDifficulty() == 3){
+                String tmp = "";
+                for(int i = 0; i < getCurrentQuestion().getAnswers().length; i++){
+                    if(getCurrentQuestion().getAnswers()[i] == getCurrentQuestion().getCorrect()){
+                        tmp = tmp + "Antwort "+ getCurrentQuestion().getCorrect() + " 40% \n";
+                    }else{
+                        tmp = tmp + "Antwort" + getCurrentQuestion().getAnswers()[i] + "  20% \n";
+                    }
+                }
+                getCurrentQuestion().setQuestion(tmp);
+            }
         }
     }
 
@@ -118,6 +177,4 @@ public class ModeNormal extends Gamemode {
     public void setJoker(Joker[] joker) {
         super.setJoker(joker);
     }
-
-
 }

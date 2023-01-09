@@ -1,0 +1,15 @@
+Index: src/main/java/de/hebk/controll/gui/ModenormalGui.java
+===================================================================
+diff --git a/src/main/java/de/hebk/controll/gui/ModenormalGui.java b/src/main/java/de/hebk/controll/gui/ModenormalGui.java
+--- a/src/main/java/de/hebk/controll/gui/ModenormalGui.java	
++++ b/src/main/java/de/hebk/controll/gui/ModenormalGui.java	
+@@ -71,6 +71,9 @@
+         antwort3.addActionListener(this);
+         antwort4.addActionListener(this);
+         end.addActionListener(this);
++        joker1.addActionListener(this);
++        joker2.addActionListener(this);
++        joker3.addActionListener(this);
+ 
+ 
+         //Bild Wer wird Millionär

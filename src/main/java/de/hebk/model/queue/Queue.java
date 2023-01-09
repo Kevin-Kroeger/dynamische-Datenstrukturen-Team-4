@@ -31,7 +31,6 @@ public class Queue<T> {
             first = new Node<T>(pObject);
         } else {
             Node<T> n = first;
-
             while (n.getNext()!=null) {
                 n = n.getNext();
             }
@@ -59,5 +58,18 @@ public class Queue<T> {
             return null;
         }
         return first.getContext();
+    }
+
+    public int getLenght(){
+        int count = 1;
+        if(first == null){
+            return 0;
+        }
+        Node<T> tmp = first;
+        while(tmp.getNext() != null){
+            count++;
+            tmp = tmp.getNext();
+        }
+        return count;
     }
 }
