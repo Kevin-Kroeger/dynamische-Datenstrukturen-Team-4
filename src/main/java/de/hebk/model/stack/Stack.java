@@ -78,4 +78,16 @@ public class Stack<T> {
         ret = ret + "]";
         return ret;
     }
+    public int getLenght(){
+        int count = 1;
+        if(first == null){
+            return 0;
+        }
+        Node<T> tmp = first;
+        while(tmp.getNext() != null){
+            count++;
+            tmp = tmp.getNext();
+        }
+        return count;
+    }
 }
