@@ -40,7 +40,6 @@ public class Menu extends JFrame implements ActionListener {
 
 
     public void actionPerformed(ActionEvent event){
-
         if(event.getSource() == play){
             this.setVisible(false);
             ctrl.showSelection();

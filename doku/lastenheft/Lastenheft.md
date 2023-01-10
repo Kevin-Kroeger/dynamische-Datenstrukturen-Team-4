@@ -14,9 +14,11 @@
 
 
 ## 1 Einleitung
-* Aufg *
-
-
+Dieses Projekt soll den Lernstoff der letzten 1.5 Jahre beinhalten. Hierzu wollen wir ein Spiel Programmieren, welches die 
+Grundprinzipien des Legendären "Wer wird Millionär" beinhaltet. Dafür haben wir 3 verschiedene Spiel-Modus erstellt.Die je nach Anwendungsfall verschiedene Dynamische Datenstrukturbenutzten. Der "Normal"
+Modus, welches der Fernsehsendung ähnelt. Den 2 Modus "Survive", welcher ein Endlos modus des Ersten Modus ist. Und den 3 Modus 
+Jeopardy. Dies ist auch ein Spiel welches Wissen Jeglicher art abfragt. 
+Um ein Bild zum Spiel zu Erblicken, werden wir das Komplette Projekt mithilfe von GUI gestalten .  
 
 ## 2 Soll-Konzept
 
@@ -26,7 +28,7 @@ Die Anwendung soll eine Funktionierende Kopie des Deutschland weit bekannten Gam
 Diese Kopie soll Spielbar sein und mithilfe dynamischen Datenstrukturen Erweitert werden. 3 Verschiedene Spiel-modys 
 sollen in unserer Version von "Wer wird Millionär" vorhanden sein. Diese Unterscheiden sich je nach Datenstruktur in 
 ihrer Anwendung. So werden die Modys "Klassisch", "Überleben" und "Jeopardy" spielbar sein. Alle Fortschritte werden
-in einen Leaderboard gespeichtert. Somit soll an Ende des Projektes ein Witziges und Spannendes Spiel rauskommen. 
+in einen Leaderboard gespeichtert. Somit soll an Ende des Projektes ein Witziges und Spannendes Spiel das Endprodukt sein. 
 ### 2.2 Systemidee
 
 Die Grundidee unsers Projekts ist die Kultische und schon fast Legendäre Game-show "Wer wird Millinär". Diese wird mit 
