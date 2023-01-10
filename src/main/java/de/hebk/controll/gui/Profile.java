@@ -17,6 +17,11 @@ public class Profile extends JFrame implements ActionListener {
     private JButton menuButton;
     private JButton benutzernamenAendernButton;
 
+    /**
+     * Konstruktor
+     * @param pCtrl
+     * @param pTitel
+     */
     public Profile(Controll pCtrl, String pTitel){
         super(pTitel);
         ctrl = pCtrl;
@@ -30,6 +35,10 @@ public class Profile extends JFrame implements ActionListener {
         menuButton.addActionListener(this);
     }
 
+    /**
+     * Actionlistener
+     * @param event the event to be processed
+     */
     public void actionPerformed(ActionEvent event){
         if(event.getSource() == benutzernamenAendernButton){
             ctrl.showLogin();

@@ -19,22 +19,28 @@ public class LogIn extends JFrame implements ActionListener {
     private JLabel usernamelabel;
     private JLabel agelabel;
 
+    /**
+     * Konstruktor
+     * @param pCtrl
+     * @param pTitel
+     */
     public LogIn(Controll pCtrl,String pTitel){
         super(pTitel);
         ctrl = pCtrl;
-
         this.add(login);
         this.setVisible(true);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
         pAge = 0;
         pUsername = "";
-
         username.addActionListener(this);
         age.addActionListener(this);
         weiterButton.addActionListener(this);
     }
 
+    /**
+     * Actionlistener
+     * @param event the event to be processed
+     */
     public void actionPerformed(ActionEvent event){
         if(event.getSource() == username){
             pUsername = username.getText();
@@ -53,19 +59,34 @@ public class LogIn extends JFrame implements ActionListener {
         }
     }
 
-
+    /**
+     * liefert den Wert pUsername zurück
+     * @return
+     */
     public String getpUsername() {
         return pUsername;
     }
 
+    /**
+     * setzt den Parameter als pUsername
+     * @param pUsername
+     */
     public void setpUsername(String pUsername) {
         this.pUsername = pUsername;
     }
 
+    /**
+     * liefert den Wert pAger zurück
+     * @return
+     */
     public int getpAge() {
         return pAge;
     }
 
+    /**
+     * setzt den Parameter als pAge
+     * @param pAge
+     */
     public void setpAge(int pAge) {
         this.pAge = pAge;
     }

@@ -9,7 +9,6 @@ import de.hebk.model.queue.Queue;
 import de.hebk.model.stack.Stack;
 
 public class CSVReader {
-
     /**
      * Diese Methode liest die Datei mit den Fragen.
      * Danach wird von jeder Zeile ein neues Objekt der Klasse Question instanziiert.
@@ -38,6 +37,14 @@ public class CSVReader {
         }
         return l1;
     }
+
+    /**
+     * Die Methode liest die Fragen in der CSV Datei ein
+     * jede Zeile der Datei ist eine Frage und wird dem Stack hinzugefügt
+     * danach wird der Stack zurückgegeben
+     * @param path
+     * @return
+     */
     public Stack<Questions> readCSVStack(String path) {
         Stack<Questions> s1 = new Stack<Questions>();
         String s;
@@ -60,7 +67,9 @@ public class CSVReader {
     }
 
     /**
-     * Themen Erdkunde,Naturwissenschaften,Geschichte, Wissenschaft, Fanfrage, Musik, Filme
+     Die Methode liest die Fragen in der CSV Datei ein
+     * jede Zeile der Datei ist eine Frage und wird einer Queue hinzugefügt
+     * danach wird diese Queue zurückgegeben
      */
     public Queue<Questions> readCSVQueue(String path){
         Queue<Questions> q1 = new Queue<Questions>();

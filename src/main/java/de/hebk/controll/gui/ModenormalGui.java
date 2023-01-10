@@ -48,7 +48,12 @@ public class ModenormalGui extends JFrame implements ActionListener{
     private JButton end;
     private JTextArea textArea1;
 
-
+    /**
+     * Konstruktor
+     * @param pCtrl
+     * @param pGamemode
+     * @param pTitel
+     */
     public ModenormalGui(Controll pCtrl, Gamemode pGamemode, String pTitel) {
         super(pTitel);
         ctrl = pCtrl;
@@ -56,12 +61,9 @@ public class ModenormalGui extends JFrame implements ActionListener{
         gamemode.randomQuestion(null);
         generateLabelButtontext();
         addMoneyarr();
-
-
         this.add(panel1);
         this.setVisible(true);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
         //Icons für Joker
         Icon joker50 = new ImageIcon("src/main/java/de/hebk/images/icons/50-50.png");
         joker1.setIcon(joker50);
@@ -69,7 +71,6 @@ public class ModenormalGui extends JFrame implements ActionListener{
         joker2.setIcon(jokertele);
         Icon jokeraudience = new ImageIcon("src/main/java/de/hebk/images/icons/audience.png");
         joker3.setIcon(jokeraudience);
-
         antwort1.addActionListener(this);
         antwort2.addActionListener(this);
         antwort3.addActionListener(this);
@@ -79,6 +80,11 @@ public class ModenormalGui extends JFrame implements ActionListener{
         joker2.addActionListener(this);
         joker3.addActionListener(this);
     }
+
+    /**
+     * Actionlistener
+     * @param event the event to be processed
+     */
     public void actionPerformed(ActionEvent event){
         if(event.getSource() == antwort1 || event.getSource() == antwort2 || event.getSource() == antwort3 || event.getSource() == antwort4){
             if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
@@ -113,7 +119,8 @@ public class ModenormalGui extends JFrame implements ActionListener{
     }
 
     /**
-     * Verändern wenns geht
+     * Packt die money Label in ein array
+     * hilft um besser auf die jeweiligen Stellen zuzugreifen
      */
     private void addMoneyarr(){
         moneyarr = new JLabel[15];
@@ -135,6 +142,9 @@ public class ModenormalGui extends JFrame implements ActionListener{
         moneyarr[count].setForeground(Color.RED);
     }
 
+    /**
+     * verändert die Sichtbarkeit der Antwort Buttons
+     */
     private void deleteAnswerbuttons(){
         antwort1.setVisible(false);
         antwort2.setVisible(false);
@@ -142,6 +152,9 @@ public class ModenormalGui extends JFrame implements ActionListener{
         antwort4.setVisible(false);
     }
 
+    /**
+     * Generiert die Texte der Frage und Antwortmöglichkeiten
+     */
     private void generateLabelButtontext() {
         gamemode.getCurrentQuestion().randomAnswers();
         antwort1.setVisible(true);
@@ -155,6 +168,9 @@ public class ModenormalGui extends JFrame implements ActionListener{
         textArea1.setText(gamemode.getCurrentQuestion().getQuestion());
     }
 
+    /**
+     * Methode um den 50/50 Joker zu benutzen
+     */
     private void usefiftyfifty(){
         ctrl.getGame().getGamemode().useJoker(0);
         gamemode.getCurrentQuestion().randomAnswers();
@@ -164,21 +180,25 @@ public class ModenormalGui extends JFrame implements ActionListener{
         antwort4.setVisible(false);
     }
 
+    /**
+     * Methode um den Telefonjoker zu benutzen
+     */
     private void usetelephone(){
         ctrl.getGame().getGamemode().useJoker(1);
         textArea1.setText(gamemode.getCurrentQuestion().getQuestion());
     }
 
+    /**
+     * Methode um den Publikumsjoker zu benutzen
+     */
     private void useaudiencejoker(){
         ctrl.getGame().getGamemode().useJoker(2);
         textArea1.setText(gamemode.getCurrentQuestion().getQuestion());
     }
 
-    private void useaudience(){
-        ctrl.getGame().getGamemode().useJoker(2);
-        textArea1.setText(gamemode.getCurrentQuestion().getQuestion());
-    }
-
+    /**
+     * Methode um den jeweiligen Geld Fortschritt zu setzten
+     */
     private void moneycount(){
         if(count == 4 || count == 9 || count == 14){
             moneyarr[count].setForeground(new Color(75,82,142));

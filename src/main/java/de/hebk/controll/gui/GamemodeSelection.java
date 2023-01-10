@@ -18,20 +18,27 @@ public class GamemodeSelection extends JFrame implements ActionListener {
     private JButton jeopardy;
     private JButton back;
 
+    /**
+     * Konstruktor
+     * @param pCtrl
+     * @param pTitel
+     */
     public GamemodeSelection(Controll pCtrl,String pTitel){
         super(pTitel);
         ctrl = pCtrl;
-
         this.add(selection);
         this.setVisible(true);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
         normal.addActionListener(this);
         survive.addActionListener(this);
         jeopardy.addActionListener(this);
         back.addActionListener(this);
     }
 
+    /**
+     * Actionlistener
+     * @param event the event to be processed
+     */
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == normal){
             setVisible(false);
