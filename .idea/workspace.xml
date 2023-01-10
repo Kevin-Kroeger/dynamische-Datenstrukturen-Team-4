@@ -4,96 +4,72 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
-    <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="[ADD] Mode Jeopardy + GUI">
+    <list default="true" id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="[FIX] workout.xml fehler durch vorherigen merge fehler behoben">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_12_2022_13_51__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_12_2022_13_51__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_12_2022_15_22__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_12_2022_15_22__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_01_2023_21_57__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_01_2023_21_57__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModejeopardyGui.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModejeopardyGui.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModejeopardyGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModejeopardyGui.java" afterDir="false" />
-    </list>
-    <list id="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" name="Changes by kevin" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/Controll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/Controll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModejeopardyGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModejeopardyGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModenormalGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModenormalGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/csv/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/csv/CSVReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Gamemode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/Gamemode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeJeopardy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeJeopardy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/controll/Leaderboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/controll/Leaderboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/csv/questions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/csv/questions.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeNormal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeNormal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/hebk/gamemode/ModeSurvive.java" afterDir="false" />
-
-        </list>
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="klausurvorbereitung" />
+        <entry key="$PROJECT_DIR$" value="Survivemode" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-
+  <component name="GitHubPullRequestSearchHistory">{
+    &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+    }
+    }</component>
   <component name="GithubPullRequestsUISettings">
     <option name="recentNewPullRequestHead">
       <RepoCoordinatesHolder>
-        <option name="owner" value="Apftendo" />
-        <option name="repository" value="dynamische-Datenstrukturen-Team-4myFork" />
+        <option name="owner" value="MrMajesrto" />
+        <option name="repository" value="dynamische-Datenstrukturen-Team-4" />
       </RepoCoordinatesHolder>
     </option>
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="c015d7ba-27e4-4456-ba39-58efabdc3a6e" />
+        <option name="accountId" value="7393610a-4cd4-488c-b833-9f0da96a09fd" />
         <option name="url" value="https://github.com/HEBK-BGM/dynamische-Datenstrukturen-Team-4.git" />
       </UrlAndAccount>
     </option>
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/de/hebk/controll/gui/ModejeopardyGui.java">
-      <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
-        <range start1="9" end1="9" start2="10" end2="11" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
-        <range start1="38" end1="38" start2="40" end2="50" changelist="2866380c-7f39-4bed-9416-88fabc0190d1" />
-        <range start1="39" end1="40" start2="51" end2="52" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
-        <range start1="42" end1="42" start2="54" end2="55" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
-        <range start1="48" end1="48" start2="61" end2="68" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
-        <range start1="51" end1="52" start2="71" end2="81" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
-        <range start1="53" end1="53" start2="82" end2="84" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
-        <range start1="61" end1="63" start2="92" end2="105" changelist="d546e1f5-2ed5-4ce9-a9c3-371e3d407f22" />
-      </ranges>
-    </file>
-  </component>
-
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2JuJMshHNQqdeeGOd77DKKtdVz4" />
+  <component name="ProjectId" id="2IU6H6De2VRag5f1uX9dbo7dzzk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-
   <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
+    &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
-  }
-}</component>
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    }
+    }</component>
   <component name="RunManager">
     <configuration name="Maintester" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="de.hebk.Main" />
@@ -103,25 +79,20 @@
       </method>
     </configuration>
   </component>
-
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/aswin.peterf/Schule/Informatik/Extras/Bild/Löschen.png",
-    "nodejs_package_manager_path": "npm"
-  }
-}]]></component>
-
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="dc">
+      <created>1670081710247</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670081710247</updated>
+    </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0202f099-650d-455f-855f-e2f3d6b26e8c" name="Changes" comment="" />
-      <created>1672922016223</created>
+      <changelist id="2866380c-7f39-4bed-9416-88fabc0190d1" name="Changes" comment="dc" />
+      <created>1670223746325</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-
       <updated>1670223746325</updated>
       <workItem from="1670223750969" duration="3661000" />
       <workItem from="1670524042299" duration="601000" />
@@ -132,9 +103,8 @@
       <workItem from="1671434782280" duration="55000" />
       <workItem from="1671613002494" duration="973000" />
       <workItem from="1672485329005" duration="11978000" />
-      <workItem from="1672933229230" duration="183000" />
-      <workItem from="1672946904509" duration="7306000" />
-      <workItem from="1673006877402" duration="6660000" />
+      <workItem from="1673206525228" duration="67000" />
+      <workItem from="1673356726427" duration="1718000" />
     </task>
     <task id="LOCAL-00002" summary="dc">
       <created>1670224012464</created>
@@ -143,27 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670224012464</updated>
     </task>
-    <task id="LOCAL-00003" summary="[ADD] Mode Jeopardy + GUI">
-      <created>1672953990963</created>
+    <task id="LOCAL-00003" summary="[FIX] workout.xml fehler durch vorherigen merge fehler behoben">
+      <created>1673205887607</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1672953990963</updated>
+      <updated>1673205887607</updated>
     </task>
-    <task id="LOCAL-00004" summary="[ADD] Mode Jeopardy + GUI">
-      <created>1672954121097</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1672954121097</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
-
-      <updated>1672922016223</updated>
-      <workItem from="1672922026909" duration="614000" />
-      <workItem from="1672924427608" duration="10636000" />
-    </task>
-
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,12 +137,10 @@
       </map>
     </option>
   </component>
-
   <component name="VcsManagerConfiguration">
     <MESSAGE value="dc" />
     <MESSAGE value="ModeSurvive Testbar" />
-    <MESSAGE value="[ADD] Mode Jeopardy + GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADD] Mode Jeopardy + GUI" />
+    <MESSAGE value="[FIX] workout.xml fehler durch vorherigen merge fehler behoben" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FIX] workout.xml fehler durch vorherigen merge fehler behoben" />
   </component>
-
 </project>
