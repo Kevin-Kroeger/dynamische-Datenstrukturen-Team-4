@@ -12,6 +12,7 @@ public class Main {
         Game g = new Game();
     }
 
+    Game g = new Game();
 
 
 }

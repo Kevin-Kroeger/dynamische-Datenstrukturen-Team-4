@@ -2,11 +2,7 @@ package de.hebk.controll;
 
 
 import de.hebk.Game;
-import de.hebk.controll.gui.GamemodeSelection;
-import de.hebk.controll.gui.Menu;
-import de.hebk.controll.gui.ModejeopardyGui;
-import de.hebk.controll.gui.ModenormalGui;
-import de.hebk.controll.gui.ModesurviveGui;
+import de.hebk.controll.gui.*;
 import de.hebk.gamemode.Gamemode;
 import de.hebk.gamemode.ModeJeopardy;
 import de.hebk.gamemode.ModeNormal;
