@@ -2,6 +2,7 @@ package de.hebk.controll.gui;
 
 import de.hebk.controll.Controll;
 import de.hebk.gamemode.Gamemode;
+import de.hebk.gamemode.ModeSurvive;
 
 import javax.swing.*;
 import java.awt.*;
@@ -78,7 +79,8 @@ public class ModesurviveGui extends JFrame implements ActionListener {
         if(e.getSource() == button1 || e.getSource() == button2 || e.getSource() == button3 || e.getSource() == button4) {
             if(gamemode.checkcorrect(((JButton)e.getSource()).getText())) {
                 count++;
-                textArea1.setText("Deine Punktzahl: "+count);
+                ctrl.getGame().getUser()[0].setCount(count);
+                textArea1.setText("Deine Punktzahl: "+ count);
                 gamemode.start();
                 try {
                     generateLabelButtontext();
@@ -94,6 +96,7 @@ public class ModesurviveGui extends JFrame implements ActionListener {
         } else if(e.getSource()==beenden) {
             ctrl.showMenu();
             this.setVisible(false);
+            ctrl.getLeaderboard().addPosLeaderboard(gamemode);
         }
     }
 

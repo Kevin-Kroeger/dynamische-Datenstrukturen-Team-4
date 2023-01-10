@@ -106,6 +106,7 @@ public class ModenormalGui extends JFrame implements ActionListener{
         }else if(event.getSource() == end){
             ctrl.showMenu();
             this.setVisible(false);
+            ctrl.getLeaderboard().addPosLeaderboard(gamemode);
         }else if(event.getSource() == joker1){
             usefiftyfifty();
             joker1.setVisible(false);

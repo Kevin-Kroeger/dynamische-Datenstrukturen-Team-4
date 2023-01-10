@@ -7,7 +7,7 @@ import java.util.Random;
 public class ModeSurvive extends Gamemode {
 
     private Questions currentQuestion;
-
+    private int count = 0;
     /**
      * Konstruktor
      */
@@ -62,6 +62,7 @@ public class ModeSurvive extends Gamemode {
      */
     public void nextQuestion() {
         modeSurvive.pop();
+        count++;
     }
 
     @Override
@@ -78,5 +79,13 @@ public class ModeSurvive extends Gamemode {
      */
     public void setCurrentQuestion(Questions pCurrentQuestion) {
         currentQuestion=pCurrentQuestion;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 }

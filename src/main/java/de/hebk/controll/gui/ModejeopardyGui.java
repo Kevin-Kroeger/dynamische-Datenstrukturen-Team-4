@@ -126,6 +126,7 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         if(event.getSource() == homebutton){
             ctrl.showMenu();
             this.setVisible(false);
+            ctrl.getLeaderboard().addPosLeaderboard(gamemode);
         }else if(event.getSource() == first100 || event.getSource() == first200){
             generateQuestion(topic1.getText(),1);
             ((JButton) event.getSource()).setVisible(false);

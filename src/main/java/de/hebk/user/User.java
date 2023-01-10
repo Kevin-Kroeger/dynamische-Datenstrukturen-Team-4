@@ -4,6 +4,7 @@ import de.hebk.user.Person;
 
 public class User extends Person {
     private int points;
+    private int count;
 
     /**
      * Konstruktor
@@ -11,9 +12,10 @@ public class User extends Person {
      * @param pAge
      * @param pPoints
      */
-    public User(String pName, int pAge, int pPoints) {
+    public User(String pName, int pAge, int pPoints,int pCount) {
         super(pName, pAge);
         setPoints(pPoints);
+        setPoints(pCount);
     }
 
     /**
@@ -30,5 +32,13 @@ public class User extends Person {
      */
     public void setPoints(int points) {
         this.points = points;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 }

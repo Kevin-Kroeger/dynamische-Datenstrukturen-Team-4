@@ -2,19 +2,15 @@ package de.hebk.controll;
 
 
 import de.hebk.Game;
-import de.hebk.controll.gui.GamemodeSelection;
-import de.hebk.controll.gui.Menu;
-import de.hebk.controll.gui.ModejeopardyGui;
-import de.hebk.controll.gui.ModenormalGui;
-import de.hebk.controll.gui.ModesurviveGui;
+import de.hebk.controll.gui.*;
 import de.hebk.gamemode.Gamemode;
 import de.hebk.gamemode.ModeJeopardy;
 import de.hebk.gamemode.ModeNormal;
 import de.hebk.gamemode.ModeSurvive;
 import de.hebk.model.list.List;
 import de.hebk.user.User;
-import de.hebk.controll.gui.LogIn;
 
+import javax.swing.*;
 import java.util.Random;
 
 public class Controll {
@@ -29,6 +25,7 @@ public class Controll {
      */
     public Controll(Game pGame){
         game = pGame;
+        leaderboard = new Leaderboard(this,"Bestenliste");
     }
 
     /**
@@ -77,6 +74,14 @@ public class Controll {
      */
     public void showSelection(){
         GamemodeSelection selection = new GamemodeSelection(this,"Spielen");
+    }
+
+    /**
+     * öffnet das Leaderboard
+     */
+    public void showLeaderboard(){
+        leaderboard.setVisible(true);
+        leaderboard.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
