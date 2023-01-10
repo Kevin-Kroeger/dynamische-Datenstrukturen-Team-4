@@ -28,9 +28,9 @@ public class Game {
      */
     public void createUser(String pName, int pAge){
         if(users[0] == null){
-            users[0] = new User(pName,pAge,0);
+            users[0] = new User(pName,pAge,0,0);
         }else{
-            users[1] = new User(pName,pAge,0);
+            users[1] = new User(pName,pAge,0,0);
         }
     }
 
