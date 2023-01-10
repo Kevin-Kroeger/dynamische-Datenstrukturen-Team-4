@@ -34,20 +34,23 @@ public class ModeJeopardy extends Gamemode {
 
     @Override
     public void randomQuestion(String pTopic) {
-        Queue<Questions> q1 = new Queue<>();
+        Random rand = new Random();
         Queue<Questions> tmp = new Queue<>();
-        while(!modeJeopardy.isEmpty()) {
-            if(modeJeopardy.front().getTopic().equals(pTopic)){
-                q1.enqueue(modeJeopardy.front());
-            }
+        int j = rand.nextInt(modeJeopardy.getLenght()+1);
+        for(int i = 0; i < j;i++){
             tmp.enqueue(modeJeopardy.front());
+            modeJeopardy.enqueue(modeJeopardy.front());
             modeJeopardy.dequeue();
         }
-        while(!q1.isEmpty() && getCurrentQuestion() == null){
-            if(q1.front().getDifficulty() == lvl) {
-                setCurrentQuestion(q1.front());
-            }
-            q1.dequeue();
+        if(modeJeopardy.front().getDifficulty() == lvl){
+            currentQuestion = modeJeopardy.front();
+            modeJeopardy.dequeue();
+        }else{
+            randomQuestion(pTopic);
+        }
+        while(!tmp.isEmpty()){
+            modeJeopardy.enqueue(tmp.front());
+            tmp.dequeue();
         }
     }
 

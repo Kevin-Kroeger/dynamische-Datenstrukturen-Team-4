@@ -1,12 +1,11 @@
 package de.hebk;
-import de.hebk.*;
 import de.hebk.controll.*;
 import de.hebk.user.*;
 import de.hebk.gamemode.*;
 import de.hebk.csv.*;
 
 public class Game {
-    private User user;
+    private User[] users = new User[2];
     private Controll ctrl;
     private CSVReader csv;
     private Gamemode gamemode;
@@ -15,13 +14,15 @@ public class Game {
     public Game(){
         ctrl = new Controll(this);
         csv = new CSVReader();
-        ctrl.showMenu();
+        ctrl.showLogin();
     }
 
-    public void createUser(String pName, int pAge, int pPoints){
-        user.setName(pName);
-        user.setAge(pAge);
-        user.setPoints(pPoints);
+    public void createUser(String pName, int pAge){
+        if(users[0] == null){
+            users[0] = new User(pName,pAge,0);
+        }else{
+            users[1] = new User(pName,pAge,0);
+        }
     }
 
 
@@ -39,7 +40,7 @@ public class Game {
             gamemode.setModeNormal(csv.readCSVList("src/main/java/de/hebk/csv/questions.csv"));
         }else if(input == 2){
             gamemode = new ModeSurvive();
-            gamemode.setModeSurvive(csv.readCSVStack("src/main/java/de/hebk/csv/questions.csv"));
+            gamemode.setModeSurvive(csv.readCSVStack("C:\\Users\\aswin.peterf\\IdeaProjects\\dynamische-Datenstrukturen-Team-4myFork\\src\\main\\java\\de\\hebk\\csv\\questions.csv"));
         }else if(input == 3){
             gamemode = new ModeJeopardy();
             gamemode.setModeJeopardy(csv.readCSVQueue("src/main/java/de/hebk/csv/questions.csv"));
@@ -49,8 +50,8 @@ public class Game {
     /*
     Getter und Setter
      */
-    public User getUser() {
-        return user;
+    public User[] getUser() {
+        return users;
     }
     public Controll getCtrl() {
         return ctrl;

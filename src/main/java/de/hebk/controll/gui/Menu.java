@@ -48,7 +48,8 @@ public class Menu extends JFrame implements ActionListener {
         }else if(event.getSource() == options){
 
         }else if(event.getSource() == profile){
-
+            this.setVisible(false);
+            Profile profile = new Profile(ctrl,"Profile");
         }else if(event.getSource() == exit){
             System.exit(1);
         }
