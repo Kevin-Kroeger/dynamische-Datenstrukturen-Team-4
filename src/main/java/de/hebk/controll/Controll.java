@@ -21,14 +21,22 @@ public class Controll {
     private GamemodeSelection gamemodeSelection;
     private Profile profile;
 
-
+    /**
+     * Konstruktor
+     * @param pGame
+     */
     public Controll(Game pGame){
         game = pGame;
         menu = new Menu(this,"Menü");
         gamemodeSelection = new GamemodeSelection(this,"Spielen");
         profile = new Profile(this,"Profile");
+        leaderboard = new Leaderboard(this,"Bestenliste");
     }
 
+    /**
+     * Hiermit wird die GUI des jeweiligen Gamemodes gestartet
+     * @param pGamemode
+     */
     public void gamemodeGui(Gamemode pGamemode){
         if(pGamemode instanceof ModeNormal) {
             ModenormalGui gui = new ModenormalGui(this,pGamemode, "Wer Wird Millionär");
@@ -38,7 +46,6 @@ public class Controll {
             if(game.getUser()[1] == null){
                 showLogin();
             }
-            if(game.getUser()[0] != null && game.getUser()[1] != null){
                 String[] topics = new String[]{"Erdkunde","Fangfrage","Musik","Filme","Naturwissenschaften","Geschichte","Wissenschaft"};
                 List<String> list = new List<>();
                 for(int i = 0; i < topics.length; i++){
@@ -60,15 +67,33 @@ public class Controll {
         }
     }
 
+    /**
+     * öffnet das Menu
+     */
     public void showMenu(){
         menu.setVisible(true);
         menu.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
+    /**
+     * öffnet die Gamemodeauswahl
+     */
     public void showSelection(){
         gamemodeSelection.setVisible(true);
         gamemodeSelection.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
+
+    /**
+     * öffnet das Leaderboard
+     */
+    public void showLeaderboard(){
+        leaderboard.setVisible(true);
+        leaderboard.setExtendedState(JFrame.MAXIMIZED_BOTH);
+    }
+
+    /**
+     * Öffnet den LogIN Screen
+     */
     public void showLogin(){
         LogIn logIn = new LogIn(this,"LogIn");
     }
@@ -79,18 +104,34 @@ public class Controll {
         profile.setText();
     }
 
+    /**
+     * gibt das Leaderboard zurück
+     * @return
+     */
     public Leaderboard getLeaderboard() {
         return leaderboard;
     }
 
+    /**
+     * Setzt das Leaderboard
+     * @param leaderboard
+     */
     public void setLeaderboard(Leaderboard leaderboard) {
         this.leaderboard = leaderboard;
     }
 
+    /**
+     * Gibt das Game zurück
+     * @return
+     */
     public Game getGame() {
         return game;
     }
 
+    /**
+     * setzt das Game
+     * @param game
+     */
     public void setGame(Game game) {
         this.game = game;
     }

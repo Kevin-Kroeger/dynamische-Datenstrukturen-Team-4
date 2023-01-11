@@ -18,6 +18,11 @@ public class Menu extends JFrame implements ActionListener {
     private JPanel top;
     private JLabel icon;
 
+    /**
+     * Konstruktor
+     * @param pCtrl
+     * @param pTitel
+     */
     public Menu(Controll pCtrl, String pTitel){
         super(pTitel);
         ctrl = pCtrl;
@@ -32,13 +37,17 @@ public class Menu extends JFrame implements ActionListener {
     }
 
 
-
+    /**
+     * Actionlistener
+     * @param event the event to be processed
+     */
     public void actionPerformed(ActionEvent event){
         if(event.getSource() == play){
             this.setVisible(false);
             ctrl.showSelection();
         }else if(event.getSource() == leaderboard){
-
+            this.setVisible(false);
+            ctrl.showLeaderboard();
         }else if(event.getSource() == options){
 
         }else if(event.getSource() == profile){

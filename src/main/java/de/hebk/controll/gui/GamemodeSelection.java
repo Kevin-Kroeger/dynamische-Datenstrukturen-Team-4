@@ -18,6 +18,11 @@ public class GamemodeSelection extends JFrame implements ActionListener {
     private JButton jeopardy;
     private JButton back;
 
+    /**
+     * Konstruktor
+     * @param pCtrl
+     * @param pTitel
+     */
     public GamemodeSelection(Controll pCtrl,String pTitel){
         super(pTitel);
         ctrl = pCtrl;
@@ -28,6 +33,10 @@ public class GamemodeSelection extends JFrame implements ActionListener {
         back.addActionListener(this);
     }
 
+    /**
+     * Actionlistener
+     * @param event the event to be processed
+     */
     public void actionPerformed(ActionEvent event) {
         if(event.getSource() == normal){
             setVisible(false);

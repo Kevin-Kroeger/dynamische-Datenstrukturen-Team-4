@@ -10,21 +10,25 @@ public class ModeNormal extends Gamemode {
     private Questions currentQuestion;
     private int count = 0;
 
+    /**
+     * Konstruktor
+     */
     public ModeNormal(){
         setModeNormal(getModeNormal());
         setLvl(1);
         setMoney(0);
     }
-
     @Override
+    /**
+     * überprüft den Parameter, ob dieser gleich ist wie die korrekte Antwort der momentanen Frage
+     */
     public boolean checkcorrect(String pAnswer) {
         return pAnswer.equals(currentQuestion.getCorrect());
     }
 
-
-
     /**
-     *
+     * Generiert eine Randomfrage aus der Liste modeNormal
+     * Die Frage muss die gleiche Schwierigkeit haben, wie das lvl
      * @return
      */
     @Override
@@ -46,7 +50,9 @@ public class ModeNormal extends Gamemode {
         }
     }
 
-
+    /**
+     * Nächste Frage wird generiert und der Counter für das Geld geht ein hoch
+     */
     @Override
     public void nextQuestion() {
         count++;
@@ -54,6 +60,9 @@ public class ModeNormal extends Gamemode {
         randomQuestion(null);
     }
 
+    /**
+     * überprüft,wann die Schwierigkeit geändert werden muss
+     */
     public void changeLVL(){
         if(count == 5){
             setLvl(2);
@@ -63,6 +72,12 @@ public class ModeNormal extends Gamemode {
     }
 
     @Override
+    /**
+     * Benutzen des Jokers
+     * Wenn pInput = 1, dann 50/50 Joker
+     * Wenn pInput = 2, dann Telefon Joker
+     * Wenn pInput = 3, dann Publikums Joker
+     */
     public void useJoker(int pInput) {
         getJoker()[pInput] = null;
         //50/50 Joker
@@ -137,6 +152,9 @@ public class ModeNormal extends Gamemode {
     }
 
     @Override
+    /**
+     * fügt die drei Joker dem Gamemode hinzu
+     */
     public void jokerHinzufuegen(Joker pJoker) {
         for(int i = 0; i < getJoker().length; i++){
             if(getJoker()[i] == null) {
@@ -151,32 +169,57 @@ public class ModeNormal extends Gamemode {
      *
      */
     @Override
+    /**
+     * startet denn Gamemode
+     */
     public void start() {
         randomQuestion(null);
     }
 
+    /**
+     * liefert das aktuelle Geld zurück
+     * @return
+     */
     public int getMoney() {
         return money;
     }
 
+    /**
+     * setzt das Geld auf den Parameter
+     * @param money
+     */
     public void setMoney(int money) {
         this.money = money;
     }
 
+    /**
+     * liefert die momentane Frage zurück
+     * @return
+     */
     public Questions getCurrentQuestion() {
         return currentQuestion;
     }
 
+    /**
+     * setzt die momentane Frage auf den Parameter
+     * @param currentQuestion
+     */
     public void setCurrentQuestion(Questions currentQuestion){
         this.currentQuestion = currentQuestion;
     }
 
     @Override
+    /**
+     * liefert die Joker zurück
+     */
     public Joker[] getJoker() {
         return super.getJoker();
     }
 
     @Override
+    /**
+     * setzt die Joker
+     */
     public void setJoker(Joker[] joker) {
         super.setJoker(joker);
     }
