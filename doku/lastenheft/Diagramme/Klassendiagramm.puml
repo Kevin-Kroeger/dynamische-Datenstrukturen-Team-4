@@ -208,5 +208,181 @@ Node --o Stack
 Node --o Queue
 Node --o List
 
+class GamemodeSelcetion{
+-ctrl:Controll
+-selection:JPanel
+-normal: JButton
+-survive:JButton
+-jeopardy:JButton
+-back:JButton
 
++actionPerformed:void
+}
+
+class LogIn{
+-login:JPanel
+-pUsername:String
+-pAge:int
+-crtl:Controll
+-username:JTextField
+-age:JTextField
+-weiterButton:JButton
+-usernamelabel:JLabel
+-agelabel:JLabel
+
++actionPerformed:void
+}
+
+class Menu{
+-crtl:Controll
+-menu:JPanel
+-selection:JPanel
+-play:JButton
+-leaderboard:JButton
+-options:JButton
+-exit:JButton
+-profile:Jbutton
+-top:JPanel
+-icon:JLabel
+
++actionPerformed:void
+}
+
+class ModejeopardyGUI{
+-crtl:Controll
+-gamemode:Gamemode
+-jeopardy:JPanel
+-topic1:JLabel
+-topic2:JLabel
+-topic3:JLabel
+-topic4:JLabel
+-first100:JButton
+-first200:JButton
+-first300:JButton
+-first400:JButton
+-first500:JButton
+-first600:JButton
+-second100:JButton
+-second200:JButton
+-second300:JButton
+-second400:JButton
+-second500:JButton
+-second600:JButton
+-third100:JButton
+-third200:JButton
+-third300:JButton
+-third400:JButton
+-third500:JButton
+-third600:JButton
+-fourth100:JButton
+-fourth200:JButton
+-fourth300:JButton
+-fourth400:JButton
+-fourth500:JButton
+-fourth600:JButton
+-questions:JLabel
+-question:JPanel
+-answers1:JButton
+-answers2:JButton
+-answers3:JButton
+-answers4:JButton
+-team1:JLabel
+-team2:JLabel
+-point1:JPanel
+-point2:JPanel
+-panel1:JPanel
+-panel2:JPanel
+-panel3:JPanel
+-panel4:JPanel
+-answers:JPanel
+-points:JPanel
+-homebutton:JButton
+-home:JPanel
+
++ actionPerformed:void
+- gernerateToppicLabel:void
+- generateQuestion:void
+- disabletextAnswers:void
+}
+
+class ModenormalGui{
+
+    private Gamemode gamemode;
+    - ctrl:Controll
+    - int count = 0;
+    - panel1:JPanel
+    - antwort1:JButton
+    - antwort2:JButton
+    - antwort3:JButton
+    - antwort4:JButton
+    - geldAnzeige:JPanel
+    - antworten:JPanel
+    - fragePanel:JPanel
+    - joker1:JButton
+    - joker3:JButton
+    - joker2:JButton
+    - joker:JPanel
+    - moneyarr:JLabel
+    - money1:JLabel
+    - money2:JLabel
+    - money3:JLabel
+    - money4:JLabel
+    - money5:JLabel
+    - money6:JLabel
+    - money7:JLabel
+    - money8:JLabel
+    - money9:JLabel
+    - money10:JLabel
+    - money11:JLabel
+    - money12:JLabel
+    - money13:JLabel
+    - money14:JLabel
+    - money15:JLabel
+    - end:JButton
+    - textArea1:JTextArea
+
+    + actionPerformed:void
+    - add Money:void
+    - deleteAnswerbuttons:void
+    - generateLabelBuoontext:void
+    - usefiftyfifty:void
+    - usetelephone:void
+    - useaudiencejoker:void
+    - moneycount:void
+}
+
+class ModesurviveGui{
+    - gamemode:Gamemode
+    - crtl:Controll
+    - button4:JButton
+    - button3:JButton
+    - button2:JButton
+    - button1:JButton
+    - panel1:JPanel
+    - beenden:JButton
+    - textArea1:JTextArea
+    - textArea2:JTextArea
+    -private int count =0:
+    -private boolean check = false
+
+    +actionPermormed:void
+    +deletbutton:void
+    -generateLabelButtontext:void
+}
+
+class Profil{
+    - ctrl:Controll
+    - profile:JPanel
+    - mid:JPanel
+    - usernametext:JPanel
+    - pointstext:JPanel
+    - username:JPanel
+    - points:JPanel
+    - menuButton:JButton
+    - benutzernamenAendernButton:JButton
+
+    + actionPerformed:void
+
+
+}
 @enduml
