@@ -206,14 +206,15 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
     }
 
     private void pointCounter(int pPoints){
+        ctrl.getGame().getGamemode().setCurrentQuestion(null);
         if(currentPlayer == ctrl.getGame().getUser()[0]){
             ctrl.getGame().getUser()[0].setPoints(ctrl.getGame().getUser()[0].getPoints() + pPoints);
             point1.setText(String.valueOf(ctrl.getGame().getUser()[0].getPoints())+ " Punkte");
             currentPlayer = ctrl.getGame().getUser()[1];
         }else if(currentPlayer == ctrl.getGame().getUser()[1]){
             ctrl.getGame().getUser()[1].setPoints(ctrl.getGame().getUser()[1].getPoints() + pPoints);
-            point2.setText(String.valueOf(ctrl.getGame().getUser()[0].getPoints())+ " Punkte");
-            currentPlayer = ctrl.getGame().getUser()[1];
+            point2.setText(String.valueOf(ctrl.getGame().getUser()[1].getPoints())+ " Punkte");
+            currentPlayer = ctrl.getGame().getUser()[0];
         }
     }
 }

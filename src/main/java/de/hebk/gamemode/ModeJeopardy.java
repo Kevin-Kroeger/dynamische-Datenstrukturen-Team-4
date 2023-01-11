@@ -36,19 +36,41 @@ public class ModeJeopardy extends Gamemode {
     public void randomQuestion(String pTopic) {
         Random rand = new Random();
         Queue<Questions> tmp = new Queue<>();
-        int j = rand.nextInt(modeJeopardy.getLenght()+1);
-        for(int i = 0; i < j;i++){
-            tmp.enqueue(modeJeopardy.front());
-            modeJeopardy.enqueue(modeJeopardy.front());
-            modeJeopardy.dequeue();
+        Queue<Questions> topic = new Queue<>();
+        while(!modeJeopardy.isEmpty()){
+            if(modeJeopardy.front().getTopic().equals(pTopic)){
+                topic.enqueue(modeJeopardy.front());
+                modeJeopardy.dequeue();
+            }else{
+                tmp.enqueue(modeJeopardy.front());
+                modeJeopardy.dequeue();
+            }
         }
-        if(modeJeopardy.front().getDifficulty() == lvl){
-            currentQuestion = modeJeopardy.front();
-            modeJeopardy.dequeue();
+        int j = rand.nextInt(topic.getLenght()+1);
+        System.out.println(j);
+        for(int i = 0; i <= j;i++){
+            System.out.println(topic.front());
+            topic.enqueue(topic.front());
+            topic.dequeue();
+        }
+        if(topic.front().getDifficulty() == lvl) {
+            currentQuestion = topic.front();
+            topic.dequeue();
         }else{
-            randomQuestion(pTopic);
+            while(currentQuestion == null){
+                if(topic.front().getDifficulty() == lvl) {
+                    currentQuestion = topic.front();
+                    topic.dequeue();
+                }
+                topic.enqueue(topic.front());
+                topic.dequeue();
+            }
         }
-        while(!tmp.isEmpty()){
+        while (!topic.isEmpty()) {
+            tmp.enqueue(topic.front());
+            topic.dequeue();
+        }
+        while (!tmp.isEmpty()) {
             modeJeopardy.enqueue(tmp.front());
             tmp.dequeue();
         }
