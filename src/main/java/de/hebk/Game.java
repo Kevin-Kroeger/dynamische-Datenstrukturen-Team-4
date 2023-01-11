@@ -10,26 +10,32 @@ public class Game {
     private CSVReader csv;
     private Gamemode gamemode;
 
-
+    /**
+     * Konstruktor
+     */
     public Game(){
         ctrl = new Controll(this);
         csv = new CSVReader();
         ctrl.showLogin();
     }
 
+    /**
+     * Erstellt einen neuen User
+     * User[1] ist der Haupt User
+     * User[2] wird beim Gamemode Jeopardy erstellt
+     * @param pName
+     * @param pAge
+     */
     public void createUser(String pName, int pAge){
         if(users[0] == null){
-            users[0] = new User(pName,pAge,0);
+            users[0] = new User(pName,pAge,0,0);
         }else{
-            users[1] = new User(pName,pAge,0);
+            users[1] = new User(pName,pAge,0,0);
         }
     }
 
-
-
-
     /**
-     *Erstmal zum Testen
+     * Starten den jeweiligen Spielmodus
      */
     public void startGame(int input){
         if(input == 1){
@@ -60,15 +66,12 @@ public class Game {
     public void setCtrl(Controll ctrl) {
         this.ctrl = ctrl;
     }
-
     public CSVReader getCsv() {
         return csv;
     }
-
     public void setCsv(CSVReader csv) {
         this.csv = csv;
     }
-
     public Gamemode getGamemode() {
         return gamemode;
     }

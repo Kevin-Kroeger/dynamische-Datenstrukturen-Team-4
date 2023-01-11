@@ -2,6 +2,7 @@ package de.hebk.controll.gui;
 
 import de.hebk.controll.Controll;
 import de.hebk.gamemode.Gamemode;
+import de.hebk.gamemode.ModeSurvive;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,10 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ModesurviveGui extends JFrame implements ActionListener {
-
     private Gamemode gamemode;
     private Controll ctrl;
-
     private JButton button4;
     private JButton button3;
     private JButton button2;
@@ -21,15 +20,20 @@ public class ModesurviveGui extends JFrame implements ActionListener {
     private JButton beenden;
     private JTextArea textArea1;
     private JTextArea textArea2;
-    private int count =0;
+    private int count = 0;
     private boolean check = false;
 
+    /**
+     * Konstruktor
+     * @param pControll
+     * @param pGamemode
+     * @param ptitle
+     */
     public ModesurviveGui(Controll pControll, Gamemode pGamemode, String ptitle) {
         super(ptitle);
         ctrl = pControll;
         this.gamemode = pGamemode;
         generateLabelButtontext();
-
         button1.addActionListener(this);
         button2.addActionListener(this);
         button3.addActionListener(this);
@@ -37,15 +41,14 @@ public class ModesurviveGui extends JFrame implements ActionListener {
         beenden.addActionListener(this);
         beenden.setForeground(Color.white);
         beenden.setBackground(new Color(3,37,126));
-
-
-
         this.add(panel1);
         this.setVisible(true);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
     }
 
+    /**
+     * Generiert die Buttons mit den Texten und Back/Foregrounds
+     */
     private void generateLabelButtontext() {
         gamemode.start();
         textArea2.setText(gamemode.getCurrentQuestion().getQuestion());
@@ -69,11 +72,15 @@ public class ModesurviveGui extends JFrame implements ActionListener {
     }
 
     @Override
+    /**
+     * Actionlistener
+     */
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == button1 || e.getSource() == button2 || e.getSource() == button3 || e.getSource() == button4) {
             if(gamemode.checkcorrect(((JButton)e.getSource()).getText())) {
                 count++;
-                textArea1.setText("Deine Punktzahl: "+count);
+                ctrl.getGame().getUser()[0].setCount(count);
+                textArea1.setText("Deine Punktzahl: "+ count);
                 gamemode.start();
                 try {
                     generateLabelButtontext();
@@ -85,13 +92,17 @@ public class ModesurviveGui extends JFrame implements ActionListener {
                 textArea1.setText("Das war falsch");
                 textArea1.setForeground(Color.RED);
                 deletebutton();
-
             }
         } else if(e.getSource()==beenden) {
             ctrl.showMenu();
             this.setVisible(false);
+            ctrl.getLeaderboard().addPosLeaderboard(gamemode);
         }
     }
+
+    /**
+     * Sichtbarkeit der Buttons wird verändert
+     */
     public void deletebutton() {
         button1.setVisible(false);
         button2.setVisible(false);

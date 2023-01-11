@@ -57,18 +57,29 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
     private JButton homebutton;
     private JPanel home;
 
-    public ModejeopardyGui(Controll pCtrl, Gamemode pGamemode ,String pTitel, String[] pTopics){
+
+    /**
+     * Konstruktor
+     * @param pCtrl
+     * @param pGamemode
+     * @param pTitel
+     * @param pTopics
+     * @param user2
+     */
+    public ModejeopardyGui(Controll pCtrl, Gamemode pGamemode ,String pTitel, String[] pTopics,User user2){
         super(pTitel);
         ctrl = pCtrl;
         gamemode = pGamemode;
-
+        users[0] = ctrl.getGame().getUser()[0];
+        users[1] = user2;
+        currentPlayer = users[0];
+        team1.setText(users[0].getName());
+        team2.setText(users[1].getName());
         this.add(jeopardy);
         this.setVisible(true);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
         generateTopicLabel(pTopics);
         disabletextAnswers();
-
         first100.addActionListener(this);
         first200.addActionListener(this);
         first300.addActionListener(this);
@@ -99,8 +110,16 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         answers4.addActionListener(this);
     }
 
+    /**
+     * Actionlistener
+     * @param event the event to be processed
+     */
     public void actionPerformed(ActionEvent event){
-        if(event.getSource() == first100 || event.getSource() == first200){
+        if(event.getSource() == homebutton){
+            ctrl.showMenu();
+            this.setVisible(false);
+            ctrl.getLeaderboard().addPosLeaderboard(gamemode);
+        }else if(event.getSource() == first100 || event.getSource() == first200){
             generateQuestion(topic1.getText(),1);
             ((JButton) event.getSource()).setVisible(false);
         }else if(event.getSource() == first300 || event.getSource() == first400){
@@ -123,12 +142,13 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
             generateQuestion(topic4.getText(),1);
         }else if(event.getSource() == fourth300 || event.getSource() == fourth400){
             generateQuestion(topic4.getText(),2);
-        }else if(event.getSource() == fourth500 || event.getSource() == fourth600){
-            generateQuestion(topic4.getText(),3);
-        }else if(event.getSource() == homebutton) {
-            ctrl.showMenu();
-        }
-        if(event.getSource() == answers1 || event.getSource() == answers2 || event.getSource() == answers3 || event.getSource() == answers4){
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
+        }else if(event.getSource() == fourth500 || event.getSource() == fourth600) {
+            generateQuestion(topic4.getText(), 3);
+            ((JButton) event.getSource()).setVisible(false);
+            point = Integer.parseInt(((JButton) event.getSource()).getText());
+        }else if(event.getSource() == answers1 || event.getSource() == answers2 || event.getSource() == answers3 || event.getSource() == answers4){
             if(gamemode.checkcorrect(((JButton) event.getSource()).getText())){
                 //Punkte System machen
                 disabletextAnswers();
@@ -139,7 +159,10 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
     }
 
 
-
+    /**
+     * Weist die jeweiligen Themen zu
+     * @param pTopic
+     */
     private void generateTopicLabel(String[] pTopic){
         topic1.setText(pTopic[0]);
         topic2.setText(pTopic[1]);
@@ -147,6 +170,11 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         topic4.setText(pTopic[3]);
     }
 
+    /**
+     * Generiert eine random Frage mit dem übergebenden Topic(pTopic) und den jeweiligen Fragenlevel(input)
+     * @param pTopic
+     * @param input
+     */
     private void generateQuestion(String pTopic,int input){
         gamemode.setLvl(input);
         gamemode.randomQuestion(pTopic);
@@ -163,11 +191,32 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         answers4.setText(gamemode.getCurrentQuestion().getAnswers()[3]);
     }
 
+    /**
+     * Methode um die Antwortmöglichkeiten nicht Sichtbar zu machen
+     */
     private void disabletextAnswers(){
         question.setVisible(false);
         answers1.setVisible(false);
         answers2.setVisible(false);
         answers3.setVisible(false);
         answers4.setVisible(false);
+    }
+
+
+    /**
+     * Methode um die jeweiligen Punkte dem Spieler hinzuzufügen
+     * pPoints sind die jeweils übergebenden Punkte
+     * @param pPoints
+     */
+    private void pointCounter(int pPoints){
+        if(currentPlayer == users[0]){
+            users[0].setPoints(users[0].getPoints() + pPoints);
+            point1.setText(String.valueOf(users[0].getPoints())+ " Punkte");
+            currentPlayer = users[1];
+        }else if(currentPlayer == users[1]){
+            users[1].setPoints(users[1].getPoints() + pPoints);
+            point2.setText(String.valueOf(users[1].getPoints())+ " Punkte");
+            currentPlayer = users[0];
+        }
     }
 }
