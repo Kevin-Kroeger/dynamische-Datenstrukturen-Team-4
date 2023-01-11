@@ -39,7 +39,10 @@ public class ModeNormal extends Gamemode {
             currentQuestion = modeNormal.getObject();
             modeNormal.remove();
         }else{
-            randomQuestion(null);
+            while(modeNormal.getObject().getDifficulty() == lvl){
+                modeNormal.next();
+            }
+            currentQuestion = modeNormal.getObject();
         }
     }
 
