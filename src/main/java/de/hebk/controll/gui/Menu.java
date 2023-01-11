@@ -21,15 +21,9 @@ public class Menu extends JFrame implements ActionListener {
     public Menu(Controll pCtrl, String pTitel){
         super(pTitel);
         ctrl = pCtrl;
-
         this.add(menu);
-        this.setVisible(true);
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
         Icon pic = new ImageIcon("src/main/java/de/hebk/images/wwm.png");
         icon.setIcon(pic);
-
-
         play.addActionListener(this);
         leaderboard.addActionListener(this);
         options.addActionListener(this);
@@ -40,7 +34,6 @@ public class Menu extends JFrame implements ActionListener {
 
 
     public void actionPerformed(ActionEvent event){
-
         if(event.getSource() == play){
             this.setVisible(false);
             ctrl.showSelection();
@@ -50,12 +43,10 @@ public class Menu extends JFrame implements ActionListener {
 
         }else if(event.getSource() == profile){
             this.setVisible(false);
-            Profile profile = new Profile(ctrl,"Profile");
+            ctrl.showProfile();
         }else if(event.getSource() == exit){
             System.exit(1);
         }
 
     }
-
-
 }

@@ -2,11 +2,7 @@ package de.hebk.controll;
 
 
 import de.hebk.Game;
-import de.hebk.controll.gui.GamemodeSelection;
-import de.hebk.controll.gui.Menu;
-import de.hebk.controll.gui.ModejeopardyGui;
-import de.hebk.controll.gui.ModenormalGui;
-import de.hebk.controll.gui.ModesurviveGui;
+import de.hebk.controll.gui.*;
 import de.hebk.gamemode.Gamemode;
 import de.hebk.gamemode.ModeJeopardy;
 import de.hebk.gamemode.ModeNormal;
@@ -14,6 +10,7 @@ import de.hebk.gamemode.ModeSurvive;
 import de.hebk.model.list.List;
 import de.hebk.user.User;
 
+import javax.swing.*;
 import java.util.Random;
 
 public class Controll {
@@ -21,10 +18,15 @@ public class Controll {
     private Leaderboard leaderboard;
     private Game game;
     private Menu menu;
+    private GamemodeSelection gamemodeSelection;
+    private Profile profile;
 
 
     public Controll(Game pGame){
         game = pGame;
+        menu = new Menu(this,"Menü");
+        gamemodeSelection = new GamemodeSelection(this,"Spielen");
+        profile = new Profile(this,"Profile");
     }
 
     public void gamemodeGui(Gamemode pGamemode){
@@ -33,7 +35,9 @@ public class Controll {
         }else if(pGamemode instanceof ModeSurvive){
             ModesurviveGui gui1 = new ModesurviveGui(this,pGamemode,"Wie länge überstehst du?");
         }else if(pGamemode instanceof ModeJeopardy){
-            showLogin();
+            if(game.getUser()[1] == null){
+                showLogin();
+            }
             if(game.getUser()[0] != null && game.getUser()[1] != null){
                 String[] topics = new String[]{"Erdkunde","Fangfrage","Musik","Filme","Naturwissenschaften","Geschichte","Wissenschaft"};
                 List<String> list = new List<>();
@@ -57,15 +61,22 @@ public class Controll {
     }
 
     public void showMenu(){
-        menu = new Menu(this,"Menü");
+        menu.setVisible(true);
+        menu.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     public void showSelection(){
-        GamemodeSelection selection = new GamemodeSelection(this,"Spielen");
+        gamemodeSelection.setVisible(true);
+        gamemodeSelection.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
     public void showLogin(){
         LogIn logIn = new LogIn(this,"LogIn");
+    }
 
+    public void showProfile() {
+        profile.setVisible(true);
+        profile.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        profile.setText();
     }
 
     public Leaderboard getLeaderboard() {
@@ -83,4 +94,6 @@ public class Controll {
     public void setGame(Game game) {
         this.game = game;
     }
+
+
 }

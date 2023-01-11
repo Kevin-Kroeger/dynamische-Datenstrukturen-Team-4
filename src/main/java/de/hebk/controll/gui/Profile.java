@@ -21,11 +21,6 @@ public class Profile extends JFrame implements ActionListener {
         super(pTitel);
         ctrl = pCtrl;
         this.add(profile);
-        this.setVisible(true);
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
-        username.setText(ctrl.getGame().getUser()[0].getName());
-        points.setText(String.valueOf(ctrl.getGame().getUser()[0].getPoints()));
         benutzernamenAendernButton.addActionListener(this);
         menuButton.addActionListener(this);
     }
@@ -38,5 +33,10 @@ public class Profile extends JFrame implements ActionListener {
             ctrl.showMenu();
             this.setVisible(false);
         }
+    }
+
+    public void setText(){
+        username.setText(ctrl.getGame().getUser()[0].getName());
+        points.setText(String.valueOf(ctrl.getGame().getUser()[0].getPoints()));
     }
 }
