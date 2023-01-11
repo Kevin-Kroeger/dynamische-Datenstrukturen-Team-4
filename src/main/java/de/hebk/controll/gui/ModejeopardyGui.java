@@ -10,7 +10,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ModejeopardyGui extends JFrame implements ActionListener {
-    private User[] users = new User[2];
     private int point;
     private User currentPlayer;
     private Controll ctrl;
@@ -69,21 +68,14 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         super(pTitel);
         ctrl = pCtrl;
         gamemode = pGamemode;
-
-        //User
-        users[0] = ctrl.getGame().getUser()[0];
-        users[1] = user2;
-        currentPlayer = users[0];
-        team1.setText(users[0].getName());
-        team2.setText(users[1].getName());
-
+        currentPlayer = ctrl.getGame().getUser()[0];
+        team1.setText(ctrl.getGame().getUser()[0].getName());
+        team2.setText(ctrl.getGame().getUser()[1].getName());
         this.add(jeopardy);
         this.setVisible(true);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-
         generateTopicLabel(pTopics);
         disabletextAnswers();
-
         first100.addActionListener(this);
         first200.addActionListener(this);
         first300.addActionListener(this);
@@ -119,8 +111,7 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         if(event.getSource() == homebutton){
             ctrl.showMenu();
             this.setVisible(false);
-        }
-        if(event.getSource() == first100 || event.getSource() == first200){
+        }else if(event.getSource() == first100 || event.getSource() == first200){
             generateQuestion(topic1.getText(),1);
             ((JButton) event.getSource()).setVisible(false);
             point = Integer.parseInt(((JButton) event.getSource()).getText());
@@ -215,14 +206,14 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
     }
 
     private void pointCounter(int pPoints){
-        if(currentPlayer == users[0]){
-            users[0].setPoints(users[0].getPoints() + pPoints);
-            point1.setText(String.valueOf(users[0].getPoints())+ " Punkte");
-            currentPlayer = users[1];
-        }else if(currentPlayer == users[1]){
-            users[1].setPoints(users[1].getPoints() + pPoints);
-            point2.setText(String.valueOf(users[1].getPoints())+ " Punkte");
-            currentPlayer = users[0];
+        if(currentPlayer == ctrl.getGame().getUser()[0]){
+            ctrl.getGame().getUser()[0].setPoints(ctrl.getGame().getUser()[0].getPoints() + pPoints);
+            point1.setText(String.valueOf(ctrl.getGame().getUser()[0].getPoints())+ " Punkte");
+            currentPlayer = ctrl.getGame().getUser()[1];
+        }else if(currentPlayer == ctrl.getGame().getUser()[1]){
+            ctrl.getGame().getUser()[1].setPoints(ctrl.getGame().getUser()[1].getPoints() + pPoints);
+            point2.setText(String.valueOf(ctrl.getGame().getUser()[0].getPoints())+ " Punkte");
+            currentPlayer = ctrl.getGame().getUser()[1];
         }
     }
 }
