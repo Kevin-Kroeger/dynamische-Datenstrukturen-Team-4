@@ -63,7 +63,9 @@ public class ModeJeopardy extends Gamemode {
             }
         }
         int j = rand.nextInt(topic.getLenght()+1);
-        for(int i = 0; i < j;i++){
+        System.out.println(j);
+        for(int i = 0; i <= j;i++){
+            System.out.println(topic.front());
             topic.enqueue(topic.front());
             topic.dequeue();
         }
@@ -71,11 +73,12 @@ public class ModeJeopardy extends Gamemode {
             currentQuestion = topic.front();
             topic.dequeue();
         }else{
-            while(!topic.isEmpty()){
+            while(currentQuestion == null){
                 if(topic.front().getDifficulty() == lvl) {
                     currentQuestion = topic.front();
                     topic.dequeue();
                 }
+                topic.enqueue(topic.front());
                 topic.dequeue();
             }
         }

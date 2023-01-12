@@ -18,6 +18,8 @@ public class Controll {
     private Leaderboard leaderboard;
     private Game game;
     private Menu menu;
+    private GamemodeSelection gamemodeSelection;
+    private Profile profile;
 
     /**
      * Konstruktor
@@ -25,6 +27,9 @@ public class Controll {
      */
     public Controll(Game pGame){
         game = pGame;
+        menu = new Menu(this,"Menü");
+        gamemodeSelection = new GamemodeSelection(this,"Spielen");
+        profile = new Profile(this,"Profile");
         leaderboard = new Leaderboard(this,"Bestenliste");
     }
 
@@ -40,7 +45,7 @@ public class Controll {
         }else if(pGamemode instanceof ModeJeopardy){
             if(game.getUser()[1] == null){
                 showLogin();
-            }else{
+            }
                 String[] topics = new String[]{"Erdkunde","Fangfrage","Musik","Filme","Naturwissenschaften","Geschichte","Wissenschaft"};
                 List<String> list = new List<>();
                 for(int i = 0; i < topics.length; i++){
@@ -66,14 +71,16 @@ public class Controll {
      * öffnet das Menu
      */
     public void showMenu(){
-        menu = new Menu(this,"Menü");
+        menu.setVisible(true);
+        menu.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
      * öffnet die Gamemodeauswahl
      */
     public void showSelection(){
-        GamemodeSelection selection = new GamemodeSelection(this,"Spielen");
+        gamemodeSelection.setVisible(true);
+        gamemodeSelection.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -89,7 +96,12 @@ public class Controll {
      */
     public void showLogin(){
         LogIn logIn = new LogIn(this,"LogIn");
+    }
 
+    public void showProfile() {
+        profile.setVisible(true);
+        profile.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        profile.setText();
     }
 
     /**
@@ -123,4 +135,6 @@ public class Controll {
     public void setGame(Game game) {
         this.game = game;
     }
+
+
 }

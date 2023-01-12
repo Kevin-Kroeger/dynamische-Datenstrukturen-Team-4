@@ -27,8 +27,6 @@ public class GamemodeSelection extends JFrame implements ActionListener {
         super(pTitel);
         ctrl = pCtrl;
         this.add(selection);
-        this.setVisible(true);
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         normal.addActionListener(this);
         survive.addActionListener(this);
         jeopardy.addActionListener(this);
