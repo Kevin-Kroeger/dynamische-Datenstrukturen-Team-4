@@ -58,7 +58,7 @@ public class ModenormalGui extends JFrame implements ActionListener{
         super(pTitel);
         ctrl = pCtrl;
         gamemode = pGamemode;
-        gamemode.randomQuestion("");
+        gamemode.randomQuestion(null);
         generateLabelButtontext();
         addMoneyarr();
         this.add(panel1);
