@@ -20,12 +20,6 @@ public class ModeSurvive extends Gamemode {
     public void useJoker(int pInput) {
     }
 
-    @Override
-    /**
-     * starten den Gamemode
-     */
-    public void start() {
-    }
 
     @Override
     /**

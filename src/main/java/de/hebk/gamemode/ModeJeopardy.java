@@ -21,14 +21,6 @@ public class ModeJeopardy extends Gamemode {
      */
     public void useJoker(int pInput) {
     }
-
-    @Override
-    /**
-     *
-     */
-    public void start() {
-    }
-
     @Override
     /**
      * Da der Gamemode Joker hat, wird diese Methode nicht verwendet
