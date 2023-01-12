@@ -1,6 +1,7 @@
 package de.hebk.gamemode;
 
 import de.hebk.gamemode.Gamemode;
+import de.hebk.model.stack.Stack;
 
 import java.util.Random;
 
@@ -24,11 +25,6 @@ public class ModeSurvive extends Gamemode {
      * starten den Gamemode
      */
     public void start() {
-        if (currentQuestion != null) {
-            modeSurvive.pop();
-        }
-        setCurrentQuestion(modeSurvive.top());
-        currentQuestion.randomAnswers();
     }
 
     @Override
@@ -52,8 +48,20 @@ public class ModeSurvive extends Gamemode {
      *
      */
     public void randomQuestion(String pContext) {
-
-
+        Stack<Questions> tmp = new Stack<>();
+        Random rand = new Random();
+        int j = rand.nextInt(modeSurvive.getLenght()+1);
+        System.out.println(modeSurvive.getLenght());
+        for(int i = 0; i < j ; i++){
+            tmp.push(modeSurvive.top());
+            modeSurvive.pop();
+        }
+        currentQuestion = modeSurvive.top();
+        modeSurvive.pop();
+        while(!tmp.isEmpty()){
+            modeSurvive.push(tmp.top());
+            tmp.pop();
+        }
     }
 
     @Override
