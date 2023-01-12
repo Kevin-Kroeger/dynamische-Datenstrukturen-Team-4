@@ -65,7 +65,6 @@ public class ModeJeopardy extends Gamemode {
         int j = rand.nextInt(topic.getLenght()+1);
         System.out.println(j);
         for(int i = 0; i <= j;i++){
-            System.out.println(topic.front());
             topic.enqueue(topic.front());
             topic.dequeue();
         }
