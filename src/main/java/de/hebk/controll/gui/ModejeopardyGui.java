@@ -115,6 +115,7 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
         answers2.addActionListener(this);
         answers3.addActionListener(this);
         answers4.addActionListener(this);
+        homebutton.addActionListener(this);
     }
 
     /**
@@ -122,10 +123,7 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
      * @param event the event to be processed
      */
     public void actionPerformed(ActionEvent event){
-        if(event.getSource() == homebutton){
-            ctrl.showMenu();
-            this.setVisible(false);
-        }else if(event.getSource() == first100 || event.getSource() == first200){
+        if(event.getSource() == first100 || event.getSource() == first200){
             generateQuestion(topic1.getText(),1);
             ((JButton) event.getSource()).setVisible(false);
             point = Integer.parseInt(((JButton) event.getSource()).getText());
@@ -183,6 +181,10 @@ public class ModejeopardyGui extends JFrame implements ActionListener {
                 question.setText("Diese Antwort ist Falsch!");
                 pointCounter(0);
             }
+        }else if(event.getSource() == homebutton) {
+            ctrl.showMenu();
+            this.setVisible(false);
+            ctrl.getLeaderboard().addPosLeaderboard(gamemode);
         }
     }
 
