@@ -49,7 +49,8 @@ public class Menu extends JFrame implements ActionListener {
             this.setVisible(false);
             ctrl.showLeaderboard();
         }else if(event.getSource() == options){
-
+            this.setVisible(false);
+            ctrl.showOptions();
         }else if(event.getSource() == profile){
             this.setVisible(false);
             ctrl.showProfile();

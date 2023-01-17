@@ -20,6 +20,7 @@ public class Controll {
     private Menu menu;
     private GamemodeSelection gamemodeSelection;
     private Profile profile;
+    private Options options;
 
     /**
      * Konstruktor
@@ -31,6 +32,7 @@ public class Controll {
         gamemodeSelection = new GamemodeSelection(this,"Spielen");
         profile = new Profile(this,"Profile");
         leaderboard = new Leaderboard(this,"Bestenliste");
+        options = new Options(this,"Optionen");
     }
 
     /**
@@ -103,6 +105,11 @@ public class Controll {
         profile.setVisible(true);
         profile.setExtendedState(JFrame.MAXIMIZED_BOTH);
         profile.setText();
+    }
+
+    public void showOptions(){
+        options.setVisible(true);
+        options.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
