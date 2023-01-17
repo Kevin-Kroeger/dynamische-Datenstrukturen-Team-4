@@ -21,6 +21,7 @@ public class Controll {
     private GamemodeSelection gamemodeSelection;
     private Profile profile;
     private Options options;
+    private List<String> topics;
 
     /**
      * Konstruktor
@@ -33,6 +34,8 @@ public class Controll {
         profile = new Profile(this,"Profile");
         leaderboard = new Leaderboard(this,"Bestenliste");
         options = new Options(this,"Optionen");
+        topics = new List<>();
+        setTopics(new String[]{"Erdkunde","Fangfrage","Musik","Filme","Naturwissenschaften","Geschichte","Wissenschaft"});
     }
 
     /**
@@ -48,11 +51,8 @@ public class Controll {
             if(game.getUser()[1] == null){
                 showLogin();
             }else{
-                String[] topics = new String[]{"Erdkunde","Fangfrage","Musik","Filme","Naturwissenschaften","Geschichte","Wissenschaft"};
                 List<String> list = new List<>();
-                for(int i = 0; i < topics.length; i++){
-                    list.append(topics[i]);
-                }
+                list = topics;
                 String[] arr = new String[4];
                 Random rand = new Random();
                 for(int i = 0; i < arr.length;i++) {
@@ -144,5 +144,28 @@ public class Controll {
         this.game = game;
     }
 
+    public List<String> getTopics() {
+        return topics;
+    }
 
+    public void setTopics(String[] arr) {
+        for(int i = 0; i<arr.length;i++){
+            topics.append(arr[i]);
+        }
+    }
+
+    public void addTopic(String pTopic){
+        topics.append(pTopic);
+    }
+
+    public void deleteTopic(String pTopic){
+        topics.toFirst();
+        for(int i = 0; i<topics.getLenght(); i++){
+            if(topics.getObject().equals(pTopic)){
+                topics.remove();
+                return;
+            }
+            topics.next();
+        }
+    }
 }
